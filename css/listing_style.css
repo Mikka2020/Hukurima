@@ -1,0 +1,8 @@
+*{
+    margin: 0 auto;
+    width: 375px;
+}
+.img_contents{
+    display: flex;
+    justify-content: space-around;
+}
