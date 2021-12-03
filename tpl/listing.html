@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出品画面</title>
+    <link rel="stylesheet" href="../css/listing_style.css">
+</head>
+<body>
+<!-- <?php require_once '参照ヘッダーファイル';?> -->
+
+<main>
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <div class="img_contents">
+            <input type="file" name="img" id="first_img_contents">
+            <input type="file" name="img">
+            <input type="file" name="img">
+            <input type="file" name="img">
+            <input type="file" name="img">
+            <input type="file" name="img">
+            <input type="file" name="img">
+        </div>
+    
+    <h2>商品名と説明</h2><span class="help_guide">出品禁止物・出品ルール</span>
+    <input type="text" name="" value="" placeholder="商品名 (必須) " maxlength="10">
+    <div>
+        <label><input type="text" name="" value="" placeholder="プレースホルダーを書く" maxlength="1000"></label>
+    </div>
+    <input type="text" name="" value="" placeholder="ハッシュタグを利用する">
+    
+    <h2>商品情報</h2>
+    <label>カテゴリ<input type="text" name="" value="" placeholder="選択してください (必須) "></label>
+    <label>商品の状態<input type="text" name="" value="" placeholder="選択してください (必須) "></label>
+    <label>カテゴリ<input type="text" name="" value="" placeholder="選択してください (必須) "></label>
+    
+    <h2>配送について</h2>
+    <label><input type="text" name="" value="" placeholder="指定しない (必須) "></label>
+    <label><input type="text" name="" value="" placeholder="指定しない (任意) "></label>
+    <label><input type="text" name="" value="" placeholder="指定しない (任意) "></label>
+    
+    <h2>販売価格 (300円〜9,999,999円)</h2><span class="help_guide">販売利益とは</span>
+    <label>出品価格<input type="text" name="" value="" placeholder=""></label>
+    <p>販売手数料<span class="price_contents">0円</span></p>
+    <p>販売利益<span class="price_contents">0円</span></p>
+    
+    </from>
+    
+    <p>禁止されている<a href="利用規約のファイル名">行為</a>及び<a href="利用規約のファイル名">出品物</a>を必ずご確認ください。また、出品をもちまして<a href="利用規約のファイル名">規約</a>に同意したことになります。</p>
+    
+    <form action="" method="post">
+        <button type="submit" name="" value="">出品する</button>
+        <button type="submit" name="" value="">下書きに保存する</button>
+    </form>
+</main>
+
+<!-- <?php require_once '参照フッダーファイル';?> -->
+<!-- <script src="" async></script> -->
+</body>
+</html>

@@ -1,5 +1,14 @@
-main {
-  width: 375px;
-  border: solid 1px #ccc;
+*{
+  background-color: aliceblue;
 }
-/*# sourceMappingURL=style.css.map */
+#information{
+  display: flex;
+}
+#information img{
+  width:90px;
+  height:90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #00000080;
+}
