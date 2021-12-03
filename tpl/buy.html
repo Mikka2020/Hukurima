@@ -5,22 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/destyle.css">
-    <link rel="stylesheet" href="./../css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./../css/buy.css">
+    <title>購入</title>
 </head>
 <body>
 <main>
     <article>
       <h2></h2>
-        <section class="img_product">
-          <img src="./../img/アシメレースアップリボンニット.png" alt="商品画像" width="315" height="420">
-        </section>
+          <div class="bg_product"><img class="img_product" src="./../img/products/アシメレースアップリボンニット.png" alt="商品画像" width="315" height="420"></div>
         <section>
-          <h2>商品説明</h2>
           <ul>
             <li>アシメレースアップリボンニット（長袖）</li>
-            <li>LAISSE PASSE</li>
-            <li>¥3,600</li>
+            <li class="brand">LAISSE PASSE</li>
+            <li class="price">¥3,600</li>
           </ul>
           <table>
               <tr>
@@ -40,12 +37,12 @@
                 <td>2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。合わせやすいのでおすすめです。</td>
                 </tr>
           </table>
-          <p>商品を閉じる</p>
+          <p class="center">商品を閉じる</p>
         </section>
      
         <section>            
           <h2>出品者</h2>
-          <p><img src="./../img/Profile_Mari.png" alt="プロフィール画像"></p>
+          <p><img src="./../img/users/Profile_Mari.png" alt="プロフィール画像" width="32" height="32"></p>
           <p>Mari さん</p>
           <p>メッセージ</p>        
         </section>
@@ -68,14 +65,16 @@
             </section>
             <section>
                 <h2>オプション</h2>
-                <input type="checkbox" name="" id="">クリーニングあり
-                <a href="">取引中止を申請する</a>
-                <a href="">問題を報告する</a>
-         
-                <button type="submit">購入する</button>
-            </form>
-
+                <div><input type="checkbox" name="" id="">クリーニングあり</div>
+                
             </section>
+                <div class="center">
+                  <a href="" class="center">取引中止を申請する</a><br>
+                  <a href="" class="center">問題を報告する</a>
+                </div>
+                <div class="bg_btn_buy"><button type="submit" class=" btn btn_buy">購入する</button></div>
+                
+            </form>
 
     </article>
 </main>

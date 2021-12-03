@@ -1,5 +1,88 @@
-main {
+body {
   width: 375px;
+}
+
+main {
   border: solid 1px #ccc;
+  background-color: #ccc;
+  color: #707070;
+  font-size: 12px;
+}
+
+main h2 {
+  font-size: 16px;
+}
+
+main section {
+  background-color: #fff;
+  padding: 0 10%;
+  margin-bottom: 10px;
+}
+
+main table {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+main table tr {
+  height: 30px;
+}
+
+main table th {
+  width: 30%;
+}
+
+main table td {
+  width: 70%;
+}
+
+main .img_product {
+  background-color: #fff;
+}
+
+main .bg_product {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+
+main .brand {
+  font-size: 8px;
+}
+
+main .price {
+  font-size: 16px;
+  color: #ff0000;
+}
+
+main .center {
+  text-align: center;
+}
+
+main .btn_buy {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #000;
+}
+
+main .btn {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+main .btn_buy {
+  border-radius: 5px;
+  padding: 10px 0;
+  background-color: #fe9900;
+  color: #fff;
+  width: 80%;
+}
+
+main .bg_btn_buy {
+  background-color: #fff;
+  padding: 10px;
 }
 /*# sourceMappingURL=buy.css.map */
