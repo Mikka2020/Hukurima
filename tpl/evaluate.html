@@ -12,53 +12,66 @@
   <div id="evaluate">
     <h1>評価</h1>
   </div>
+  <hr id="line">
 
   <div id="arert">
     <div id="message">
-    <p id="orange">✔︎</p>
-    <h4>受け取り評価をしてください</h4>
+        <p id="orange">✔︎</p>
+        <div id="mes_text">
+        <h4>受け取り評価をしてください</h4>
+        <p>商品が発送されました。商品が到着したら出品者の評価をしてください。</p>
+        </div>
     </div>
-    <p>商品が発送されました。商品が到着したら出品者の評価をしてください。</p>
-    </div>
+  </div>
     <div id="url">
       <a href="">取引についてFAQ ></a><br>
       <a href="">取引者のよくある質問 ></a>
-      </div>
+    </div>
 
     <div id="evaluate_info">
     <h2>取引情報</h2>
       <div id="information">
         <img src="img/ニット.png" alt="information">
+        <div class="text">
         <p>アシメレースアップリボンニット（長袖）</p>
         <p id="red">¥3,600</p>
+        </div>
       </div>
     </div>
 
     <div id="user_info">
       <h2>出品者情報</h2>
         <div id="user">
-          <img src="img/user01.png" alt="information">
+          <a href=""><img src="img/user01.png" alt="information">
           <p>コウイチ</p>
-          <p id="pink"> ></p>
-          <button>取引メッセージ</button>
+          <p id="pink"> ></p></a>
         </div>
+        <button>取引メッセージ</button>
       </div>
 
       <div id="value">
         <h2>評価</h2>
           <div id="value_button">
+            <div id="good">
             <button>😃</button>
             <p>良かった</p>
+            </div>
+            <div id="bad">
             <button>😩</button>
             <p>残念だった</p>
+            </div>
+          </div>
+          <div id="comment">
             <p id="small_text">評価に際してコメントを記入しましょう。</p>
             <form method = "post" action = "index.php" enctype = "multipart/form-data">
-            <input type="text" placeholder="この度はお取引ありがとうございました。">
+            <div id="mes_foryou">
+              <input type="text" placeholder="この度はお取引ありがとうございました。">
+            </div>
             <p>※コメントは必要ではありませんが、お礼のメッセージなどを書くと喜ばれます</p>
             <button type="submit"  name="btn" value="up">送信する</button>
           </form>
-          </div>
         </div>
+      </div>
 
 </body>
 </html>
