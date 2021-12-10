@@ -1,0 +1,31 @@
+body {
+  width: 375px;
+  border: solid 1px #ccc;
+  min-height: 650px;
+}
+
+main {
+  font-size: 12px;
+  background-color: #ccc;
+  h2 {
+    font-size: 16px;
+  }
+  section {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 0 30px;
+  }
+  .sec_product {
+  }
+  .nav_prof {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+    span {
+      font-size: 10px;
+    }
+    li {
+      text-align: center;
+    }
+  }
+}

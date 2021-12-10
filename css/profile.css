@@ -1,0 +1,41 @@
+body {
+  width: 375px;
+  border: solid 1px #ccc;
+  min-height: 650px;
+}
+
+main {
+  font-size: 12px;
+  background-color: #ccc;
+}
+
+main h2 {
+  font-size: 16px;
+}
+
+main section {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 0 30px;
+}
+
+main .nav_prof {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .nav_prof span {
+  font-size: 10px;
+}
+
+main .nav_prof li {
+  text-align: center;
+}
+/*# sourceMappingURL=profile.css.map */

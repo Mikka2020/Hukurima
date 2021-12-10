@@ -5,31 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会員登録画面</title>
+    <link rel="stylesheet" href="../css/core_style.css">
     <link rel="stylesheet" href="../css/entry_style.css">
 </head>
 <body>
 <!-- <?php require_once '参照ヘッダーファイル';?> -->
 
-<img src="../img/progress.png" alt="会員登録の進捗を表示する画像" width="300" height="80">
+<main>
 
-<label>ニックネーム<input type="text" name="" value="" placeholder="フクリマ内のユーザ名"></label>
-<label>メールアドレス<input type="text" name="" value="" placeholder="PC・携帯どちらでもOK"></label>
-<label>メールアドレス (確認) <input type="text" name="" value="" placeholder="メールアドレス再入力"></label>
-<label>パスワード<input type="text" name="" value="" placeholder="8文字以上の半角英数字"></label>
-<label>姓 (漢字) <input type="text" name="" value="" placeholder="福沢"></label>
-<label>名 (漢字) <input type="text" name="" value="" placeholder="玲子"></label>
-<label>姓 (カナ) <input type="text" name="" value="" placeholder="フクザワ"></label>
-<label>名 (カナ) <input type="text" name="" value="" placeholder="レイコ"></label>
-<label>生年月日<input type="text" name="" value="" placeholder="選択してください"></label>
-<label>電話番号<input type="text" name="" value="" placeholder="ハイフンなしで入力"></label>
+    <img src="../img/progress.png" alt="会員登録の進捗を表示する画像" width="300" height="80">
 
-<p>「次へ」ボタンを押すことにより、<a href="利用規約のファイル名">利用規約</a>に同意したものとみなします。</p>
+    <form action="" method="post" enctype="multipart/form-data">
+    <article class="input_area">
+        <div class="input_box"><p class="input_label">ニックネーム</p><input type="text" name="" value="" placeholder="フクリマ内のユーザ名" class="input_form"></div>
+        <div class="input_box"><p class="input_label">メールアドレス</p><input type="text" name="" value="" placeholder="PC・携帯どちらでもOK" class="input_form"></div>
+        <div class="input_box"><p class="input_label">メールアドレス (確認)</p><input type="text" name="" value="" placeholder="メールアドレス再入力" class="input_form"></div>
+        <div class="input_box"><p class="input_label">パスワード</p><input type="text" name="" value="" placeholder="8文字以上の半角英数字" class="input_form"></div>
+    </article>
 
-<form action="" method="post">
-    <button type="submit" name="next" value="">次へ</button>
-</form>
+    <p class="border">
 
+    <article class="input_area">
+        <div class="input_box"><p class="input_label">姓 (漢字)</p><input type="text" name="" value="" placeholder="福沢" class="input_form"></div>
+        <div class="input_box"><p class="input_label">名 (漢字)</p><input type="text" name="" value="" placeholder="玲子" class="input_form"></div>
+        <div class="input_box"><p class="input_label">姓 (カナ)</p><input type="text" name="" value="" placeholder="フクザワ" class="input_form"></div>
+        <div class="input_box"><p class="input_label">名 (カナ)</p><input type="text" name="" value="" placeholder="レイコ" class="input_form"></div>
+        <div class="input_box"><p class="input_label">生年月日</p><input type="text" name="" value="" placeholder="選択してください" class="input_form"></div>
+        <div class="input_box"><p class="input_label">電話番号</p><input type="text" name="" value="" placeholder="ハイフンなしで入力" class="input_form"></div>
+    </article>
 
+    <article class="send_form">
+        <p class="annotation">「次へ」ボタンを押すことにより、<a href="利用規約のファイル名" class="annotation_guide">利用規約</a>に同意したものとみなします。
+        <button type="submit" name="next" value="" class="next_btn">次へ</button>
+    </article>
+    </form>
+
+</main>
 
 
 

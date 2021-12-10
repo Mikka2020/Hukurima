@@ -1,0 +1,84 @@
+/* スマホ画面の外枠？レイアウト */
+*{
+    margin: 0 auto;
+    width: 375px;
+    border: none;
+    font-size: small;
+}
+/* メインコンテンツのデザイン・レイアウト */
+main{
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+
+/* inputタグのボーダーを消す */
+input{
+    text-align: end;
+    background-color: unset;
+}
+/* インプットコンテンツのスタイリング */
+.input_area{
+    width: 345px;
+    /* border: solid 1px black; */
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+/* インプット一つひとつのデザイン */
+.input_box{
+    /* border: solid 1px black; */
+    width: 345px;
+    display: flex;
+    justify-content: space-between;
+}
+/* ラベルのデザイン */
+.input_label{
+    /* border: solid 1px black; */
+    text-align: start;
+    margin-left: 15px;
+    width: 155px;
+}
+/* テキストボックスのデザイン */
+.input_form{
+    /* border: solid 1px black; */
+    margin-right: 15px;
+    width: 155px;
+}
+/* placeholderの右寄せ */
+::placeholder{
+    text-align: end;
+    font-size: xx-small;
+    color: #cccccc;
+}
+/* インプットコンテンツの区切り線 */
+.border{
+    margin: 30px auto;
+}
+
+
+/* 説明文みたいなやつにしようするレイアウト */
+.annotation{
+    font-size: xx-small;
+}
+/* 説明文みたいなやつに含まれるリンクに関するスタイリング */
+.annotation_guide{
+    text-decoration: none;
+    color: #000088;
+    font-size: xx-small;
+}
+
+/* ボタンに関するデザイン */
+.next_btn{
+    width: 75%;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ee4466;
+}
+
+/* 送信系ボタンのデザイン・レイアウト */
+.send_form{
+    text-align: center;
+}
