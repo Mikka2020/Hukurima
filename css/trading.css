@@ -1,0 +1,49 @@
+@import url("./destyle.css");
+@import url("./style.css");
+.btn_msg {
+  border: solid 1px #333;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.btn_eval {
+  padding: 10px 0;
+  background-color: #fe9900;
+  color: #fff;
+  width: 90%;
+}
+
+.bg_btn_eval {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.progress-bar {
+  position: static;
+  left: 0;
+}
+
+.in-circle {
+  background-color: #fd819d;
+  padding: 0.5em 1em;
+  border-radius: 50%;
+  max-width: 0.5rem;
+  max-height: 0.5rem;
+  margin-right: 3rem;
+}
+
+.circle-area {
+  position: relative;
+}
+
+.circle-area::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100%;
+  display: block;
+  border-top: 10px solid #fd819d;
+}
+/*# sourceMappingURL=trading.css.map */

@@ -1,0 +1,13 @@
+@import url("./destyle.css");
+@import url("./style.css");
+.nav_prof {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-evenly;
+  span {
+    font-size: 10px;
+  }
+  li {
+    text-align: center;
+  }
+}

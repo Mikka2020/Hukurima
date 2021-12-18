@@ -1,0 +1,22 @@
+@import url("./destyle.css");
+@import url("./style.css");
+.nav_prof {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.nav_prof span {
+  font-size: 10px;
+}
+
+.nav_prof li {
+  text-align: center;
+}
+/*# sourceMappingURL=profile.css.map */
