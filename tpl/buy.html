@@ -1,115 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./../css/buy.css">
-  <title>購入</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/destyle.css">
+    <link rel="stylesheet" href="./../css/buy.css">
+    <title>購入</title>
 </head>
-
 <body>
-  <main>
-    <h1>購入画面</h1>
+<main>
     <article>
-      <h2>商品情報</h2>
-
-      <div class="product-img-area">
-        <img class="product-img" src="./../img/products/product1.jpg" alt="商品画像" width="315" height="420">
-      </div>
-
-      <section>
-        <h3></h3>
-        <ul>
-          <li>アシメレースアップリボンニット（長袖）</li>
-          <li class="brand">LAISSE PASSE</li>
-          <li class="price">¥3,600</li>
-        </ul>
-        <table>
-          <tr>
-            <th>カテゴリ</th>
-            <td>ブラウス</td>
-          </tr>
-          <tr>
-            <th>商品の状態</th>
-            <td>目立った傷や汚れなし</td>
-          </tr>
-          <tr>
-            <th>発送までの日数</th>
-            <td>2~3日</td>
-          </tr>
-          <tr>
-            <th>商品説明</th>
-            <td>2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。合わせやすいのでおすすめです。</td>
-          </tr>
-        </table>
-        <p class="center">商品を閉じる <img src="./../img/icon/" alt=""></p>
-      </section>
-    </article>
-    <article>
-      <h2>出品者</h2>
-      <section>
-        <h3></h3>
-        <div class="prof-area">
-
-          <p><img class="prof-img" src="./../img/users/mari.jpg" alt="プロフィール画像" width="32" height="32"></p>
-          <span class="prof-name">Mari さん</span>
-        </div>
-        <p><button type="submit" class="btn message-btn">メッセージ</button></p>
-      </section>
-    </article>
-    <article>
-      <h2>配送先</h2>
-      <section>
-        <form action="" method="post">
+      <h2></h2>
+          <div class="bg_product"><img class="img_product" src="./../img/products/アシメレースアップリボンニット.png" alt="商品画像" width="315" height="420"></div>
+        <section>
           <ul>
-            <li>
-              <label for="address" class="address-area">
-                <input type="radio" name="address" id="1">
-                <div class="address-text">
-                  配送先1 <br>
-                  〒530-0001 <br>
-                  大阪市北区梅田3-3-1
-                </div>
-              </label>
-            </li>
-            <li>
-              <label for="address" class="address-area">
-                <input type="radio" name="address" id="2">
-                <div class="address-text">
-                  配送先2 <br>
-                  〒160-0023 <br>
-                  東京新宿区西新宿1-7-3
-
-                </div>
-              </label>
-            </li>
-            <li>
-              <label for=""><span>+</span>新しい配送先を追加する</label>
-            </li>
+            <li>アシメレースアップリボンニット（長袖）</li>
+            <li class="brand">LAISSE PASSE</li>
+            <li class="price">¥3,600</li>
           </ul>
-      </section>
+          <table>
+              <tr>
+                <th>カテゴリ</th>
+                <td>ブラウス</td>
+              </tr>
+              <tr>
+                <th>商品の状態</th>
+                <td>目立った傷や汚れなし</td>
+              </tr>
+              <tr>
+                <th>発送までの日数</th>
+                <td>2~3日</td>
+              </tr>
+              <tr>
+                <th>商品説明</th>
+                <td>2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。合わせやすいのでおすすめです。</td>
+                </tr>
+          </table>
+          <p class="center">商品を閉じる</p>
+        </section>
+     
+        <section>            
+          <h2>出品者</h2>
+          <p><img src="./../img/users/Profile_Mari.png" alt="プロフィール画像" width="32" height="32"></p>
+          <p>Mari さん</p>
+          <p>メッセージ</p>        
+        </section>
+        <section>
+            <h2>配送先</h2>
+            <form action="" method="post">
+                <ul>
+                    <li>
+                        <input type="radio" name="" id="">配送先1 <br>
+                        〒530-0001 <br>
+                        大阪市北区梅田3-3-1
+                    </li>
+                    <li>
+                        <input type="radio" name="" id="">配送先2 <br>
+                        〒160-0023 <br>
+                        東京新宿区西新宿1-7-3
+                    </li>
+                    <li><label for=""><span>+</span>新しい配送先を追加する</label></li>
+                </ul>
+            </section>
+            <section>
+                <h2>オプション</h2>
+                <div><input type="checkbox" name="" id="">クリーニングあり</div>
+                
+            </section>
+                <div class="center">
+                  <a href="" class="center">取引中止を申請する</a><br>
+                  <a href="" class="center">問題を報告する</a>
+                </div>
+                <div class="bg_btn_buy"><button type="submit" class=" btn btn_buy">購入する</button></div>
+                
+            </form>
+
     </article>
-    <article>
-      <h2>オプション</h2>
-      <section>
-        <input class="option-input" type="checkbox" name="" id=""> <span class="cleaning"> クリーニングあり </span>
-      </section>
-    </article>
-    <aside class="center">
-      <a href="">取引中止を申請する</a><br>
-      <a href="">問題を報告する</a>
-    </aside>
-
-    <div class="buy-btn-area">
-      <button type="submit" class=" btn buy-btn">購入する</button>
-    </div>
-
-    </form>
-
-
-  </main>
+</main>
 </body>
-
 </html>
