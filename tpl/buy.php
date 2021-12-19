@@ -15,7 +15,7 @@
     <article>
       <h2></h2>
       <section class="img_product">
-        <img src="./../img/アシメレースアップリボンニット.png" alt="商品画像" width="315" height="420">
+        <img src="./../img/users/2/products/1/product1.jpg" alt="商品画像" width="315" height="420">
       </section>
       <section>
         <h2>商品説明</h2>
@@ -47,7 +47,7 @@
 
       <section>
         <h2>出品者</h2>
-        <p><img src="./../img/Profile_Mari.png" alt="プロフィール画像"></p>
+        <p><img src="./../img/users/2/prof/mari.jpg" alt="プロフィール画像" width="30px" height="30px"></p>
         <p>Mari さん</p>
         <p>メッセージ</p>
       </section>
@@ -73,7 +73,7 @@
           <a href="">取引中止を申請する</a>
           <a href="">問題を報告する</a>
 
-          <button type="submit" name="buy_btn" value="on">購入する</button>
+          <button type="submit" name="buy_btn" value="on" class="btn">購入する</button>
 
         </form>
       </section>
