@@ -58,7 +58,7 @@ function err_judge($check_value,$array){
 function assemb_get_column($link,$table,$column,$id){
     $query = "SELECT * FROM ";
     $query .= $table;
-    $query .= " WHERE ".$column." = "
+    $query .= " WHERE ".$column." = ";
     $query .= $id;
     return $query;
 }
