@@ -34,7 +34,7 @@ mysqli_close($link);
 // ユーザが投稿している商品画像の取得
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get__lots_of($link,$list_table,$column,$user_id);
+$line = get_lots_of($link,$list_table,$column,$user_id);
 mysqli_close($link);
 
 // 購入ボタンが押された時の処理
