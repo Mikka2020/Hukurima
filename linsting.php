@@ -44,9 +44,10 @@ if(isset($_POST['listing'])){
     // 下書きボタンが押された時に下書きを保存する処理
 // }
 
-// 戻るボタンが押された時の処理
-// if(){
-    // 戻るボタンが押された時に画面を遷移する処理
+// 戻るボタンが押された時の処理(name="back")
+// if(isset($_POST['back'])){
+//     header ('location:./');
+//     exit;
 // }
 
 var_dump($err_msg);
