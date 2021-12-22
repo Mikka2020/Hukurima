@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./../css/destyle.css">
-  <link rel="stylesheet" href="./../css/style.css">
+  <link rel="stylesheet" href="./css/buy.css">
   <title>購入画面</title>
 </head>
 
@@ -15,7 +14,7 @@
     <article>
       <h2></h2>
       <section class="img_product">
-        <img src="./../img/users/2/products/1/product1.jpg" alt="商品画像" width="315" height="420">
+        <img src="./img/users/2/products/1/product1.jpg" alt="商品画像" width="315" height="420">
       </section>
       <section>
         <h2>商品説明</h2>
@@ -47,7 +46,7 @@
 
       <section>
         <h2>出品者</h2>
-        <p><img src="./../img/users/2/prof/mari.jpg" alt="プロフィール画像" width="30px" height="30px"></p>
+        <p><img src="./img/users/2/prof/mari.jpg" alt="プロフィール画像" width="30px" height="30px"></p>
         <p>Mari さん</p>
         <p>メッセージ</p>
       </section>

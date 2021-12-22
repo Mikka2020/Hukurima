@@ -21,7 +21,7 @@ $_SESSION['product_id'] = 1;
 // 初期値
 $id = $_SESSION['product_id'];
 $table = 'listing';
-$column = 'id'
+$column = 'id';
 
 
 // 商品の配送状況の取得
