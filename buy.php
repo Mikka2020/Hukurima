@@ -12,11 +12,14 @@
 
 
 // 参照ファイル呼び出し
+session_start();
 require_once './config.php';
 require_once './func.php';
 
+// 動作確認用固定値
+$_SESSION['product_id'] = 1;
+
 // 初期値
-session_start();
 $table = 'listing'; // テーブル名
 $column = 'id';
 
@@ -36,5 +39,13 @@ if(isset($_POST['buy_btn'])){
     header ('location:./entry_confirm.php');
     exit;
 }
+
+// 戻るボタンが押された時の処理(name="back")
+// if(isset($_POST['back'])){
+//     header ('location:./');
+//     exit;
+// }
+
+// var_dump($line);
 
 require_once './tpl/buy.php';

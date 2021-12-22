@@ -11,11 +11,11 @@
 
 
 // 参照ファイル呼び出し
+session_start();
 require_once './config.php';
 require_once './func.php';
 
 // 初期化
-session_start();
 $input_entry_data = ['login_id' => '' , 'address' => '' , 'address_confirm' => '' , 'password' => '' , 'surn_name_han' => '' , 'first_name_han' => '' , 'surn_name_kana' => '' , 'first_name_kana' => '' , 'birth_day' => '' , 'tel' => '']; // 入力された情報をセットする配列
 $err_msg = ['login_id' => '' , 'address' => '' , 'address_confirm' => '' , 'password' => '' , 'surn_name_han' => '' , 'first_name_han' => '' , 'surn_name_kana' => '' , 'first_name_kana' => '' , 'birth_day' => '' , 'tel' => '']; // エラー出力用配列
 $input_entry_label = ['login_id' => 'ニックネーム' , 'address' => 'メールアドレス' , 'address_confirm' => 'メールアドレス(確認)' , 'password' => 'パスワード' , 'surn_name_han' => '姓(漢字)' , 'first_name_han' => '名(漢字)' , 'surn_name_kana' => '姓(カナ)' , 'first_name_kana' => '名(カナ)' , 'birth_day' => '生年月日' , 'tel' => '電話番号']; // 添字に対するラベル名がセットされている配列
@@ -46,9 +46,10 @@ if(!isset($err_msg)){
 }
 
 
-// 戻るボタンが押された時の処理
-// if(){
-    // 戻るボタンが押された時に画面を遷移する処理
+// 戻るボタンが押された時の処理(name="back")
+// if(isset($_POST['back'])){
+//     header ('location:./');
+//     exit;
 // }
 
 require_once './tpl/entry.php';
