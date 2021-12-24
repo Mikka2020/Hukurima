@@ -1,7 +1,7 @@
 <!-- <pre> -->
 <?php
 /**
- * 内容：購入画面
+ * 内容：商品一覧画面
  * 作成日：2021/12/17
  * 作成者：小川慧
  * ------------------------------------------------------------------------------------------------------------------------
@@ -16,21 +16,25 @@ session_start();
 require_once './config.php';
 require_once './func.php';
 
-// 動作確認用固定値
+// 動作確認用固定値（後で削除する）
+$conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
+$_SESSION['search'] = $conditions['search']; // テキストボックス
+$_SESSION['sort'] = $conditions['sort']; // セレクトボックス
+$_SESSION['trend'] = $conditions['trend']; // ラジオボタン
 
 
 // 初期値
 $table = 'listing'; // テーブル名
-$conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
+// $conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
 
-// 検索条件
-if (isset($_POST['search'])){
-    $_SESSION['search'] = $_POST['search']; // テキストボックス
-} else if (isset($_POST['sort'])){
-    $_SESSION['sort'] = $_POST['sort']; // セレクトボックス
-} else if (isset($_POST['trend'])){
-    $_SESSION['trend'] = $_POST['trend']; // ラジオボタン
-}
+// 検索条件（後でコメント外す）
+// if (isset($_POST['search'])){
+//     $_SESSION['search'] = $_POST['search']; // テキストボックス
+// } else if (isset($_POST['sort'])){
+//     $_SESSION['sort'] = $_POST['sort']; // セレクトボックス
+// } else if (isset($_POST['trend'])){
+//     $_SESSION['trend'] = $_POST['trend']; // ラジオボタン
+// }
 
 // 検索条件に変更があれば対応させる処理
 if (isset($_SESSION['search'])){
@@ -68,6 +72,7 @@ if(isset($_POST['btn_seller'])){
 //     exit;
 // }
 
-// var_dump($line);
+// var_dump($conditions);
+var_dump($line);
 
 require_once './tpl/product.php';
