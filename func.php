@@ -20,8 +20,10 @@
  * 商品一覧画面でしか使えないクエリを組み立てる関数（変数名：assemb_get_column_order($table,$conditions)）
  * 商品一覧画面でしか使えない関数（変数名：get_column_order($link,$table,$column,$id)）
  * 並び替え条件の取得（変数名：which_sort($value)）
- * 複数条件で取得するクエリを組み立てる関数（変数名：assemb_get_column_multiple_condition()）
- * 複数条件で取得する関数（変数名：get_column_multiple_condition()）
+ * 複数条件で取得するクエリを組み立てる関数（変数名：assemb_get_column_multiple_condition($table,$conditions,$product_name)）
+ * 複数条件で取得する関数（変数名：get_column_multiple_condition($link,$table,$conditions,$product_name)）
+ * 評価するためのクエリを組み立てるする関数（変数名：assemb_evaluate($table,$flg,$message)）
+ * 評価する関数（変数名：evaluate($link,$table,$flg,$message)）
  * ------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -258,4 +260,72 @@ function get_column_multiple_condition($link,$table,$conditions,$product_name){
         $list[] = $row;
     }
     return $list;
+}
+
+/* 
+* 概要：評価を書き込むクエリを組み立てる関数（評価画面で使用）
+* （※ 評価「良かった」を1、「残念だった」を9とする）
+* 戻り値：SQL文
+*/
+function assemb_evaluate($table,$flg,$message){
+    $query = "UPDATE ".$table." SET ";
+    if(isset($flg)){
+        $query .= "evaluate = ";
+    }
+    if(isset($message)){
+        $query .= "evaluate_msg = ";
+    }
+    return $query;
+}
+
+/* 
+* 概要：評価を書き込む関数（評価画面で使用）
+* 戻り値：true/false
+*/
+function evaluate($link,$table,$flg,$message){
+    $query = assemb_get_column_multiple_condition($table,$conditions,$product_name);
+    $result = mysqli_query($link,$query);
+    return $result;
+}
+
+
+
+
+
+
+/* 
+* 概要：会員登録するクエリを組み立てる関数（会員登録確認画面で使用）
+* 戻り値：SQL文
+*/
+function assemb_evaluate($table,$input_entry_data,$input_entry_label){
+    $count = count($input_entry_label);
+    $query = "INSERT INTO ".$table." ( ";
+    for ($i = 0; $i < $count; $i++) {
+        if($i < $count - 1){
+            $query .= "'".$input_entry_label[$i]."',";
+        } else {
+            $query .= "'".$input_entry_label[$i]."'";
+        }
+    }
+    $query .= " ) VALUES (";
+    for ($i = 0; $i < $count; $i++) {
+        if($i < $count - 1){
+            $query .= "'".$input_entry_data[$i]."',";
+        } else {
+            $query .= "'".$input_entry_data[$i]."'";
+        }
+    }
+    $query .= " )";
+    return $query;
+}
+
+/* 
+* 概要：会員登録する関数（会員登録確認画面で使用）
+* 戻り値：id
+*/
+function evaluate($link,$table,$input_entry_data,$input_entry_label){
+    $query = assemb_get_column_multiple_condition($table,$conditions,$product_name);
+    mysqli_query($link,$query);
+    $id = mysqli_insert_id($link);
+    return $id;
 }
