@@ -10,7 +10,16 @@
 
 <body>
   <main>
-    <article></article>
+    <article>
+      <form action="" method="post">
+        ログインID
+        <input type="text" name="" id="">
+        パスワード
+        <input type="text" name="" id="">
+
+        <button type="submit">ログイン</button>
+      </form>
+    </article>
   </main>
 </body>
 
