@@ -297,7 +297,7 @@ function evaluate($link,$table,$flg,$message){
 * 概要：会員登録するクエリを組み立てる関数（会員登録確認画面で使用）
 * 戻り値：SQL文
 */
-function assemb_evaluate($table,$input_entry_data,$input_entry_label){
+function _assemb_evaluate($table,$input_entry_data,$input_entry_label){
     $count = count($input_entry_label);
     $query = "INSERT INTO ".$table." ( ";
     for ($i = 0; $i < $count; $i++) {
@@ -323,7 +323,7 @@ function assemb_evaluate($table,$input_entry_data,$input_entry_label){
 * 概要：会員登録する関数（会員登録確認画面で使用）
 * 戻り値：id
 */
-function evaluate($link,$table,$input_entry_data,$input_entry_label){
+function _evaluate($link,$table,$input_entry_data,$input_entry_label){
     $query = assemb_get_column_multiple_condition($table,$conditions,$product_name);
     mysqli_query($link,$query);
     $id = mysqli_insert_id($link);
