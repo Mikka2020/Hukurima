@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,oBAAI;AACZ,OAAO,CAAC,kBAAI",
+    "sources": [
+        "../sass/product_detail.scss"
+    ],
+    "names": [],
+    "file": "product_detail.css"
+}
