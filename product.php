@@ -73,6 +73,6 @@ if(isset($_POST['btn_seller'])){
 // }
 
 // var_dump($conditions);
-var_dump($line);
+// var_dump($line);
 
 require_once './tpl/product.php';
