@@ -10,105 +10,79 @@
 
 <body>
   <div id="field">
-    <!-- ヘッター -->
+    <header></header>
+    <main>
 
-    <!-- ヘッター終了 -->
+      <!-- 検索エリア  -->
+      <div id="search">
+        <ul>
+          <li>
+            <form method="get" action="product.php">
+              <input type="text" id="input_box" placeholder="商品を検索......" />
+              <button type="submit" name="search_flag" value="on">
+                &#x1f50d;
+              </button>
+            </form>
+          </li>
 
-    <!-- 検索エリア  -->
-    <div id="serch">
-      <ul>
-        <li>
-          <form method="get" action="product.php">
-            <input type="text" id="input_box" placeholder="商品を検索......" />
-            <button type="submit" name="serch_flag" value="on">
-              &#x1f50d;
-            </button>
-          </form>
-        </li>
-
-        <li>
-          <select name="sort" id="sort">
-            <option value="">選択してください</option>
-            <option value="high_price">価格の高い順</option>
-            <option value="low_price">価格の安い順</option>
-            <option value="user_recommend">ユーザーのオススメ</option>
-            <option value="listing_date_">出品日の新しい</option>
-            <option value="listing_date_">出品日の古い</option>
-          </select>
-        </li>
-      </ul>
-    </div>
-    <!-- 検索エリア終了 -->
-
-    <!-- トレンドエリア -->
-    <div id="trend">
-      <ol>
-        <li>トレンド　</li>
-        <li class="trend_word"><a href="">コート</a></li>
-        <li class="trend_word"><a href="">ニット</a></li>
-        <li class="trend_word"><a href="">ブーツ</a></li>
-        <li class="trend_word"><a href="">冬服</a></li>
-      </ol>
-    </div>
-    <!-- トレンドエリア終了 -->
-    <br />
-    <!-- 商品一覧 -->
-    <div id="product">
-      <div class="product_area">
-        <p>
-          <img class="woman_img" src="../img/influencer.jpg" alt="インフルエンサー" />インフルエンサー
-        </p>
-        <p>
-          <img class="product_item" src="../img/product1.jpg" alt="商品" width="400" height="400" />
-        </p>
-        <p class="product_explanation">
-          アシメレースアップリボンニッット（長袖）
-        </p>
-        <p class="product_explanation">￥3,600</p>
+          <li>
+            <select name="sort" id="sort">
+              <option value="">選択してください</option>
+              <option value="high_price">価格の高い順</option>
+              <option value="low_price">価格の安い順</option>
+              <option value="user_recommend">ユーザーのオススメ</option>
+              <option value="listing_date_">出品日の新しい</option>
+              <option value="listing_date_">出品日の古い</option>
+            </select>
+          </li>
+        </ul>
       </div>
+      <!-- 検索エリア終了 -->
 
-      <div class="product_area">
-        <p>
-          <img class="woman_img" src="../img/woman2.jpg" alt="aoi324" />aoi324
-        </p>
-        <p>
-          <img class="product_item" src="../img/product2.jpg" alt="商品" width="400" height="400" />
-        </p>
-        <p class="product_explanation">シングルプレスト フード付きコート</p>
-        <p class="product_explanation">￥3,950</p>
+      <!-- トレンドエリア -->
+      <div id="trend">
+        <ul>
+          <li>トレンド</li>
+          <?php foreach($tags as $tag): ?>
+          <li class="trend_word">
+            <a href=""><?php echo $tag; ?></a> <!-- タグ名 -->
+          </li>
+          <?php endforeach; ?>
+        </ul>
       </div>
+      <!-- トレンドエリア終了 -->
 
-      <div class="product_area">
-        <p>
-          <img class="woman_img" src="../img/woman3.jpg" alt="sakura440" />sakura440
-        </p>
-        <p>
-          <img class="product_item" src="../img/product3.jpg" alt="商品" width="400" height="400" />
-        </p>
-        <p class="product_explanation">
-          レイヤード風カジュアルラウンドネック
-        </p>
-        <p class="product_explanation">￥2,200</p>
+      <br />
+      <!-- 商品一覧 -->
+      <div id="product">
+
+        <?php foreach($products_arr as $product): ?>
+        <div class="product_area">
+          <p>
+            <img class="product_item"
+              src="./img/users/<?php echo $product['会員id']; ?>/products/<?php echo $product['商品id'] ?>/<?php $product['商品画像名']; ?>"
+              alt="商品" width="400" height="400" /> <!-- 商品画像 -->
+          </p>
+          <p class="product_explanation">
+            <?php echo $product['price']; ?>
+            <!-- 値段 -->
+          </p>
+          <p class="product_explanation">
+
+            <img class="woman_img"
+              src="./img/users/<?php echo $product['会員id']; ?>/prof/<?php echo $product['プロフィール画像名'] ?>" alt="プロフィール画像"
+              width="32px" height="32px" /> <!-- プロフィール画像 -->
+            <?php echo $product['']; ?>
+            <!-- 会員名 -->
+          </p>
+        </div>
+        <?php endforeach; ?>
+
       </div>
+      <!-- 商品一覧終了 -->
+    </main>
 
-      <div class="product_area">
-        <p>
-          <img class="woman_img" src="../img/woman4.jpg" alt="siho1027" />siho1027
-        </p>
-        <p>
-          <img class="product_item" src="../img/product4.jpg" alt="商品" width="400" height="400" />
-        </p>
-        <p class="product_explanation">
-          ランタンスリーブ＋スカート セットアップ
-        </p>
-        <p class="product_explanation">￥2,800</p>
-      </div>
-    </div>
-    <!-- 商品一覧終了 -->
-
-    <!-- フッター -->
-
-    <!-- フッター終了 -->
+    <footer></footer>
   </div>
 </body>
 
