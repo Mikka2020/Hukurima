@@ -43,11 +43,11 @@
       <div id="trend">
         <ul>
           <li>トレンド</li>
-          <?php foreach($tags as $tag): ?>
+          <!-- <?php foreach($tags as $tag): ?> -->
           <li class="trend_word">
-            <a href=""><?php echo $tag; ?></a> <!-- タグ名 -->
+            <a href=""><?php echo $tag; ?></a> タグ名
           </li>
-          <?php endforeach; ?>
+          <!-- <?php endforeach; ?> -->
         </ul>
       </div>
       <!-- トレンドエリア終了 -->
@@ -56,11 +56,11 @@
       <!-- 商品一覧 -->
       <div id="product">
 
-        <?php foreach($products_arr as $product): ?>
+        <!-- <?php foreach($line as $product): ?> -->
         <div class="product_area">
           <p>
             <img class="product_item"
-              src="./img/users/<?php echo $product['会員id']; ?>/products/<?php echo $product['商品id'] ?>/<?php $product['商品画像名']; ?>"
+              src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
               alt="商品" width="400" height="400" /> <!-- 商品画像 -->
           </p>
           <p class="product_explanation">
@@ -70,13 +70,13 @@
           <p class="product_explanation">
 
             <img class="woman_img"
-              src="./img/users/<?php echo $product['会員id']; ?>/prof/<?php echo $product['プロフィール画像名'] ?>" alt="プロフィール画像"
-              width="32px" height="32px" /> <!-- プロフィール画像 -->
-            <?php echo $product['']; ?>
+              src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+              alt="プロフィール画像" width="32px" height="32px" /> <!-- プロフィール画像 -->
+            <?php echo $product['user_name']; ?>
             <!-- 会員名 -->
           </p>
         </div>
-        <?php endforeach; ?>
+        <!-- <?php endforeach; ?> -->
 
       </div>
       <!-- 商品一覧終了 -->
