@@ -61,7 +61,7 @@
           <p>
             <img class="product_item"
               src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
-              alt="商品" width="400" height="400" /> <!-- 商品画像 -->
+              alt="商品" width="160px" height="160px" /> <!-- 商品画像 -->
           </p>
           <p class="product_explanation">
             <?php echo $product['price']; ?>
