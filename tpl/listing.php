@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>出品画面</title>
   <link rel="stylesheet" href="./css/core_style.css">
-  <link rel="stylesheet" href="./css/listing_style.css">
+  <link rel="stylesheet" href="./css/listing.css">
 </head>
 
 <body>
