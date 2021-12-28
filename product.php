@@ -74,5 +74,6 @@ if(isset($_POST['btn_seller'])){
 
 // var_dump($conditions);
 // var_dump($line);
+// $tags = ['アウター', 'TheNorthFace', 'パーカー', 'DIESEL'];
 
 require_once './tpl/product.php';
