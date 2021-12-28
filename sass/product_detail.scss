@@ -1,2 +1,14 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
+.product-detail {
+  ul {
+    display: flex;
+    li {
+      width: 50%;
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}
