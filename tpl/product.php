@@ -9,81 +9,92 @@
 </head>
 
 <body>
-  <div id="field">
-    <header></header>
-    <main>
-
-      <!-- 検索エリア  -->
-      <div id="search">
-        <ul>
-          <li>
-            <form method="get" action="product.php">
-              <input type="text" id="input_box" placeholder="商品を検索......" />
-              <button type="submit" name="search_flag" value="on">
-                &#x1f50d;
-              </button>
-            </form>
-          </li>
-
-          <li>
-            <select name="sort" id="sort">
-              <option value="">選択してください</option>
-              <option value="high_price">価格の高い順</option>
-              <option value="low_price">価格の安い順</option>
-              <option value="user_recommend">ユーザーのオススメ</option>
-              <option value="listing_date_">出品日の新しい</option>
-              <option value="listing_date_">出品日の古い</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-      <!-- 検索エリア終了 -->
-
+  <header></header>
+  <main>
+    <h1>フクリマ</h1>
+    <article id="field">
+      <h2>商品一覧</h2>
       <!-- トレンドエリア -->
-      <div id="trend">
+      <section id="trend">
+        <h3>トレンド</h3>
         <ul>
-          <li>トレンド</li>
-          <!-- <?php foreach($tags as $tag): ?> -->
-          <li class="trend_word">
-            <a href=""><?php echo $tag; ?></a> タグ名
+          <?php foreach($tags as $tag): ?>
+          <li class="trend-tag">
+            <a href="./product.php?search=<?php echo $tag; ?>">
+              <?php echo $tag; ?>
+            </a>
           </li>
-          <!-- <?php endforeach; ?> -->
+          <?php endforeach; ?>
         </ul>
-      </div>
+      </section>
       <!-- トレンドエリア終了 -->
 
-      <br />
+      <!-- 検索エリア  -->
+      <section id="search">
+        <h3>検索</h3>
+
+        <!-- <form action="product.php" method="get">
+          <input type="text" id="input_box" placeholder="商品を検索......" />
+          <button type="submit" name="search_flag" value="on">
+            検索
+          </button>
+        </form> -->
+
+      </section>
+      <!-- 検索エリア終了 -->
+
+
       <!-- 商品一覧 -->
-      <div id="product">
+      <select name="sort" id="sort" class="sort">
+        <option value="">出品日の新しい順</option>
+        <option value="high_price">価格の高い順</option>
+        <option value="low_price">価格の安い順</option>
+        <option value="user_recommend">ユーザーのオススメ</option>
+        <option value="listing_date_">出品日の新しい</option>
+        <option value="listing_date_">出品日の古い</option>
+      </select>
+      <section id="product">
+        <h3>商品一覧</h3>
 
-        <!-- <?php foreach($line as $product): ?> -->
-        <div class="product_area">
-          <p>
-            <img class="product_item"
-              src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
-              alt="商品" width="160px" height="160px" /> <!-- 商品画像 -->
-          </p>
-          <p class="product_explanation">
-            <?php echo $product['price']; ?>
+
+        <?php foreach($line as $product): ?>
+        <div class="product-area">
+          <h4><?php echo $product['product_name']; ?></h4>
+          <div class="product-item">
+            <a href="./product_detail.php?id=<?php echo $product['id']; ?>">
+              <img class="product-item"
+                src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
+                alt="商品" width="160px" height="160px" /> <!-- 商品画像 -->
+            </a>
+          </div>
+
+          <div class="product-explain">
+            <p class="price">¥<?php echo $product['price']; ?></p>
             <!-- 値段 -->
-          </p>
-          <p class="product_explanation">
 
-            <img class="woman_img"
-              src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
-              alt="プロフィール画像" width="32px" height="32px" /> <!-- プロフィール画像 -->
-            <?php echo $product['user_name']; ?>
-            <!-- 会員名 -->
-          </p>
+            <p class="profile">
+              <a href="./profile.php?user_id=<?php echo $product['user_id']; ?>">
+                <img class="prof-img"
+                  src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+                  alt="プロフィール画像" width="16px" height="16px" /> <!-- プロフィール画像 -->
+                <?php echo $product['user_name']; ?>
+                <!-- 会員名 -->
+              </a>
+              <img src="./img/icon/heart-regular.svg" alt="いいねアイコン" width="16px" height="">
+            </p>
+
+          </div>
+
         </div>
-        <!-- <?php endforeach; ?> -->
+        <?php endforeach; ?>
 
-      </div>
-      <!-- 商品一覧終了 -->
-    </main>
+      </section> <!-- 商品一覧終了 -->
+    </article>
+  </main>
 
-    <footer></footer>
-  </div>
+  <footer>
+    <?php require_once('./footer.php'); ?>
+  </footer>
 </body>
 
 </html>
