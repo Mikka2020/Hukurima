@@ -26,6 +26,8 @@
  * 評価する関数（変数名：evaluate($link,$table,$flg,$message)）
  * 会員登録するためのクエリを組み立てるする関数（変数名：assemb_entry($table,$input_entry_data,$input_entry_label)）
  * 会員登録する関数（変数名：entry($link,$table,$input_entry_data,$input_entry_label)）
+ * ログインするためのクエリを組み立てるする関数（変数名：assemb_get_id($table,$login_id,$password)）
+ * ログインする関数（変数名：get_id($link,$table,$login_id,$password)）
  * ------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -322,6 +324,31 @@ function assemb_entry($table,$input_entry_data,$input_entry_label){
 */
 function entry($link,$table,$input_entry_data,$input_entry_label){
     $query = assemb_entry($table,$conditions,$product_name);
+    mysqli_query($link,$query);
+    $id = mysqli_insert_id($link);
+    return $id;
+}
+
+/* 
+* 概要：ログインするクエリを組み立てる関数（ログイン画面で使用）
+* 戻り値：SQL文
+*/
+function assemb_get_id($table,$login_id,$password){
+    $query = "SELECT * FROM ";
+    $query .= $table;
+    $query .= " WHERE login_id = "
+    $query .= $login_id;
+    $query .= " and password = "
+    $query .= $password;
+    return $query;
+}
+
+/* 
+* 概要：ログインする関数（ログイン画面で使用）
+* 戻り値：id
+*/
+function get_id($link,$table,$login_id,$password){
+    $query = assemb_get_id($table,$login_id,$password);
     mysqli_query($link,$query);
     $id = mysqli_insert_id($link);
     return $id;
