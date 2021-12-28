@@ -1,11 +1,11 @@
 @import url("./destyle.css");
 @import url("./style.css");
-.btn_msg {
+.msg-btn {
   border: solid 1px #333;
   width: 100%;
   padding: 5px 0;
 }
-.btn_eval {
+.eval-btn {
   padding: 10px 0;
   background-color: #fe9900;
   color: #fff;
@@ -15,36 +15,42 @@
   background-color: #fff;
   padding: 10px;
 }
-.progress-bar {
-  position: static;
-  left: 0;
+
+.progress-bar-area {
+  margin-top: 3em;
+  .progress-bar {
+    li {
+      width: 20%;
+      text-align: center;
+    }
+    li::before {
+      background-color: #fff;
+      border: solid 3px #fd819d;
+      border-radius: 100%;
+      content: "";
+      padding: 8px;
+      position: absolute;
+      top: -1.5rem;
+      margin-left: -0.5rem;
+    }
+  }
+  .progress-bar::before {
+    background-color: #fd819d;
+    content: "";
+    padding: 3px 32%;
+    position: absolute;
+    top: -16px;
+  }
+  .send-status {
+    font-size: 8px;
+  }
+  ul {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    li {
+      width: 20%;
+      text-align: center;
+    }
+  }
 }
-.in-circle {
-  background-color: #fd819d;
-  padding: 0.5em 1em;
-  border-radius: 50%;
-  max-width: 0.5rem;
-  max-height: 0.5rem;
-  margin-right: 3rem;
-}
-.circle-area {
-  position: relative;
-}
-.circle-area::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10rem;
-  height: 100%;
-  display: block;
-  border-top: 10px solid #fd819d;
-}
-// .in-bar {
-//   background-color: #fd819d;
-//   padding: 0px 5rem;
-//   height: 3px;
-//   position: relative;
-//   left: 0;
-//   top: -0.7rem;
-// }
