@@ -8,6 +8,9 @@
  * 変更日：2021/12/25
  * 追加内容：全体的な処理（正常処理のみ）
  * ------------------------------------------------------------------------------------------------------------------------
+ * 変更日：2021/12/28
+ * 追加内容：コメントアウト
+ * ------------------------------------------------------------------------------------------------------------------------
 */
 
 
@@ -28,22 +31,22 @@ $table = 'member';
 // }
 
 // セッションを取得
-$input_entry_data = $_SESSION['input_entry_data'];
+// $input_entry_data = $_SESSION['input_entry_data'];
 
 // 全項目が入力されていた時の処理
-if(isset(登録ボタンが押されたとき)){
-    // 登録処理
-    $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-    mysqli_set_charset($link , 'utf8');
-    $id = entry($link,$table,$input_entry_data,$input_entry_label);
-    mysqli_close($link);
+// if(isset(登録ボタンが押されたとき)){
+//     // 登録処理
+//     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+//     mysqli_set_charset($link , 'utf8');
+//     $id = entry($link,$table,$input_entry_data,$input_entry_label);
+//     mysqli_close($link);
 
-    setcookie('id',$id,time()3600*24*7)
-    if(isset($_COOKIE['id'])){
-        header ('location:./entry_complete.php');
-        exit;
-    }
-}
+//     setcookie('id',$id,time()3600*24*7);
+//     if(isset($_COOKIE['id'])){
+//         header ('location:./entry_complete.php');
+//         exit;
+//     }
+// }
 
 // 戻るボタンが押された時の処理(name="back")
 if(isset($_POST['back'])){
