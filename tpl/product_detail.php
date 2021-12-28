@@ -54,7 +54,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="product-detail">
         <h4>商品詳細</h4>
         <ul>
           <li>カテゴリ</li>
@@ -87,12 +87,12 @@
       </section>
     </article>
 
-    <form action="" method="post">
-      <button type="submit">購入する</button>
-    </form>
-
   </main>
-  <footer></footer>
+  <footer>
+    <form action="" method="post">
+      <button type="submit" class="btn">購入する</button>
+    </form>
+  </footer>
 </body>
 
 </html>
