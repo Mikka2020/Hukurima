@@ -24,6 +24,8 @@
  * 複数条件で取得する関数（変数名：get_column_multiple_condition($link,$table,$conditions,$product_name)）
  * 評価するためのクエリを組み立てるする関数（変数名：assemb_evaluate($table,$flg,$message)）
  * 評価する関数（変数名：evaluate($link,$table,$flg,$message)）
+ * 会員登録するためのクエリを組み立てるする関数（変数名：assemb_entry($table,$input_entry_data,$input_entry_label)）
+ * 会員登録する関数（変数名：entry($link,$table,$input_entry_data,$input_entry_label)）
  * ------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -288,16 +290,11 @@ function evaluate($link,$table,$flg,$message){
     return $result;
 }
 
-
-
-
-
-
 /* 
 * 概要：会員登録するクエリを組み立てる関数（会員登録確認画面で使用）
 * 戻り値：SQL文
 */
-function _assemb_evaluate($table,$input_entry_data,$input_entry_label){
+function assemb_entry($table,$input_entry_data,$input_entry_label){
     $count = count($input_entry_label);
     $query = "INSERT INTO ".$table." ( ";
     for ($i = 0; $i < $count; $i++) {
@@ -323,8 +320,8 @@ function _assemb_evaluate($table,$input_entry_data,$input_entry_label){
 * 概要：会員登録する関数（会員登録確認画面で使用）
 * 戻り値：id
 */
-function _evaluate($link,$table,$input_entry_data,$input_entry_label){
-    $query = assemb_get_column_multiple_condition($table,$conditions,$product_name);
+function entry($link,$table,$input_entry_data,$input_entry_label){
+    $query = assemb_entry($table,$conditions,$product_name);
     mysqli_query($link,$query);
     $id = mysqli_insert_id($link);
     return $id;
