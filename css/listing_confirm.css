@@ -1,0 +1,27 @@
+@import url("./destyle.css");
+@import url("./style.css");
+.product-detail ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-detail ul li {
+  width: 50%;
+}
+
+.tag-area ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag-area ul li {
+  border: solid 1px #000;
+  border-radius: 16px;
+  padding: 3px 6px;
+  margin: 4px;
+}
+/*# sourceMappingURL=listing_confirm.css.map */
