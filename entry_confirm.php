@@ -28,22 +28,22 @@ $table = 'member';
 // }
 
 // セッションを取得
-$input_entry_data = $_SESSION['input_entry_data'];
+// $input_entry_data = $_SESSION['input_entry_data'];
 
 // 全項目が入力されていた時の処理
-if(isset(登録ボタンが押されたとき)){
-    // 登録処理
-    $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-    mysqli_set_charset($link , 'utf8');
-    $id = entry($link,$table,$input_entry_data,$input_entry_label);
-    mysqli_close($link);
+// if(isset(登録ボタンが押されたとき)){
+//     // 登録処理
+//     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+//     mysqli_set_charset($link , 'utf8');
+//     $id = entry($link,$table,$input_entry_data,$input_entry_label);
+//     mysqli_close($link);
 
-    setcookie('id',$id,time()3600*24*7)
-    if(isset($_COOKIE['id'])){
-        header ('location:./entry_complete.php');
-        exit;
-    }
-}
+//     setcookie('id',$id,time()3600*24*7);
+//     if(isset($_COOKIE['id'])){
+//         header ('location:./entry_complete.php');
+//         exit;
+//     }
+// }
 
 // 戻るボタンが押された時の処理(name="back")
 if(isset($_POST['back'])){

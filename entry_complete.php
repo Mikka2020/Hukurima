@@ -28,9 +28,9 @@ require_once './func.php';
 // }
 
 // 全項目が入力されていた時の処理
-if(isset($_COOKIE['id'])){
-    // 登録完了メッセージ表示処理
-}
+// if(isset($_COOKIE['id'])){
+//     登録完了メッセージ表示処理
+// }
 
 require_once './tpl/entry_complete.php';
 ?>

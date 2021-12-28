@@ -50,7 +50,7 @@ if(isset($_POST['listing'])){
 //     exit;
 // }
 
-var_dump($err_msg);
+// var_dump($err_msg);
 require_once './tpl/listing.php';
 
 
