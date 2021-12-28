@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>フクリマ 出品履歴一覧</title>
   <link rel="stylesheet" href="./css/listed_history_list.css">
+  <title>フクリマ 出品履歴一覧</title>
 </head>
 
 <body>
@@ -25,7 +25,8 @@
     <!-- ここから出品履歴一覧 -->
     <article class="products_area">
       <section class="product">
-        <p class="product_img"><img src="./img/users/2/products/1/product1.jpg" alt="商品画像" width="70px" height="70px">
+        <p class="product_img">
+          <img src="./img/users/2/products/1/アシメレースアップリボンニット_1.jpg" alt="商品画像" width="70px" height="70px">
         </p>
         <!-- <p class="sold_mark"><img src="../img/listed_history_list/SOLDマーク.png" alt="購入済みマーク"></p> -->
         <ul class="product_info">
@@ -56,7 +57,7 @@
       </section>
 
       <section class="product">
-        <p class="product_img"><img src="./img/users/2/products/2/product2.jpg" alt="商品画像" width="70px" height="70px">
+        <p class="product_img"><img src="./img/users/2/products/2/グレーコート_1.jpg" alt="商品画像" width="70px" height="70px">
         </p>
         <!-- <p class="sold_mark"><img src="../img/listed_history_list/SOLDマーク.png" alt="購入済みマーク"></p> -->
         <ul class="product_info">
@@ -121,7 +122,7 @@
 
     </article><!-- ここまで出品履歴一覧 -->
 
-    <p><img src="./img/icon/ハンガー.png" alt="ハンガー画像"></p>
+    <p class="center"><img src="./img/icon/ハンガー.png" alt="ハンガー画像"></p>
 
   </main>
 
