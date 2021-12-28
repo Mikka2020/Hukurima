@@ -13,36 +13,44 @@
   <header></header>
   <main>
     <img
-      src="./img/users/<?php echo $product['会員id']; ?>/products/<?php echo $product['商品id']; ?>/<?php echo $product['商品画像名']; ?>"
-      alt="商品画像" width="" height=""> <!-- 商品画像 -->
-    <img src="" alt="その他の商品画像">
+      src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
+      alt="商品画像" width="360px" height="420px"> <!-- 商品画像 -->
     <ul>
-      <?php foreach($products as $product): ?>
-      <li><img src="" alt="その他の商品画像"></li> <!-- その他の商品画像-->
-      <?php endforeach; ?>
+      <?php // foreach($product_images as $product/image): ?>
+      <li>
+        <img
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
+          alt="その他の商品画像" width="64px" height="64px">
+      </li> <!-- その他の商品画像のサムネイルをアップロードされた枚数分表示 -->
+      <?php // endforeach; ?>
     </ul>
     <article>
       <section>
-        <h3><?php echo $product['商品名']; ?></h3>
+        <h3><?php echo $product['product_name']; ?></h3>
         <ul>
-          <li><?php echo $product['ブランド名']; ?></li>
-          <li><?php echo $product['値段'] ?></li>
+          <li><?php echo $product['product_bland']; ?></li>
+          <li>¥<?php echo $product['price'] ?></li>
         </ul>
         <form action="" method="post">
 
-          <button><img src="./img/icon/" alt="いいねアイコン" width="" height=""><?php echo $product['いいね数']; ?></button>
-          <button><img src="./img/icon/" alt="コメントアイコン" width="" height=""><?php echo $product['コメント数']; ?></button>
+          <button><img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width=""
+              height=""><?php echo $product['favorite']; ?></button>
+          <button><img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width=""
+              height=""><?php echo  5; // $product['comment']; ?></button>
         </form>
 
       </section>
       <section>
         <h4>商品説明</h4>
-        <p><?php echo $product['商品説明テキスト']; ?></p>
-        <p><img src="" alt="時計アイコン" width="" height=""><?php echo $product['商品出品時間']; ?></p>
+        <p><?php echo $product['product_explan']; ?></p>
+        <p>
+          <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
+          <?php echo $product['listed_at']; ?>
+        </p>
         <ul>
-          <?php foreach($tags as $tag): ?>
-          <li><?php echo $tag; ?></li>
-          <?php endforeach; ?>
+          <?php // foreach($tags as $tag): ?>
+          <li><?php // echo $tag; ?></li>
+          <?php // endforeach; ?>
         </ul>
       </section>
 
@@ -50,23 +58,31 @@
         <h4>商品詳細</h4>
         <ul>
           <li>カテゴリ</li>
-          <li></li>
+          <li><?php echo $product['category']; ?></li>
         </ul>
         <ul>
-          <li>商品の詳細</li>
-          <li></li>
+          <li>商品の状態</li>
+          <li><?php echo $product['product_statu'] == 0 ? '目立った傷や汚れ無し' : '不良'; ?></li>
         </ul>
         <ul>
-          <li>クリーニングオプション</li>
-          <li></li>
+          <li>配送までの日数</li>
+          <li><?php echo ''; ?></li>
         </ul>
         <ul>
-          <li>集荷オプション</li>
-          <li></li>
+          <li>ハンガーボックス</li>
+          <li><?php echo 'あり'; ?></li>
+        </ul>
+        <ul>
+          <li>クリーニング</li>
+          <li><?php echo '可'; ?></li>
         </ul>
         <ul>
           <li>出品者</li>
-          <li></li>
+          <li>
+            <img src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+              alt="プロフィール画像" width="32px" height="32px">
+            <?php echo $product['user_name']; ?>
+          </li>
         </ul>
       </section>
     </article>
