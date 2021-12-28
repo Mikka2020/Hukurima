@@ -1,3 +1,17 @@
 @import url("./destyle.css");
 @import url("./style.css");
+.product-detail ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-detail ul li {
+  width: 50%;
+}
+
+.product-detail ul li img {
+  border-radius: 100%;
+}
 /*# sourceMappingURL=product_detail.css.map */
