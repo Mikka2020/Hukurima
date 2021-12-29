@@ -91,9 +91,15 @@ function get_column($link,$table,$column,$id){
 * 概要：テーブルから全件取得するクエリを組み立てる関数（購入画面で使用）
 * 戻り値：SQL文
 */
-function assemb_get_all($table){
+function assemb_get_all($table,$column,$where){
     $query = "SELECT * FROM ";
     $query .= $table;
+    if($where != ''){
+        $query .= " WHERE ";
+        $query .= "".$column." = '";
+        $query .= "".$where."'";
+    }
+    var_dump($query);
     return $query;
 }
 
@@ -101,14 +107,14 @@ function assemb_get_all($table){
 * 概要：テーブルから全件取得するクエリを組み立てる関数（購入画面で使用）
 * 戻り値：連想配列
 */
-function get_all($link,$table){
+function get_all($link,$table,$column,$where){
     $list = [];
-    $query = assemb_get_all($table);
+    $query = assemb_get_all($table,$column,$where);
     $result = mysqli_query($link,$query);
     while($row = mysqli_fetch_assoc($result)){
         $list[] = $row;
     }
-    return $row;
+    return $list;
 }
 
 /* 
