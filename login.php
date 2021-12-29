@@ -36,7 +36,7 @@ if(isset($_POST['login_btn'])){
     mysqli_close($link);
 
     if(isset($id)){
-        setcookie('login_statu',$user_id,time() + 3600*24*7);
+        setcookie('login_status',$user_id,time() + 3600*24*7);
         header ('location:./entry_confirm.php');
         exit;
     }
