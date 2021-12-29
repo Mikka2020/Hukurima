@@ -33,9 +33,9 @@
         </ul>
         <form action="" method="post">
 
-          <button><img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width=""
+          <button><img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px"
               height=""><?php echo $product['favorite']; ?></button>
-          <button><img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width=""
+          <button><img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px"
               height=""><?php echo  5; // $product['comment']; ?></button>
         </form>
 
