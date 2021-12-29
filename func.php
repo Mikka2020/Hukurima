@@ -336,9 +336,9 @@ function entry($link,$table,$input_entry_data,$input_entry_label){
 function assemb_get_id($table,$login_id,$password){
     $query = "SELECT * FROM ";
     $query .= $table;
-    $query .= " WHERE login_id = "
+    $query .= " WHERE login_id = ";
     $query .= $login_id;
-    $query .= " and password = "
+    $query .= " and password = ";
     $query .= $password;
     return $query;
 }
