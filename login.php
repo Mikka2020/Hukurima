@@ -23,12 +23,12 @@ $column = 'id';
 
 // ユーザID、パスワードの取得
 if(isset($_POST['ログインボタンのクラス名'])){
-    $login_id = $_POST['クラス名'];
-    $password = $_POST['クラス名'];
+    $login_id = $_POST['login_id'];
+    $password = $_POST['password'];
 }
 
-// 購入ボタンが押された時の処理
-if(isset($_POST['buy_btn'])){
+// ログインボタンが押された時の処理
+if(isset($_POST['login_btn'])){
     // ログイン処理
     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
