@@ -1,2 +1,25 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
+.detail_info {
+  ul {
+    display: flex;
+    li {
+      width: 50%;
+    }
+  }
+}
+
+.delete_btn {
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+}
+.edit_btn {
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fe6900;
+  color: #fff;
+}
