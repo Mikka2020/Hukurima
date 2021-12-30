@@ -8,8 +8,8 @@
  * 変更日：2021/12/16
  * 追加内容：一連の流れを記述
  * ------------------------------------------------------------------------------------------------------------------------
- * 変更日：2021/12/28
- * 追加内容：コメントアウト
+ * 変更日：2021/12/31
+ * 追加内容：画像ファイル関係（送信->フォルダ作成->画像登録）
  * ------------------------------------------------------------------------------------------------------------------------
  */
 
@@ -23,6 +23,7 @@ $input_listing_data = ['product_name' => '' , 'product_explan' => '' , 'hash_tag
 $err_msg = ['product_name' => '' , 'product_explan' => '' , 'hash_tag' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '']; // エラー出力用配列
 $input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'hash_tag' => 'ハッシュタグ' , 'category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格']; // 添字に対するラベル名がセットされている配列
 $array_check_value = ['商品名','商品説明','ハッシュタグ','価格'];
+
 
 // 入力値チェック（出品ボタン）
 if(isset($_POST['listing'])){
@@ -42,10 +43,14 @@ if(isset($_POST['listing'])){
     }
 }
 
+// 画像ファイル取得処理
+// 画像フォルダ作成
+// 画像入れる（登録されてないけど、とりあえずフォルダに入れる）
+
 
 // 下書きボタンが押された時の処理
-// if(){
-    // 下書きボタンが押された時に下書きを保存する処理
+// if(isset($_POST['save_btn'])){
+    
 // }
 
 // 戻るボタンが押された時の処理(name="back")
@@ -53,6 +58,26 @@ if(isset($_POST['listing'])){
 //     header ('location:./');
 //     exit;
 // }
+
+// var_dump($err_msg);
+require_once './tpl/listing.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -71,5 +96,3 @@ if(isset($_POST['listing'])){
 //         }
 //     }
 // }
-
-require_once('./tpl/listing.php');
