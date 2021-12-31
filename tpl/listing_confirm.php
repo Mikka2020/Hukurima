@@ -18,15 +18,6 @@
       <img
         src="./img/users/<?php echo 2; // 会員id ?>/products/<?php echo 1; // 商品id ?>/<?php echo 'アシメレースアップリボンニット'; // 商品名 ?>_1.jpg"
         alt="メイン商品画像" width="360px" height="">
-      <ul>
-        <?php // foreach($images as $image): ?>
-        <li>
-          <img
-            src="./img/users/<?php echo 2; // 会員id ?>/products/<?php echo 1; // 商品id ?>/<?php echo 'アシメレースアップリボンニット'; // 商品名 ?>_1.jpg"
-            alt="その他の商品画像" width="32px" height="32px">
-        </li>
-        <?php // endforeach; ?>
-      </ul>
 
       <section class="product-detail">
         <h3>商品説明</h3>
