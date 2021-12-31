@@ -15,22 +15,19 @@
 
   <header></header>
   <main>
+    <h2>出品履歴詳細</h2>
     <article>
       <img
-        src="./img/users/<?php echo "2"; // 会員id ?>/products/<?php echo "1"; // 商品id ?>/<?php echo "アシメレースアップリボンニット"; // 商品名 ?>_1.jpg"
+        src="./img/users/<?php echo $list['user_id']; // 会員id ?>/products/<?php echo $list['listing_id']; // 商品id ?>/<?php echo $list['product_name']; // 商品名 ?>_1.jpg"
         alt="商品画像1" width="360px" height="">
-
-      <ul>
-        <li><img src="" alt=""></li>
-      </ul>
 
       <!-- 商品情報 -->
       <section>
         <button class="request_btn">購入申請が1件届いています！</button>
-        <h3 class="product_name"><?php echo "アシメレースアップリボンニット(長袖)"; ?></h3>
+        <h3 class="product_name"><?php echo $list['product_name']; ?></h3>
         <ul>
-          <li class="brand_name"><?php echo "LAISSE PASSE"; ?></li>
-          <li class="product_price">¥<?php echo "3,600"; ?></li>
+          <li class="brand_name"><?php echo $list['brand']; ?></li>
+          <li class="product_price">¥<?php echo $list['price']; ?></li>
           <li>
             <ul>
               <li>
@@ -51,9 +48,12 @@
       <h4>商品説明</h4>
       <section class="product_info_area">
         <div>
-          <p class="product_text"><?php echo "2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。合わせやすいのでおすすめです。"; // 商品詳細 ?>
+          <p class="product_text"><?php echo $list['product_explain']; // 商品詳細 ?>
           </p>
-          <p><img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="12px" height=""><?php echo "12時間前"; ?></p>
+          <p>
+            <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="12px" height="">
+            <?php echo $list['listed_at']; // 出品日時 ?>
+          </p>
         </div>
         <div class="tag_area">
           <ul class="tag_ul">
@@ -69,23 +69,23 @@
         <div class="detail_info">
           <ul>
             <li>カテゴリ</li>
-            <li><?php echo "ブラウス"; ?></li>
+            <li><?php echo $list['category']; ?></li>
           </ul>
           <ul>
             <li>商品の状態</li>
-            <li><?php echo "目立った傷や汚れ無し"; ?></li>
+            <li><?php echo $conditions[$list['product_condition']]; ?></li>
           </ul>
           <ul>
             <li>発送までの日数</li>
-            <li><?php echo "2～3日"; ?></li>
+            <li><?php echo $days_to_ship[$list['days_to_ship']]; ?></li>
           </ul>
           <ul>
             <li>クリーニングオプション</li>
-            <li>クリーニング<?php echo "可"; ?></li>
+            <li>クリーニング<?php echo $cleaning[$list['cleaning_flg']]; ?></li>
           </ul>
           <ul>
             <li>集荷オプション</li>
-            <li><?php echo "集荷を申し込む";?></li>
+            <li><?php echo $picking[$list['picking_flg']];?></li>
           </ul>
         </div>
       </section>
