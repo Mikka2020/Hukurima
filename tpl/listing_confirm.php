@@ -65,8 +65,8 @@
       </section>
     </article>
     <form action="" method="post">
-      <button type="submit" class="btn">出品する</button>
-      <button type="submit" class="btn">修正する</button>
+      <button type="submit" name="listing_btn" class="btn">出品する</button>
+      <button type="submit" name="fix_btn" class="btn">修正する</button>
     </form>
   </main>
   <footer></footer>
