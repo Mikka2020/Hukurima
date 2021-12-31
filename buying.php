@@ -50,5 +50,7 @@ if(isset($_POST['buy_btn'])){
 // }
 
 // var_dump($line);
+$product_condition = ['ほぼ新品', '目立った傷や汚れなし', '中古'];
+$days_to_ship = ['1~3日以内', '4~6日以内', '７日間以上'];
 
 require_once './tpl/buying.php';
