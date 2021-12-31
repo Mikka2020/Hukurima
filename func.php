@@ -15,8 +15,8 @@
  * 1レコード取得（変数名：get_column($link,$table,$column,$id)）
  * 全件取得のクエリ組み立て（変数名：assemb_get_all($table)）
  * 全件取得（変数名：get_all($link,$table)）
- * 検索条件１つで取得のクリエの組み立て（変数名：assemb_get_lots_of($table,$column,$id)）
- * 検索条件１つで取得（変数名：get_lots_of($link,$table,$column,$id)）
+ * 検索条件１つで取得のクリエの組み立て（変数名：assemb_get_lots_of($table,$column,$id)）<int型>
+ * 検索条件１つで取得（変数名：get_lots_of($link,$table,$column,$id)）<int型>
  * 商品一覧画面でしか使えないクエリを組み立てる関数（変数名：assemb_get_column_order($table,$conditions)）
  * 商品一覧画面でしか使えない関数（変数名：get_column_order($link,$table,$column,$id)）
  * 並び替え条件の取得（変数名：which_sort($value)）
@@ -28,6 +28,10 @@
  * 会員登録する関数（変数名：entry($link,$table,$input_entry_data,$input_entry_label)）
  * ログインするためのクエリを組み立てるする関数（変数名：assemb_get_id($table,$login_id,$password)）
  * ログインする関数（変数名：get_id($link,$table,$login_id,$password)）
+ * 検索条件１つで取得のクリエの組み立て（変数名：assemb_get_lots_of_string($table,$column,$id)）<string型>
+ * 検索条件１つで取得（変数名：get_lots_of_string($link,$table,$column,$id)）<string型>
+ * 上から5レコード取得のクエリ組み立て（変数名：assemb_get_five_column($table,$column,$id)）
+ * 上から5レコードレコード取得（変数名：get_five_column($link,$table,$column,$id)）
  * ------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -141,7 +145,7 @@ function get_count($link,$table,$column,$id){
 }
 
 /* 
-* 概要：テーブルから条件に合うレコード取得するクエリを組み立てる関数（プロフィール画面で使用）
+* 概要：テーブルから条件に合うレコード取得するクエリを組み立てる関数（プロフィール画面・検索画面で使用）
 * 戻り値：SQL文
 */
 function assemb_get_lots_of($table,$column,$id){
@@ -153,7 +157,7 @@ function assemb_get_lots_of($table,$column,$id){
 }
 
 /* 
-* 概要：テーブルから条件に合うレコード取得する関数（プロフィール画面で使用）
+* 概要：テーブルから条件に合うレコード取得する関数（int型）（プロフィール画面・検索画面で使用）
 * 戻り値：連想配列
 */
 function get_lots_of($link,$table,$column,$id){
@@ -163,7 +167,7 @@ function get_lots_of($link,$table,$column,$id){
     while($row = mysqli_fetch_assoc($result)){
         $list[] = $row;
     }
-    return $row;
+    return $list;
 }
 
 /* 
@@ -233,7 +237,7 @@ function which_sort($value){
 }
 
 /* 
-* 概要：複数条件で取得するクエリを組み立てる関数（検索画面で使用）
+* 概要：複数条件で取得するクエリを組み立てる関数（検索画面で使用する予定でした）
 * 対応レコード：急上昇キーワード -> 'category'
 * 戻り値：SQL文
 */
@@ -259,7 +263,7 @@ function assemb_get_column_multiple_condition($table,$conditions,$product_name){
 }
 
 /* 
-* 概要：複数条件で取得する関数（検索画面で使用）
+* 概要：複数条件で取得する関数（検索画面で使用する予定でした）
 * 戻り値：連想配列
 */
 function get_column_multiple_condition($link,$table,$conditions,$product_name){
@@ -299,7 +303,7 @@ function evaluate($link,$table,$flg,$message){
 }
 
 /* 
-* 概要：会員登録するクエリを組み立てる関数（会員登録確認画面で使用）
+* 概要：会員・検索登録するクエリを組み立てる関数（会員登録確認画面で使用）
 * 戻り値：SQL文
 */
 function assemb_entry($table,$input_entry_data,$input_entry_label){
@@ -307,17 +311,17 @@ function assemb_entry($table,$input_entry_data,$input_entry_label){
     $query = "INSERT INTO ".$table." ( ";
     for ($i = 0; $i < $count; $i++) {
         if($i < $count - 1){
-            $query .= "'".$input_entry_label[$i]."',";
+            $query .= "".$input_entry_label[$i].",";
         } else {
-            $query .= "'".$input_entry_label[$i]."'";
+            $query .= "".$input_entry_label[$i]."";
         }
     }
     $query .= " ) VALUES (";
-    for ($i = 0; $i < $count; $i++) {
-        if($i < $count - 1){
-            $query .= "'".$input_entry_data[$i]."',";
+    for ($j = 0; $j < $count; $j++) {
+        if($j < $count - 1){
+            $query .= "'".$input_entry_data[$input_entry_label[$j]]."',";
         } else {
-            $query .= "'".$input_entry_data[$i]."'";
+            $query .= "'".$input_entry_data[$input_entry_label[$j]]."'";
         }
     }
     $query .= " )";
@@ -325,11 +329,11 @@ function assemb_entry($table,$input_entry_data,$input_entry_label){
 }
 
 /* 
-* 概要：会員登録する関数（会員登録確認画面で使用）
+* 概要：会員・検索登録する関数（会員登録確認画面で使用）
 * 戻り値：id
 */
 function entry($link,$table,$input_entry_data,$input_entry_label){
-    $query = assemb_entry($table,$conditions,$product_name);
+    $query = assemb_entry($table,$input_entry_data,$input_entry_label);
     mysqli_query($link,$query);
     $id = mysqli_insert_id($link);
     return $id;
@@ -358,4 +362,94 @@ function get_id($link,$table,$login_id,$password){
     mysqli_query($link,$query);
     $id = mysqli_insert_id($link);
     return $id;
+}
+
+/* 
+* 概要：テーブルから条件に合うレコード取得するクエリを組み立てる関数（プロフィール画面・検索画面で使用）
+* 戻り値：SQL文
+*/
+function assemb_get_lots_of_string($table,$column,$value){
+    $query = "SELECT * FROM ";
+    $query .= $table;
+    $query .= " WHERE ".$column." = ";
+    $query .= "'".$value."'";
+    return $query;
+}
+
+/* 
+* 概要：テーブルから条件に合うレコード取得する関数（string型）（プロフィール画面・検索画面で使用）
+* 戻り値：連想配列
+*/
+function get_lots_of_string($link,$table,$column,$value){
+    $list = [];
+    $query = assemb_get_lots_of_string($table,$column,$value);
+    $result = mysqli_query($link,$query);
+    while($row = mysqli_fetch_assoc($result)){
+        $list[] = $row;
+    }
+    return $list;
+}
+
+/* 
+* 概要：会員・検索登録するクエリを組み立てる関数（会員登録確認画面で使用）
+* 戻り値：SQL文
+*/
+// function assemb_input($table,$input_entry_data,$input_entry_label){
+//     $count = count($input_entry_label);
+//     $query = "INSERT INTO ".$table." ( ";
+//     for ($i = 0; $i < $count; $i++) {
+//         if($i < $count - 1){
+//             $query .= "".$input_entry_label[$i].",";
+//         } else {
+//             $query .= "".$input_entry_label[$i]."";
+//         }
+//     }
+//     $query .= " ) VALUES (";
+//     for ($j = 0; $j < $count; $j++) {
+//         if($j < $count - 1){
+//             $query .= "'".$input_entry_data[$input_entry_label[$j]]."',";
+//         } else {
+//             $query .= "'".$input_entry_data[$input_entry_label[$j]]."'";
+//         }
+//     }
+//     $query .= " )";
+//     return $query;
+// }
+
+/* 
+* 概要：会員・検索登録する関数（会員登録確認画面で使用）
+* 戻り値：id
+*/
+// function input($link,$table,$input_entry_data,$input_entry_label){
+//     $query = assemb_input($table,$input_entry_data,$input_entry_label);
+//     mysqli_query($link,$query);
+//     $id = mysqli_insert_id($link);
+//     return $id;
+// }
+
+/* 
+* 概要：上から5レコード取得するクエリを組み立てる関数（購入画面で使用）
+* 戻り値：SQL文
+*/
+function assemb_get_five_column($table,$column,$id){
+    $query = "SELECT product_name FROM ";
+    $query .= $table;
+    $query .= " WHERE ".$column." = ";
+    $query .= $id;
+    $query .= " LIMIT 5";
+    return $query;
+}
+
+/* 
+* 概要：上から5レコード取得するクエリを組み立てる関数（購入画面で使用）
+* 戻り値：連想配列
+*/
+function get_five_column($link,$table,$column,$id){
+    $list = [];
+    $query = assemb_get_five_column($table,$column,$id);
+    $result = mysqli_query($link,$query);
+    while($row = mysqli_fetch_assoc($result)){
+        $list[] = $row;
+    }
+    return $list;
 }
