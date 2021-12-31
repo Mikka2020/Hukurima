@@ -14,36 +14,36 @@
   <main>
     <h1>フクリマ</h1>
     <article>
-      <h2 class="none"><?php echo "アシメレースアップリボンニット"; // 商品名 ?></h2>
+      <h2 class="none"><?php echo $line['product_name']; // 商品名 ?></h2>
       <section class="img_product">
         <h3 class="none">商品画像</h3>
         <img
-          src="./img/users/<?php echo '2'; // 会員id ?>/products/<?php echo '1'; // 商品id ?>/<?php echo "アシメレースアップリボンニット"; // 商品名 ?>_1.jpg"
-          alt="商品画像" width="315px" height="420px">
+          src="./img/users/<?php echo $line['user_id']; // 会員id ?>/products/<?php echo $line['listing_id']; // 商品id ?>/<?php echo $line['product_name']; // 商品名 ?>_1.jpg"
+          alt="商品画像" width="360px" height="">
       </section>
       <section>
         <h3>商品説明</h3>
         <ul>
-          <li><?php echo "アシメレースアップリボンニット"; // 商品名 ?></li>
-          <li><?php echo "LAISSE PASSE"; // ブランド名 ?></li>
-          <li>¥<?php echo "3,600"; // 値段 ?></li>
+          <li><?php echo $line['product_name']; // 商品名 ?></li>
+          <li><?php echo $line['brand']; // ブランド名 ?></li>
+          <li>¥<?php echo $line['price']; // 値段 ?></li>
         </ul>
         <table>
           <tr>
             <th>カテゴリ</th>
-            <td><?php echo "ブラウス"; // カテゴリ ?></td>
+            <td><?php echo $line['category']; // カテゴリ ?></td>
           </tr>
           <tr>
             <th>商品の状態</th>
-            <td><?php echo "目立った傷や汚れなし"; // 商品の状態 ?></td>
+            <td><?php echo $product_condition[$line['product_condition']]; // 商品の状態 ?></td>
           </tr>
           <tr>
             <th>発送までの日数</th>
-            <td><?php echo "2~3日"; // 発送までの日数 ?></td>
+            <td><?php echo $days_to_ship[$line['days_to_ship']]; // 発送までの日数 ?></td>
           </tr>
           <tr>
             <th>商品説明</th>
-            <td><?php echo "2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。合わせやすいのでおすすめです。"; // 商品の説明 ?></td>
+            <td><?php echo $line['product_explain']; // 商品の説明 ?></td>
           </tr>
         </table>
         <p>商品を閉じる</p>
@@ -51,8 +51,8 @@
 
       <section>
         <h3>出品者</h3>
-        <p><img src="./img/users/<?php echo "2"; // 会員id ?>/prof/<?php echo "mari"; // 会員名 ?>.jpg" alt="プロフィール画像"
-            width="30px" height="30px"></p>
+        <p><img src="./img/users/<?php echo $line['user_id']; // 会員id ?>/prof/<?php echo "mari"; // 会員名 ?>.jpg"
+            alt="プロフィール画像" width="30px" height="30px"></p>
         <p><?php echo "Mari"; // 会員名 ?> さん</p>
         <p>メッセージ</p>
       </section>
