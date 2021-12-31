@@ -22,7 +22,7 @@ $table = 'listing'; // テーブル名
 $column = 'id';
 
 // ユーザID、パスワードの取得
-if(isset($_POST['ログインボタンのクラス名'])){
+if(isset($_POST['login_btn'])){
     $login_id = $_POST['login_id'];
     $password = $_POST['password'];
 }
