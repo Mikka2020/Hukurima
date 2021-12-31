@@ -436,6 +436,7 @@ function assemb_get_five_column($table,$column,$id){
     $query .= $table;
     $query .= " WHERE ".$column." = ";
     $query .= $id;
+    $query .= " ORDER BY create_at DESC"
     $query .= " LIMIT 5";
     return $query;
 }
