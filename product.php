@@ -8,6 +8,9 @@
  * 変更日：2021/12/17
  * 追加内容：全体的な処理（正常処理のみ）
  * ------------------------------------------------------------------------------------------------------------------------
+ * 変更日：2021/12/31
+ * 追加内容：ボタンタグでの遷移でなく、aタグの遷移に変更
+ * ------------------------------------------------------------------------------------------------------------------------
 */
 
 
@@ -51,21 +54,21 @@ mysqli_set_charset($link , 'utf8');
 $line = get_column_order($link,$table,$conditions);
 mysqli_close($link);
 
-// 商品画像が押された時の処理（ボタンにして欲しい）
-if(isset($_POST['product_img'])){
-    $_SESSION['product_img'] = $line; // sessionに商品IDを入れる
-    header ('location:./entry_confirm.php');
-    exit;
-}
+// 商品画像が押された時の処理
+// if(isset($_POST['product_img'])){
+//     $_SESSION['product_img'] = $line; // sessionに商品IDを入れる
+//     header ('location:./entry_confirm.php');
+//     exit;
+// }
 
-// ユーザアイコンが押された時の処理（ボタンにして欲しい）
-if(isset($_POST['btn_seller'])){
-    $_SESSION['seller_id'] = $line['id']; // sessionにユーザIDを入れる
-    header ('location:./entry_confirm.php');
-    exit;
-}
+// ユーザアイコンが押された時の処理
+// if(isset($_POST['btn_seller'])){
+//     $_SESSION['seller_id'] = $line['id']; // sessionにユーザIDを入れる
+//     header ('location:./entry_confirm.php');
+//     exit;
+// }
 
-// ハートマークが押された時の処理（ボタンにして欲しい）
+// ハートマークが押された時の処理
 // if(isset($_POST['btn_favorite'])){
 //     お気に入りをDBに登録する処理
 //     header ('location:./entry_confirm.php');
