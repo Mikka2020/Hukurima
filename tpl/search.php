@@ -20,8 +20,8 @@
 
   <div id=search>
     <form method="post" action="">
-      <input type="text" name="message" placeholder="商品を検索しよう" value="">
-      <button type="submit" name="btn" value="up"><i class="fas fa-search"></i></button>
+      <input type="text" name="message" placeholder="商品を検索しよう">
+      <button type="submit" name="search"  value="up"><i class="fas fa-search"></i></button>
     </form>
   </div>
 
