@@ -42,8 +42,11 @@ if(isset($_POST['buy_btn'])){
 
 // 時刻を計算する処理
 $now = date("Y-m-d H:i:s");
-$elapsed_time = $now - $product['listed_at'];
+$time1 = strtotime($now);
+$time2 = strtotime($product['listed_at']);
+$elapsed_time = ($time1 - $time2)/60/60/24; //これで経過日数になっていると思う
 var_dump($elapsed_time);
+
 
 // 名前を取得する処理
 
@@ -54,7 +57,7 @@ var_dump($elapsed_time);
 //     exit;
 // }
 
-var_dump($product);
+
 
 require_once('./tpl/product_detail.php');
 
