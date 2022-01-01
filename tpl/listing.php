@@ -33,7 +33,7 @@
                 class="input_form">
           </div>
         </div>
-        <input type="text" name="hash_tag" value="" placeholder="ハッシュタグを利用する">
+        <!-- <input type="text" name="hash_tag" value="" placeholder="ハッシュタグを利用する"> -->
       </article>
 
       <h2>商品情報</h2>
