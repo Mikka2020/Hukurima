@@ -16,18 +16,18 @@
     <article>
       <h2><?php echo ''; // 商品名 ?></h2>
       <img
-        src="./img/users/<?php echo 2; // 会員id ?>/products/<?php echo 1; // 商品id ?>/<?php echo 'アシメレースアップリボンニット'; // 商品名 ?>_1.jpg"
+        src="./img/users/<?php echo $listing['user_id']; // 会員id ?>/products/<?php echo $listing['listing_id']; // 商品id ?>/<?php echo $listing['product_name']; // 商品名 ?>_1<?php echo $listing['img_extension']; ?>"
         alt="メイン商品画像" width="360px" height="">
 
       <section class="product-detail">
         <h3>商品説明</h3>
-        <p><?php echo 'アシメレースアップリボンニット'; // 商品名 ?></p>
+        <p><?php echo $listing['product_name']; // 商品名 ?></p>
         <ul>
           <li>
             カテゴリ
           </li>
           <li>
-            <?php echo 'ブラウス'; ?>
+            <?php echo $listing['category']; ?>
           </li>
         </ul>
         <ul>
@@ -35,17 +35,17 @@
             商品の状態
           </li>
           <li>
-            <?php echo '目立った傷や汚れ無し'; ?>
+            <?php echo $product_condition[$listing['product_condition']]; ?>
           </li>
         </ul>
         <ul>
           <li>発送までの日時</li>
-          <li><?php echo '1~3日' ?></li>
+          <li><?php echo $days_to_ship[$listing['days_to_ship']]; ?></li>
         </ul>
-        <ul>
-          <li>商品説明</li>
-          <li><?php echo '2020年頃に1万5000円で購入しましたニットです。エクリュカラーで傷はありません。'; ?></li>
-        </ul>
+        <p>
+          商品説明<br>
+          <?php echo $listing['product_explain']; ?>
+        </p>
 
       </section>
 
