@@ -18,11 +18,20 @@
 require_once './config.php';
 require_once './func.php';
 
+// 動作確認用
+setcookie('user_id',2,time()+60*60*24);
+
 // 初期値
-$input_listing_data = ['product_name' => '' , 'product_explan' => '' , 'hash_tag' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '']; // 入力された情報をセットする配列
-$err_msg = ['product_name' => '' , 'product_explan' => '' , 'hash_tag' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '']; // エラー出力用配列
-$input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'hash_tag' => 'ハッシュタグ' , 'category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格']; // 添字に対するラベル名がセットされている配列
-$array_check_value = ['商品名','商品説明','ハッシュタグ','価格'];
+// $input_listing_data = ['product_name' => '' , 'product_explan' => 0 , 'category' => '' , 'product_statu' => 0 , 'bland' => '' , 'send_days' => 0 , 'cleaning_flg' => 0 , 'pickup_flg' => 0 , 'price' => 0 , 'auto_approval' => 0]; // 入力された情報をセットする配列
+// $err_msg = ['product_name' => '' , 'product_explan' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '' , 'auto_approval' => '']; // エラー出力用配列
+// $input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格' , 'auto_approval' => '購入申請自動許可フラグ']; // 添字に対するラベル名がセットされている配列
+
+// 高橋DBに合わせて配列を変更
+$input_listing_data = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => 0 , 'product_explain' => '' , 'category' => '' ,  'product_condition' => 0 , 'brand' => '' , 'days_to_ship' => 0 , 'cleaning_flg' => 0 , 'picking_flg' => 0 , 'auto_approval' => 0]; // 入力された情報をセットする配列
+$err_msg = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => '' , 'product_explain' => '' , 'category' => '' ,  'product_condition' => '' , 'brand' => '' , 'days_to_ship' => '' , 'cleaning_flg' => '' , 'picking_flg' => '' , 'auto_approval' => '']; // エラー出力用配列
+$input_listing_label = ['user_id' => 'ユーザID' , 'product_name' => '商品名' , 'img' => '画像' ,  'price' => '価格' , 'product_explain' => '商品説明' , 'category' => 'カテゴリ' ,  'product_condition' => '商品の状態' , 'brand' => 'ブランド' , 'days_to_ship' => '配送までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'picking_flg' => '集荷オプション' , 'auto_approval' => '購入申請自動許可オプション']; // 添字に対するラベル名がセットされている配列
+
+$array_check_value = ['商品名','カテゴリ','商品説明','価格','ブランド'];
 
 
 // 入力値チェック（出品ボタン）
@@ -51,6 +60,7 @@ if(isset($_POST['listing'])){
     if(!isset($err_msg)){
         
     }
+    var_dump($err_msg);
 }
 
 // 下書きボタンが押された時の処理
