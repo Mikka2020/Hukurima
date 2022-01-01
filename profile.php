@@ -17,19 +17,19 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値
-$_SESSION['user_id'] = 'tarou';
-$id = 1;
+setcookie('user_id',1,time()+60*60*24);
 
 // 初期値
 $list_table = 'listing';
 $member_table = 'member';
-$user_id = $_SESSION['user_id'];
-$column = 'id';
+$profile_table = 'profile';
+$user_id = $_COOKIE['user_id'];
+$column = 'user_id';
 
 // 「商品詳細画面」で見てた商品の商品IDを取得
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column($link,$member_table,$column,$id);
+$line = get_column($link,$profile_table,$column,$user_id);
 mysqli_close($link);
 
 // 購入ボタンが押された時の処理
