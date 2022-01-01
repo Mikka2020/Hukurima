@@ -27,11 +27,10 @@ $array_check_value = ['商品名','商品説明','ハッシュタグ','価格'];
 
 // 入力値チェック（出品ボタン）
 if(isset($_POST['listing'])){
-    // 画像のチェック処理
-    
+
     // 空白値チェック（商品名・商品説明・ハッシュタグ・価格の４種類は「入力されていません」それ以外は「選択されていません」）
     foreach ($input_listing_data as $key => $value) {
-        if($_POST[$key] == ''){
+        if(!isset($_POST[$key])){
             if(err_judge($input_listing_label[$key],$array_check_value) === true){
                 $err_msg[$key] = $input_listing_label[$key].'が入力されていません';
             } else {
@@ -41,12 +40,18 @@ if(isset($_POST['listing'])){
             $input_listing_data[$key] = $_POST[$key];
         }
     }
+
+    // 画像のチェック処理
+    $name = $_FILES['product_img']['name'];
+    $ext = pathinfo($_FILES['product_img']['name']);
+    $file_name = './product_images/' . $input_listing_data['product_name'] . '_1.' . $ext['extension'];
+    move_uploaded_file($_FILES['product_img']['tmp_name'],$file_name);
+
+    // エラーがなかった時の処理
+    if(!isset($err_msg)){
+        
+    }
 }
-
-// 画像ファイル取得処理
-// 画像フォルダ作成
-// 画像入れる（登録されてないけど、とりあえずフォルダに入れる）
-
 
 // 下書きボタンが押された時の処理
 // if(isset($_POST['save_btn'])){

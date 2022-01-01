@@ -18,14 +18,14 @@
     <form action="" method="post" enctype="multipart/form-data">
 
       <div class="input_img_contents">
-        <input type="file" name="product_img" multiple id="first_img_content">
+        <input type="file" name="product_img" id="first_img_content">
       </div>
 
       <div class="title_area">
         <h2>商品名と説明</h2><span class="help_guide">出品禁止物・出品ルール</span>
       </div>
       <article class="input_area">
-        <input type="text" name="product_name" value="" placeholder="商品名 (必須)" maxlength="10">
+        <input type="text" name="product_name" placeholder="商品名 (必須)" maxlength="10">
         <div>
           <div class="input_box">
             <p class="input_label">
