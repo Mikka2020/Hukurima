@@ -73,7 +73,7 @@
           </ul>
           <ul>
             <li>商品の状態</li>
-            <li><?php echo $conditions[$list['product_condition']]; ?></li>
+            <li><?php echo $product_condition[$list['product_condition']]; ?></li>
           </ul>
           <ul>
             <li>発送までの日数</li>
