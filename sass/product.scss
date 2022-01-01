@@ -42,11 +42,11 @@ h4 {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   background-color: #ccc;
   .product-area {
     background-color: #fff;
-    width: 48%;
-    margin: 3px;
+    margin: 2px;
     .product-item {
       img {
         // width: 100%;

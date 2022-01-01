@@ -50,13 +50,15 @@ h4 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   background-color: #ccc;
 }
 
 #product .product-area {
   background-color: #fff;
-  width: 48%;
-  margin: 3px;
+  margin: 2px;
 }
 
 #product .product-area .product-explain {
