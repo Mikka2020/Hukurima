@@ -39,7 +39,7 @@ if(isset($_POST['listing'])){
 
     // 空白値チェック（商品名・商品説明・ハッシュタグ・価格の４種類は「入力されていません」それ以外は「選択されていません」）
     foreach ($input_listing_data as $key => $value) {
-        if(!isset($_POST[$key])){
+        if(!isset($_POST[$key]) || $_POST[$key] == ''){
             if(err_judge($input_listing_label[$key],$array_check_value) === true){
                 $err_msg[$key] = $input_listing_label[$key].'が入力されていません';
             } else {
@@ -75,7 +75,8 @@ if(isset($_POST['listing'])){
 //     exit;
 // }
 
-// var_dump($err_msg);
+var_dump($err_msg);
+
 require_once './tpl/listing.php';
 
 
