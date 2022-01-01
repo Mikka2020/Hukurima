@@ -18,7 +18,7 @@
       <section id="trend">
         <h3>トレンド</h3>
         <ul>
-          <?php foreach($tags as $tag): ?>
+          <?php foreach ($tags as $tag) : ?>
           <li class="trend-tag">
             <a href="./product.php?search=<?php echo $tag; ?>">
               <?php echo $tag; ?>
@@ -57,14 +57,14 @@
         <h3>商品一覧</h3>
 
 
-        <?php foreach($line as $product): ?>
+        <?php foreach ($line as $product) : ?>
         <div class="product-area">
           <h4><?php echo $product['product_name']; ?></h4>
           <div class="product-item">
             <a href="./product_detail.php?id=<?php echo $product['id']; ?>">
               <img class="product-item"
-                src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
-                alt="商品" width="160px" height="160px" /> <!-- 商品画像 -->
+                src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id'] ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
+                alt="商品" width="180px" height="" /> <!-- 商品画像 -->
             </a>
           </div>
 
@@ -72,12 +72,13 @@
             <p class="price">¥<?php echo $product['price']; ?></p>
             <!-- 値段 -->
 
+
             <p class="profile">
               <a href="./profile.php?user_id=<?php echo $product['user_id']; ?>">
                 <img class="prof-img"
-                  src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+                  src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles[$product['user_id']-1]['nickname']; ?>.<?php echo $profiles[$product['user_id']-1]['img_extension']; ?>"
                   alt="プロフィール画像" width="16px" height="16px" /> <!-- プロフィール画像 -->
-                <?php echo $product['user_name']; ?>
+                <?php echo $profiles[$product['user_id']-1]['nickname']; ?>
                 <!-- 会員名 -->
               </a>
               <img src="./img/icon/heart-regular.svg" alt="いいねアイコン" width="16px" height="">
