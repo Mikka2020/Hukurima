@@ -58,9 +58,10 @@ if(isset($_POST['listing'])){
 
     // エラーがなかった時の処理
     if(!isset($err_msg)){
-        
+        $_SESSION['listing_data'] = $input_listing_data;
+        header('location:./listing_confirm.php');
+        exit;
     }
-    var_dump($err_msg);
 }
 
 // 下書きボタンが押された時の処理

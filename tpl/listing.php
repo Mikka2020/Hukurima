@@ -8,6 +8,7 @@
   <title>出品画面</title>
   <link rel="stylesheet" href="./css/core_style.css">
   <link rel="stylesheet" href="./css/listing.css">
+  <link rel="stylesheet" href="./sass/style.scss">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         <div>
           <div class="input_box">
             <p class="input_label">
-              <input type="text" name="product_explan" value="" placeholder="プレースホルダーを書く" maxlength="1000"
+              <input type="text" name="product_explain" value="" placeholder="プレースホルダーを書く" maxlength="1000"
                 class="input_form">
           </div>
         </div>
@@ -44,11 +45,11 @@
         </div>
         <div class="input_box">
           <p class="input_label">商品の状態</p>
-          <input type="text" name="product_statu" value="" placeholder="選択してください (必須)" class="input_form">
+          <input type="text" name="product_condition" value="" placeholder="選択してください (必須)" class="input_form">
         </div>
         <div class="input_box">
           <p class="input_label">ブランド</p>
-          <input type="text" name="bland" value="" placeholder="選択してください (必須)" class="input_form">
+          <input type="text" name="brand" value="" placeholder="選択してください (必須)" class="input_form">
         </div>
       </article>
 
@@ -56,7 +57,7 @@
       <article class="input_area">
         <div class="input_box">
           <p class="input_label">配送までの日数</p>
-          <input type="text" name="send_days" value="" placeholder="指定しない (必須)" class="input_form">
+          <input type="text" name="days_to_ship" value="" placeholder="指定しない (必須)" class="input_form">
         </div>
         <div class="input_box">
           <p class="input_label">クリーニングオプション</p>
@@ -64,7 +65,7 @@
         </div>
         <div class="input_box">
           <p class="input_label">集荷オプション</p>
-          <input type="text" name="pickup_flg" value="" placeholder="指定しない (任意)" class="input_form">
+          <input type="text" name="picking_flg" value="" placeholder="指定しない (任意)" class="input_form">
         </div>
       </article>
 
