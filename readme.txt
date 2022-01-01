@@ -23,3 +23,6 @@ $listing = [
   'listed_at' => '',
   'auto_approval' => '',
 ];
+
+$product_condition = ['ほぼ新品', '目立った傷や汚れなし', '中古'];
+$days_to_ship = ['1~3日以内', '4~6日以内', '7日以上'];
