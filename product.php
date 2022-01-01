@@ -20,14 +20,16 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値（後で削除する）
-$conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
+$conditions = ['search' => '' , 'sort' => '' , 'trend' => ''];
 $_SESSION['search'] = $conditions['search']; // テキストボックス
 $_SESSION['sort'] = $conditions['sort']; // セレクトボックス
 $_SESSION['trend'] = $conditions['trend']; // ラジオボタン
 
 
 // 初期値
-$table = 'listing'; // テーブル名
+$list_table = 'listing'; // テーブル名
+$profile_table = 'profile';
+
 // $conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
 
 // 検索条件（後でコメント外す）
@@ -51,7 +53,7 @@ if (isset($_SESSION['search'])){
 // 表示させる処理
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column_order($link,$table,$conditions);
+$line = get_column_order($link,$list_table,$profile_table,$conditions);
 mysqli_close($link);
 
 // 商品画像が押された時の処理

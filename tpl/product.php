@@ -61,9 +61,9 @@
         <div class="product-area">
           <h4><?php echo $product['product_name']; ?></h4>
           <div class="product-item">
-            <a href="./product_detail.php?id=<?php echo $product['id']; ?>">
+            <a href="./product_detail.php?id=<?php echo $product['listing_id']; ?>">
               <img class="product-item"
-                src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
+                src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id'] ?>/<?php echo $product['product_name']; ?>_1.jpg"
                 alt="商品" width="160px" height="160px" /> <!-- 商品画像 -->
             </a>
           </div>

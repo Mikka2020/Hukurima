@@ -28,7 +28,7 @@
       <section>
         <h3><?php echo $product['product_name']; ?></h3>
         <ul>
-          <li><?php echo $product['product_bland']; ?></li>
+          <li><?php echo $product['brand']; ?></li>
           <li>¥<?php echo $product['price'] ?></li>
         </ul>
         <form action="" method="post">
@@ -42,7 +42,7 @@
       </section>
       <section>
         <h4>商品説明</h4>
-        <p><?php echo $product['product_explan']; ?></p>
+        <p><?php echo $product['product_explain']; ?></p>
         <p>
           <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
           <?php echo $product['listed_at']; ?>
@@ -62,7 +62,7 @@
         </ul>
         <ul>
           <li>商品の状態</li>
-          <li><?php echo $product['product_statu'] == 0 ? '目立った傷や汚れ無し' : '不良'; ?></li>
+          <li><?php echo $product['product_condition'] == 0 ? '目立った傷や汚れ無し' : '不良'; ?></li>
         </ul>
         <ul>
           <li>配送までの日数</li>
@@ -79,7 +79,7 @@
         <ul>
           <li>出品者</li>
           <li>
-            <img src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+            <img src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $user_name; ?>.jpg"
               alt="プロフィール画像" width="32px" height="32px">
             <?php echo $product['user_name']; ?>
           </li>
