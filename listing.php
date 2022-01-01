@@ -30,9 +30,10 @@ setcookie('user_id',2,time()+60*60*24);
 $input_listing_data = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => 0 , 'product_explain' => '' , 'category' => '' ,  'product_condition' => 0 , 'brand' => '' , 'days_to_ship' => 0 , 'cleaning_flg' => 0 , 'picking_flg' => 0 , 'auto_approval' => 0]; // 入力された情報をセットする配列
 $err_msg = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => '' , 'product_explain' => '' , 'category' => '' ,  'product_condition' => '' , 'brand' => '' , 'days_to_ship' => '' , 'cleaning_flg' => '' , 'picking_flg' => '' , 'auto_approval' => '']; // エラー出力用配列
 $input_listing_label = ['user_id' => 'ユーザID' , 'product_name' => '商品名' , 'img' => '画像' ,  'price' => '価格' , 'product_explain' => '商品説明' , 'category' => 'カテゴリ' ,  'product_condition' => '商品の状態' , 'brand' => 'ブランド' , 'days_to_ship' => '配送までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'picking_flg' => '集荷オプション' , 'auto_approval' => '購入申請自動許可オプション']; // 添字に対するラベル名がセットされている配列
-
 $array_check_value = ['商品名','カテゴリ','商品説明','価格','ブランド'];
 
+// ユーザID代入
+$input_listing_data['user_id'] = $_COOKIE['user_id'];
 
 // 入力値チェック（出品ボタン）
 if(isset($_POST['listing'])){
@@ -53,6 +54,7 @@ if(isset($_POST['listing'])){
     // 画像のチェック処理
     $name = $_FILES['product_img']['name'];
     $ext = pathinfo($_FILES['product_img']['name']);
+    $input_listing_data['img'] = $ext['extension'];
     $file_name = './product_images/' . $input_listing_data['product_name'] . '_1.' . $ext['extension'];
     move_uploaded_file($_FILES['product_img']['tmp_name'],$file_name);
 
