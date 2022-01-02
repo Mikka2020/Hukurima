@@ -18,7 +18,7 @@ require_once './func.php';
 
 // 初期値
 $login_id = $password = '';
-$table = 'listing'; // テーブル名
+// $table = 'listing'; // テーブル名
 $column = 'id';
 
 // ユーザID、パスワードの取得
@@ -36,8 +36,8 @@ if(isset($_POST['login_btn'])){
     mysqli_close($link);
 
     if(isset($id)){
-        setcookie('login_status',$user_id,time() + 3600*24*7);
-        header ('location:./entry_confirm.php');
+        setcookie('user_id',$user_id,time() + 3600*24*7);
+        header ('location:./profile.php');
         exit;
     }
 }
