@@ -49,7 +49,8 @@
         <p><?php echo $product['product_explain']; ?></p>
         <p>
           <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
-          <?php echo $product['listed_at']; ?>
+          <!-- <?php // echo $product['listed_at']; ?> -->
+          <?php echo $elapsed_time_msg; ?>
         </p>
         <ul>
           <?php // foreach($tags as $tag): ?>
@@ -85,7 +86,7 @@
           <li>
             <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user_name; ?>.jpg"
               alt="プロフィール画像" width="32px" height="32px">
-            <?php echo $product['user_name']; ?>
+            <?php echo $user['nickname']; ?>
           </li>
         </ul>
       </section>
