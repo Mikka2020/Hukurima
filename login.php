@@ -32,7 +32,7 @@ if(isset($_POST['login_btn'])){
     // ログイン処理
     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
-    $id = get_column($link,$table,$login_id,$password);
+    $id = get_id($link,TABLES['101'],$login_id,$password);
     mysqli_close($link);
 
     if(isset($id)){
