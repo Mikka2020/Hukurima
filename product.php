@@ -11,7 +11,7 @@
  * 変更日：2021/12/31
  * 追加内容：ボタンタグでの遷移でなく、aタグの遷移に変更
  * ------------------------------------------------------------------------------------------------------------------------
-*/
+ */
 
 
 // 参照ファイル呼び出し
@@ -43,19 +43,20 @@ $profile_table = 'profile';
 // }
 
 // 検索条件に変更があれば対応させる処理
-if (isset($_SESSION['search'])){
-    $conditions['search'] = $_SESSION['search'];
-} else if (isset($_SESSION['sort'])){
-    $conditions['sort'] = $_SESSION['sort'];
-} else if (isset($_SESSION['trend'])){
-    $conditions['trend'] = $_SESSION['trend'];
+if (isset($_SESSION['search'])) {
+  $conditions['search'] = $_SESSION['search'];
+} else if (isset($_SESSION['sort'])) {
+  $conditions['sort'] = $_SESSION['sort'];
+} else if (isset($_SESSION['trend'])) {
+  $conditions['trend'] = $_SESSION['trend'];
 }
 
 // 表示させる処理
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column_order($link,$list_table,$member_table,$conditions);
+$line = get_column_order($link,$list_table,$profile_table,$conditions);
 mysqli_close($link);
+
 
 // 商品画像が押された時の処理
 // if(isset($_POST['product_img'])){
@@ -81,5 +82,30 @@ mysqli_close($link);
 // var_dump($conditions);
 // var_dump($line);
 $tags = ['アウター', 'TheNorthFace', 'パーカー', 'DIESEL'];
+
+// テスト用
+// DBから全てのrecordを取り出す
+function get_db_records($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  $result = mysqli_query($link, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+    $records[] = $row;
+  }
+  mysqli_close($link);
+  return $records;
+}
+$sql = "SELECT * FROM listing";
+$link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+mysqli_set_charset($link, 'utf8');
+$line = get_db_records($sql);
+mysqli_close($link);
+
+$sql = "SELECT * FROM profile";
+$link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+mysqli_set_charset($link, 'utf8');
+$profiles = get_db_records($sql);
+mysqli_close($link);
 
 require_once './tpl/product.php';
