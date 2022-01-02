@@ -200,7 +200,6 @@ function assemb_get_column_order($table1,$table2,$conditions){
     } else {
         $query .= "listed_at DESC";
     }
-    var_dump($query);
     return $query;
 }
 

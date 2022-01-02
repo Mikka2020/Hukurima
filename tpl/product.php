@@ -75,9 +75,9 @@
             <p class="profile">
               <a href="./profile.php?user_id=<?php echo $product['user_id']; ?>">
                 <img class="prof-img"
-                  src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+                  src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['first_name']; ?>.jpg"
                   alt="プロフィール画像" width="16px" height="16px" /> <!-- プロフィール画像 -->
-                <?php echo $product['user_name']; ?>
+                <?php echo $product['last_name'].$product['first_name']; ?>
                 <!-- 会員名 -->
               </a>
               <img src="./img/icon/heart-regular.svg" alt="いいねアイコン" width="16px" height="">

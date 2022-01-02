@@ -28,6 +28,7 @@ $_SESSION['trend'] = $conditions['trend']; // ラジオボタン
 
 // 初期値
 $list_table = 'listing'; // テーブル名
+$member_table = 'member';
 $profile_table = 'profile';
 
 // $conditions = ['search' => '' , 'sort' => 'favorite' , 'trend' => ''];
@@ -53,7 +54,7 @@ if (isset($_SESSION['search'])){
 // 表示させる処理
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column_order($link,$list_table,$profile_table,$conditions);
+$line = get_column_order($link,$list_table,$member_table,$conditions);
 mysqli_close($link);
 
 // 商品画像が押された時の処理
