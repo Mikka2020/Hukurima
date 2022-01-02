@@ -347,9 +347,9 @@ function assemb_get_id($table,$login_id,$password){
     $query = "SELECT * FROM ";
     $query .= $table;
     $query .= " WHERE login_id = ";
-    $query .= $login_id;
+    $query .= "'".$login_id."'";
     $query .= " and password = ";
-    $query .= $password;
+    $query .= "'".$password."'";
     return $query;
 }
 
@@ -359,8 +359,8 @@ function assemb_get_id($table,$login_id,$password){
 */
 function get_id($link,$table,$login_id,$password){
     $query = assemb_get_id($table,$login_id,$password);
-    mysqli_query($link,$query);
-    $id = mysqli_insert_id($link);
+    $result = mysqli_query($link,$query);
+    $id = mysqli_fetch_assoc($result);
     return $id;
 }
 
