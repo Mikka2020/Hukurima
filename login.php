@@ -39,7 +39,7 @@ if(isset($_POST['login_btn'])){
         setcookie('user_id',$id['user_id'],time() + 3600*24*7);
         header ('location:./profile.php');
         exit;
-        var_dump($id);
+        // var_dump($id);
     }
 }
 

@@ -22,7 +22,7 @@
           <li><input type="text" name="password"></li>
         </ul>
 
-        <button type="submit" name="login_btn">ログイン</button>
+        <button type="submit" name="login_btn" value="on">ログイン</button>
       </form>
     </article>
   </main>
