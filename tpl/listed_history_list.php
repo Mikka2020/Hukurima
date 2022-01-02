@@ -24,15 +24,18 @@
 
     <!-- ここから出品履歴一覧 -->
     <article class="products_area">
+      <?php foreach($products as $product): ?>
       <section class="product">
         <p class="product_img">
-          <img src="./img/users/2/products/1/アシメレースアップリボンニット_1.jpg" alt="商品画像" width="70px" height="70px">
+          <img
+            src="./img/users/<?php echo $product['user_id'] ?>/products/<?php echo $product['listing_id'] ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
+            alt="商品画像" width="70px" height="70px">
         </p>
         <!-- <p class="sold_mark"><img src="../img/listed_history_list/SOLDマーク.png" alt="購入済みマーク"></p> -->
         <ul class="product_info">
           <!-- <li class="buy_request_area"><button class="buy_request_btn"></button></li> -->
-          <li class="product_name">アシメレースアップリボンニット(長袖)</li>
-          <li class="product_price">¥3,600</li>
+          <li class="product_name"><?php echo $product['product_name']; ?></li>
+          <li class="product_price">¥<?php $product['price']; ?></li>
           <li>
             <ul class="icon_group">
               <li class="favorite_icon"><img src="./img/icon/いいねアイコン.png" alt="いいねアイコン" width="15px" height="15px"></li>
@@ -41,88 +44,32 @@
           </li>
           <li>
             <ul class="icon_group">
-              <li class="comment_icon"><img src="./img/icon/コメントアイコン.png" alt="コメントアイコン" width="15px" height="15px">
+              <li class="comment_icon">
+                <img src="./img/icon/コメントアイコン.png" alt="コメントアイコン" width="15px" height="15px">
               </li>
               <li class="comment_num">1</li>
             </ul>
           </li>
           <li>
             <ul class="icon_group">
-              <li class="date_icon"><img src="./img/icon/出品日時アイコン.png" alt="出品履歴アイコン" width="15px" height="15px"></li>
-              <li class="date_text">12時間前</li>
-            </ul>
-          </li>
-        </ul>
-        <div><a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
-      </section>
-
-      <section class="product">
-        <p class="product_img"><img src="./img/users/2/products/2/グレーコート_1.jpg" alt="商品画像" width="70px" height="70px">
-        </p>
-        <!-- <p class="sold_mark"><img src="../img/listed_history_list/SOLDマーク.png" alt="購入済みマーク"></p> -->
-        <ul class="product_info">
-          <li class="buy_request_area"><button class="buy_request_btn">購入申請１件</button></li>
-          <li class="product_name">アミールカットソー</li>
-          <li class="product_price">¥4,800</li>
-          <li>
-            <ul class="icon_group">
-              <li class="favorite_icon"><img src="./img/icon/いいねアイコン.png" alt="いいねアイコン" width="15px" height="15px"></li>
-              <li class="favorite_num">4</li>
-            </ul>
-          </li>
-          <li>
-            <ul class="icon_group">
-              <li class="comment_icon"><img src="./img/icon/コメントアイコン.png" alt="コメントアイコン" width="15px" height="15px">
+              <li class="date_icon">
+                <img src="./img/icon/出品日時アイコン.png" alt="出品履歴アイコン" width="15px" height="15px">
               </li>
-              <li class="comment_num">3</li>
-            </ul>
-          </li>
-          <li>
-            <ul class="icon_group">
-              <li class="date_icon"><img src="./img/icon/出品日時アイコン.png" alt="出品履歴アイコン" width="15px" height="15px"></li>
-              <li class="date_text">2日前</li>
+              <li class="date_text"><?php echo $product['listed_at']; ?></li>
             </ul>
           </li>
         </ul>
-        <div><a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
-      </section>
-
-      <section class="product">
-        <div class="product_img_area">
-          <p class="product_img"><img src="./img/users/2/products/3/product3.jpg" alt="商品画像" width="70px" height="70px">
-          </p>
-          <p class="sold_mark"><img src="./img/icon/SOLDマーク.png" alt="購入済みマーク"></p>
+        <div>
+          <a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a>
         </div>
-        <ul class="product_info">
-          <!-- <li class="buy_request_area"><button class="buy_request_btn">購入申請0件</button></li> -->
-          <li class="product_name">フォックスファー付きコート</li>
-          <li class="product_price">¥18,000</li>
-          <li>
-            <ul class="icon_group">
-              <li class="favorite_icon"><img src="./img/icon/いいねアイコン.png" alt="いいねアイコン" width="15px" height="15px"></li>
-              <li class="favorite_num">9</li>
-            </ul>
-          </li>
-          <li>
-            <ul class="icon_group">
-              <li class="comment_icon"><img src="./img/icon/コメントアイコン.png" alt="コメントアイコン" width="15px" height="15px">
-              </li>
-              <li class="comment_num">8</li>
-            </ul>
-          </li>
-          <li>
-            <ul class="icon_group">
-              <li class="date_icon"><img src="./img/icon/出品日時アイコン.png" alt="出品履歴アイコン" width="15px" height="15px"></li>
-              <li class="date_text">3ヶ月前</li>
-            </ul>
-          </li>
-        </ul>
-        <div class="hanger_img"><a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
       </section>
+      <?php endforeach; ?>
 
     </article><!-- ここまで出品履歴一覧 -->
 
-    <p class="center"><img src="./img/icon/ハンガー.png" alt="ハンガー画像"></p>
+    <p class="center">
+      <img src="./img/icon/ハンガー.png" alt="ハンガー画像">
+    </p>
 
   </main>
 
