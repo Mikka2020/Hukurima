@@ -35,7 +35,7 @@ mysqli_close($link);
 // 購入ボタンが押された時の処理
 if(isset($_POST['buy_btn'])){
     $_SESSION['buy_product_info'] = $line;
-    header ('location:./entry_confirm.php');
+    header ('location:./.php');
     exit;
 }
 
