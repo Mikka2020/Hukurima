@@ -18,20 +18,29 @@
 require_once './config.php';
 require_once './func.php';
 
-// 初期値
-$input_listing_data = ['product_name' => '' , 'product_explan' => '' , 'hash_tag' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '']; // 入力された情報をセットする配列
-$err_msg = ['product_name' => '' , 'product_explan' => '' , 'hash_tag' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '']; // エラー出力用配列
-$input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'hash_tag' => 'ハッシュタグ' , 'category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格']; // 添字に対するラベル名がセットされている配列
-$array_check_value = ['商品名','商品説明','ハッシュタグ','価格'];
+// 動作確認用
+setcookie('user_id',2,time()+60*60*24);
 
+// 初期値
+// $input_listing_data = ['product_name' => '' , 'product_explan' => 0 , 'category' => '' , 'product_statu' => 0 , 'bland' => '' , 'send_days' => 0 , 'cleaning_flg' => 0 , 'pickup_flg' => 0 , 'price' => 0 , 'auto_approval' => 0]; // 入力された情報をセットする配列
+// $err_msg = ['product_name' => '' , 'product_explan' => '' , 'category' => '' , 'product_statu' => '' , 'bland' => '' , 'send_days' => '' , 'cleaning_flg' => '' , 'pickup_flg' => '' , 'price' => '' , 'auto_approval' => '']; // エラー出力用配列
+// $input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格' , 'auto_approval' => '購入申請自動許可フラグ']; // 添字に対するラベル名がセットされている配列
+
+// 高橋DBに合わせて配列を変更
+$input_listing_data = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => 0 , 'product_explain' => '' , 'category' => '' ,  'product_condition' => 0 , 'brand' => '' , 'days_to_ship' => 0 , 'cleaning_flg' => 0 , 'picking_flg' => 0 , 'auto_approval' => 0]; // 入力された情報をセットする配列
+$err_msg = ['user_id' => '' , 'product_name' => '' , 'img' => '' ,  'price' => '' , 'product_explain' => '' , 'category' => '' ,  'product_condition' => '' , 'brand' => '' , 'days_to_ship' => '' , 'cleaning_flg' => '' , 'picking_flg' => '' , 'auto_approval' => '']; // エラー出力用配列
+$input_listing_label = ['user_id' => 'ユーザID' , 'product_name' => '商品名' , 'img' => '画像' ,  'price' => '価格' , 'product_explain' => '商品説明' , 'category' => 'カテゴリ' ,  'product_condition' => '商品の状態' , 'brand' => 'ブランド' , 'days_to_ship' => '配送までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'picking_flg' => '集荷オプション' , 'auto_approval' => '購入申請自動許可オプション']; // 添字に対するラベル名がセットされている配列
+$array_check_value = ['商品名','カテゴリ','商品説明','価格','ブランド'];
+
+// ユーザID代入
+$input_listing_data['user_id'] = $_COOKIE['user_id'];
 
 // 入力値チェック（出品ボタン）
 if(isset($_POST['listing'])){
-    // 画像のチェック処理
-    
+
     // 空白値チェック（商品名・商品説明・ハッシュタグ・価格の４種類は「入力されていません」それ以外は「選択されていません」）
     foreach ($input_listing_data as $key => $value) {
-        if($_POST[$key] == ''){
+        if(!isset($_POST[$key]) || $_POST[$key] == ''){
             if(err_judge($input_listing_label[$key],$array_check_value) === true){
                 $err_msg[$key] = $input_listing_label[$key].'が入力されていません';
             } else {
@@ -41,12 +50,21 @@ if(isset($_POST['listing'])){
             $input_listing_data[$key] = $_POST[$key];
         }
     }
+
+    // 画像のチェック処理
+    $name = $_FILES['product_img']['name'];
+    $ext = pathinfo($_FILES['product_img']['name']);
+    $input_listing_data['img'] = $ext['extension'];
+    $file_name = './product_images/' . $input_listing_data['product_name'] . '_1.' . $ext['extension'];
+    move_uploaded_file($_FILES['product_img']['tmp_name'],$file_name);
+
+    // エラーがなかった時の処理
+    if(!isset($err_msg)){
+        $_SESSION['listing_data'] = $input_listing_data;
+        header('location:./listing_confirm.php');
+        exit;
+    }
 }
-
-// 画像ファイル取得処理
-// 画像フォルダ作成
-// 画像入れる（登録されてないけど、とりあえずフォルダに入れる）
-
 
 // 下書きボタンが押された時の処理
 // if(isset($_POST['save_btn'])){
@@ -59,7 +77,8 @@ if(isset($_POST['listing'])){
 //     exit;
 // }
 
-// var_dump($err_msg);
+var_dump($err_msg);
+
 require_once './tpl/listing.php';
 
 

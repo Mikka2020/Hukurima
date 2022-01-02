@@ -175,9 +175,10 @@ function get_lots_of($link,$table,$column,$id){
 * 対応レコード：トレンド検索 -> 'category(DESC)'、商品名 -> 'product_name'、並び替え -> '選択項目（関数呼出）'
 * 戻り値：SQL文
 */
-function assemb_get_column_order($table,$conditions){
-    $query = "SELECT * FROM ";
-    $query .= $table;
+function assemb_get_column_order($table1,$table2,$conditions){
+    $query = "SELECT * FROM ".$table1." t1 ";
+    $query .= "INNER JOIN ".$table2." t2 ";
+    $query .= "ON t1.user_id = t2.user_id";
     if ($conditions['search'] != '' || $conditions['trend'] != ''){
         $query .= " WHERE ";
         if ($conditions['search'] != ''){
@@ -197,8 +198,7 @@ function assemb_get_column_order($table,$conditions){
     if ($conditions['sort'] == 'favorite'){
         $query .= "favorite DESC";
     } else {
-        $sort = which_sort($conditions['sort']);
-        $query .= "".$sort[0]." ".$sort[1]."";
+        $query .= "listed_at DESC";
     }
     return $query;
 }
@@ -207,9 +207,9 @@ function assemb_get_column_order($table,$conditions){
 * 概要：テーブルから条件に合うレコード取得する関数（商品一覧画面で使用）
 * 戻り値：連想配列
 */
-function get_column_order($link,$table,$conditions){
+function get_column_order($link,$table1,$table2,$conditions){
     $list = [];
-    $query = assemb_get_column_order($table,$conditions);
+    $query = assemb_get_column_order($table1,$table2,$conditions);
     $result = mysqli_query($link,$query);
     while($row = mysqli_fetch_assoc($result)){
         $list[] = $row;

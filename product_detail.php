@@ -14,20 +14,17 @@
 
 // 参照ファイル呼び出し
 session_start();
+date_default_timezone_set('Asia/Tokyo');
 require_once './config.php';
 require_once './func.php';
-
-// 動作確認用固定値
-$_SESSION['product_id'] = 2;
 
 // 初期値
 $list_table = 'listing'; // テーブル名
 // $member_table = 'member';
-$column = 'id';
+$column = 'listing_id';
 
 // 「商品詳細画面」で見てた商品の商品IDを取得
-$id = $_SESSION['product_id'];
-unset($_SESSION['product_id']);
+$id = $_GET['id'];
 
 // 商品IDに対する商品詳細情報と出品者情報の取得（後日正規化していたら、テーブルを結合させる）
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
@@ -43,13 +40,25 @@ if(isset($_POST['buy_btn'])){
     exit;
 }
 
+// 時刻を計算する処理
+$now = date("Y-m-d H:i:s");
+$time1 = strtotime($now);
+$time2 = strtotime($product['listed_at']);
+$elapsed_time = ($time1 - $time2)/60/60/24; //これで経過日数になっていると思う
+var_dump($elapsed_time);
+
+
+// 名前を取得する処理
+
+
 // 戻るボタンが押された時の処理(name="back")
 // if(isset($_POST['back'])){
 //     header ('location:./');
 //     exit;
 // }
 
-var_dump($product);
+$product_condition = ['ほぼ新品', '目立った傷や汚れなし', '中古'];
+$days_to_ship = ['1~3日以内', '4~6日以内', '7日以上'];
 
 require_once('./tpl/product_detail.php');
 

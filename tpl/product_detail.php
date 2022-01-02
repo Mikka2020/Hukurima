@@ -13,13 +13,13 @@
   <header></header>
   <main>
     <img
-      src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
+      src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
       alt="商品画像" width="360px" height="420px"> <!-- 商品画像 -->
     <ul>
       <?php // foreach($product_images as $product/image): ?>
       <li>
         <img
-          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
           alt="その他の商品画像" width="64px" height="64px">
       </li> <!-- その他の商品画像のサムネイルをアップロードされた枚数分表示 -->
       <?php // endforeach; ?>
@@ -28,21 +28,25 @@
       <section>
         <h3><?php echo $product['product_name']; ?></h3>
         <ul>
-          <li><?php echo $product['product_bland']; ?></li>
+          <li><?php echo $product['brand']; ?></li>
           <li>¥<?php echo $product['price'] ?></li>
         </ul>
         <form action="" method="post">
 
-          <button><img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px"
-              height=""><?php echo $product['favorite']; ?></button>
-          <button><img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px"
-              height=""><?php echo  5; // $product['comment']; ?></button>
+          <button>
+            <img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px"
+              height=""><?php echo 1 // $product['favorite']; ?>
+          </button>
+          <button>
+            <img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px"
+              height=""><?php echo  5; // $product['comment']; ?>
+          </button>
         </form>
 
       </section>
       <section>
         <h4>商品説明</h4>
-        <p><?php echo $product['product_explan']; ?></p>
+        <p><?php echo $product['product_explain']; ?></p>
         <p>
           <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
           <?php echo $product['listed_at']; ?>
@@ -58,15 +62,15 @@
         <h4>商品詳細</h4>
         <ul>
           <li>カテゴリ</li>
-          <li><?php echo $product['category']; ?></li>
+          <li><?php echo $product['product_category']; ?></li>
         </ul>
         <ul>
           <li>商品の状態</li>
-          <li><?php echo $product['product_statu'] == 0 ? '目立った傷や汚れ無し' : '不良'; ?></li>
+          <li><?php echo $product_condition[$product['product_condition']]; ?></li>
         </ul>
         <ul>
           <li>配送までの日数</li>
-          <li><?php echo ''; ?></li>
+          <li><?php echo $days_to_ship[$product['days_to_ship']]; ?></li>
         </ul>
         <ul>
           <li>ハンガーボックス</li>
@@ -79,7 +83,7 @@
         <ul>
           <li>出品者</li>
           <li>
-            <img src="./img/users/<?php echo $product['user_id']; ?>/prof/<?php echo $product['user_name']; ?>.jpg"
+            <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user_name; ?>.jpg"
               alt="プロフィール画像" width="32px" height="32px">
             <?php echo $product['user_name']; ?>
           </li>
