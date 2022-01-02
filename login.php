@@ -32,13 +32,14 @@ if(isset($_POST['login_btn'])){
     // ログイン処理
     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
-    $id = get_id($link,TABLES['101'],$login_id,$password);
+    $id = get_id($link,TABLES['102'],$login_id,$password);
     mysqli_close($link);
 
     if(isset($id)){
         setcookie('user_id',$id['user_id'],time() + 3600*24*7);
-        header ('location:./profile.php');
-        exit;
+        // header ('location:./profile.php');
+        // exit;
+        var_dump($id);
     }
 }
 
