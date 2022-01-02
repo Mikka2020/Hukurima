@@ -36,7 +36,7 @@ if(isset($_POST['login_btn'])){
     mysqli_close($link);
 
     if(isset($id)){
-        setcookie('user_id',$user_id,time() + 3600*24*7);
+        setcookie('user_id',$id['user_id'],time() + 3600*24*7);
         header ('location:./profile.php');
         exit;
     }
