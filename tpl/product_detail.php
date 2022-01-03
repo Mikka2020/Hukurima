@@ -10,26 +10,26 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <?php echo $product['product_name']; ?>
+  </header>
   <main>
-    <img
-      src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
-      alt="商品画像" width="360px" height="420px"> <!-- 商品画像 -->
-    <ul>
-      <?php // foreach($product_images as $product/image): ?>
-      <li>
+    <article>
+      <section class="img-section">
+        <h3>商品画像</h3>
         <img
           src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
-          alt="その他の商品画像" width="64px" height="64px">
-      </li> <!-- その他の商品画像のサムネイルをアップロードされた枚数分表示 -->
-      <?php // endforeach; ?>
-    </ul>
-    <article>
+          alt="商品画像" width="360px" height=""> <!-- 商品画像 -->
+      </section>
       <section>
         <h3><?php echo $product['product_name']; ?></h3>
         <ul>
           <li><?php echo $product['brand']; ?></li>
           <li>¥<?php echo $product['price'] ?></li>
+          <p>
+            <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
+            <?php echo $product['listed_at']; ?>
+          </p>
         </ul>
         <form action="" method="post">
 
@@ -47,10 +47,6 @@
       <section>
         <h4>商品説明</h4>
         <p><?php echo $product['product_explain']; ?></p>
-        <p>
-          <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
-          <?php echo $product['listed_at']; ?>
-        </p>
         <ul>
           <?php // foreach($tags as $tag): ?>
           <li><?php // echo $tag; ?></li>
@@ -80,14 +76,14 @@
           <li>クリーニング</li>
           <li><?php echo '可'; ?></li>
         </ul>
-        <ul>
-          <li>出品者</li>
-          <li>
-            <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user_name; ?>.jpg"
-              alt="プロフィール画像" width="32px" height="32px">
-            <?php echo $product['user_name']; ?>
-          </li>
-        </ul>
+      </section>
+      <section>
+        <h4>出品者</h4>
+
+        <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user_name; ?>.jpg" alt="プロフィール画像"
+          width="32px" height="32px">
+        <?php echo $product['user_name']; ?>
+
       </section>
     </article>
 
