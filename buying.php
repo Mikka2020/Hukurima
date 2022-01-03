@@ -20,26 +20,34 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値
-$_SESSION['product_id'] = 1;
+// $_SESSION['product_id'] = 1;
 
 // 初期値
-$table = 'listing'; // テーブル名
-$column = 'listing_id';
+// $table = 'listing'; // テーブル名
+$column = 'user_id';
+
 
 // 「商品詳細画面」で見てた商品の商品IDを取得
-$id = $_SESSION['product_id'];
-unset($_SESSION['product_id']);
+$id = $_SESSION['buy_product_info'];
+unset($_SESSION['buy_product_info']);
+// var_dump($id);
 
 // 商品IDに対する商品詳細情報と出品者情報の取得
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column($link,$table,$column,$id);
+$line = get_column($link,TABLES['101'],$column,$id);
+mysqli_close($link);
+
+// ユーザ情報を取得する処理
+$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+mysqli_set_charset($link , 'utf8');
+$profiles = get_column($link,TABLES['103'],$column,$id);
 mysqli_close($link);
 
 // 購入ボタンが押された時の処理
 if(isset($_POST['buy_btn'])){
-    $_SESSION['buy_product_info'] = $line;
-    header ('location:./entry_confirm.php');
+    $_SESSION['buy_product_info'] = $line['listing_id'];
+    header ('location:./trading.php');
     exit;
 }
 

@@ -442,7 +442,7 @@ function assemb_get_five_column($table,$column,$id){
 }
 
 /* 
-* 概要：上から5レコード取得するクエリを組み立てる関数（購入画面で使用）
+* 概要：上から5レコード取得する関数（購入画面で使用）
 * 戻り値：連想配列
 */
 function get_five_column($link,$table,$column,$id){
@@ -454,3 +454,29 @@ function get_five_column($link,$table,$column,$id){
     }
     return $list;
 }
+
+// /* 
+// * 概要：user_idからプロフィール情報・ユーザ情報取得するクエリを組み立てる関数（購入画面で使用）
+// * 戻り値：SQL文
+// */
+// function assemb_get_by_user_id($table,$column,$id){
+//     $query = "SELECT * FROM ".$table1." t1 ";
+    
+//     $query .= " WHERE user_id = ";
+//     $query .= $id;
+//     return $query;
+// }
+
+// /* 
+// * 概要：user_idからプロフィール情報・ユーザ情報取得する関数（購入画面で使用）
+// * 戻り値：連想配列
+// */
+// function get_by_user_id($link,$table,$column,$id){
+//     $list = [];
+//     $query = assemb_get_five_column($table,$column,$id);
+//     $result = mysqli_query($link,$query);
+//     while($row = mysqli_fetch_assoc($result)){
+//         $list[] = $row;
+//     }
+//     return $list;
+// }

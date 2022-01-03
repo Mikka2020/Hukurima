@@ -30,6 +30,26 @@
           <li class="brand"><?php echo $line['brand']; ?></li>
           <li class="price">¥<?php echo $line['price']; ?></li>
         </ul>
+        <table>
+          <tr>
+            <th>カテゴリ</th>
+            <td><?php echo $line['product_category']; // カテゴリ ?></td>
+          </tr>
+          <tr>
+            <th>商品の状態</th>
+            <td><?php echo $product_condition[$line['product_condition']]; // 商品の状態 ?></td>
+          </tr>
+          <tr>
+            <th>発送までの日数</th>
+            <td><?php echo $days_to_ship[$line['days_to_ship']]; // 発送までの日数 ?></td>
+          </tr>
+          <tr>
+            <th>商品説明</th>
+            <td><?php echo $line['product_explain']; // 商品の説明 ?></td>
+          </tr>
+        </table>
+        <p>商品を閉じる</p>
+      </section>
 
       </section>
       <section>
@@ -61,11 +81,11 @@
 
       <section class="profile-section">
         <h3>出品者</h3>
-        <p><img class="prof-img" src="./img/users/<?php echo 2; ?>/profile/<?php echo "mari"; ?>.jpg" alt="プロフィール画像"
-            width="30px" height="30px"></p>
-        <p><?php echo "Mari"; ?> さん</p>
-        <p class="message-btn">メッセージ</p>
-      </section>
+        <p><img src="./img/users/<?php echo $line['user_id']; // 会員id ?>/profile/<?php echo $profiles['nickname']; // 会員名 ?>.jpg"
+            alt="プロフィール画像" width="30px" height="30px"></p>
+        <p><?php echo $profiles['nickname']; // 会員名 ?> さん</p>
+        <p>メッセージ</p>
+    </section>
 
       <section class="address-section">
         <h3>配送先</h3>
