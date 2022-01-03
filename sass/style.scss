@@ -36,3 +36,26 @@ h2 {
 .none {
   display: none;
 }
+
+// フッターナビ
+.global-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10;
+  font-size: 8px;
+  width: 375px;
+  height: 60px;
+  border: solid 1px #ccc;
+
+  nav {
+    margin-top: 10px;
+    ul {
+      display: flex;
+      text-align: center;
+      li {
+        width: 20%;
+      }
+    }
+  }
+}
