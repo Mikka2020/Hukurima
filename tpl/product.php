@@ -93,7 +93,7 @@
     </article>
   </main>
 
-  <footer>
+  <footer class="global-footer">
     <?php require_once('./footer.php'); ?>
   </footer>
 </body>

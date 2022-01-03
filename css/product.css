@@ -82,7 +82,7 @@ h4 {
   background-color: #fff;
 }
 
-footer {
+.global-footer {
   position: fixed;
   bottom: 0;
   background-color: #fff;
@@ -93,11 +93,11 @@ footer {
   border: solid 1px #ccc;
 }
 
-footer nav {
+.global-footer nav {
   margin-top: 10px;
 }
 
-footer nav ul {
+.global-footer nav ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,7 +105,7 @@ footer nav ul {
   text-align: center;
 }
 
-footer nav ul li {
+.global-footer nav ul li {
   width: 20%;
 }
 /*# sourceMappingURL=product.css.map */
