@@ -13,7 +13,7 @@ const TABLES = [
     '101' => 'listing',
     '102' => 'member',
     '103' => 'profile',
-    '103' => 'search_conditions'
+    '104' => 'search_conditions',
 ];
 
 /*
