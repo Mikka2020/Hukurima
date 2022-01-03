@@ -18,7 +18,7 @@ require_once './func.php';
 
 // 初期値
 $login_id = $password = '';
-$table = 'listing'; // テーブル名
+// $table = 'listing'; // テーブル名
 $column = 'id';
 
 // ユーザID、パスワードの取得
@@ -32,13 +32,14 @@ if(isset($_POST['login_btn'])){
     // ログイン処理
     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
-    $id = get_column($link,$table,$login_id,$password);
+    $id = get_id($link,TABLES['102'],$login_id,$password);
     mysqli_close($link);
 
     if(isset($id)){
-        setcookie('login_status',$user_id,time() + 3600*24*7);
-        header ('location:./entry_confirm.php');
+        setcookie('user_id',$id['user_id'],time() + 3600*24*7);
+        header ('location:./product.php');
         exit;
+        // var_dump($id);
     }
 }
 

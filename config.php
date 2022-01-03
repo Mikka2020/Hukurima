@@ -9,6 +9,13 @@ $days_to_ship = ['1~3日以内', '4~6日以内', '7日以上'];
 $cleaning = ['不可', '可'];
 $picking = ['自宅集荷しない', '自宅集荷する'];
 
+const TABLES = [
+    '101' => 'listing',
+    '102' => 'member',
+    '103' => 'profile',
+    '104' => 'search_conditions',
+];
+
 /*
  /Applications/XAMPP/bin/mysql -u root
  use hukurima;
