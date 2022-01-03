@@ -74,7 +74,9 @@
   </main>
 
   <!-- ここにフッター -->
-  <footer></footer>
+  <footer class="global-footer">
+    <?php require_once('./footer.php') ?>
+  </footer>
 
 </body>
 
