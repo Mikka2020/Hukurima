@@ -28,7 +28,7 @@
           <li>¥<?php echo $product['price'] ?></li>
           <p>
             <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
-            <?php echo $product['listed_at']; ?>
+            <?php echo $elapsed_time_msg; ?>
           </p>
         </ul>
         <form action="" method="post">
