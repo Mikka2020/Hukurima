@@ -92,11 +92,13 @@
     </article>
 
   </main>
+
   <footer>
     <form action="" method="post">
-      <button type="submit" class="btn">購入する</button>
+      <button type="submit" name="buy_btn" class="btn buy_btn">購入する</button>
     </form>
   </footer>
+
 </body>
 
 </html>
