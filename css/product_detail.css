@@ -1,7 +1,20 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+}
+
 main {
   margin-bottom: 60px;
+}
+
+.img-section {
+  text-align: center;
+}
+
+.img-section h3 {
+  display: none;
 }
 
 .product-detail ul {
@@ -32,8 +45,8 @@ footer {
 footer form .buy_btn {
   height: 40px;
   margin-top: 10px;
-  background-color: #fff;
-  width: 350px;
-  border: solid 1px #000;
+  width: 80%;
+  background-color: #fe9900;
+  color: #fff;
 }
 /*# sourceMappingURL=product_detail.css.map */
