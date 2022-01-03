@@ -31,7 +31,7 @@
         <table>
           <tr>
             <th>カテゴリ</th>
-            <td><?php echo $line['category']; // カテゴリ ?></td>
+            <td><?php echo $line['product_category']; // カテゴリ ?></td>
           </tr>
           <tr>
             <th>商品の状態</th>
@@ -51,9 +51,9 @@
 
       <section>
         <h3>出品者</h3>
-        <p><img src="./img/users/<?php echo $line['user_id']; // 会員id ?>/prof/<?php echo "mari"; // 会員名 ?>.jpg"
+        <p><img src="./img/users/<?php echo $line['user_id']; // 会員id ?>/profile/<?php echo $profiles['nickname']; // 会員名 ?>.jpg"
             alt="プロフィール画像" width="30px" height="30px"></p>
-        <p><?php echo "Mari"; // 会員名 ?> さん</p>
+        <p><?php echo $profiles['nickname']; // 会員名 ?> さん</p>
         <p>メッセージ</p>
       </section>
 
