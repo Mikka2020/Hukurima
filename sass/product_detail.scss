@@ -1,6 +1,10 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
+main {
+  margin-bottom: 60px;
+}
+
 .product-detail {
   ul {
     display: flex;
@@ -9,6 +13,25 @@
       img {
         border-radius: 100%;
       }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  background-color: #fff;
+  width: 375px;
+  height: 60px;
+  bottom: 0;
+  border: solid 1px #000;
+  z-index: 10;
+  form {
+    .buy_btn {
+      height: 40px;
+      margin-top: 10px;
+      background-color: #fff;
+      width: 350px;
+      border: solid 1px #000;
     }
   }
 }
