@@ -11,6 +11,7 @@ main {
   font-size: 12px;
   color: #707070;
   border: solid 1px #ccc;
+  margin-bottom: 60px;
 }
 
 h1,
@@ -82,12 +83,18 @@ h4 {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  background-color: #fff;
   z-index: 10;
   font-size: 8px;
   width: 375px;
+  height: 60px;
   border: solid 1px #ccc;
+}
+
+footer nav {
+  margin-top: 10px;
 }
 
 footer nav ul {
