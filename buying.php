@@ -26,6 +26,7 @@ require_once './func.php';
 // $table = 'listing'; // テーブル名
 $column = 'user_id';
 
+
 // 「商品詳細画面」で見てた商品の商品IDを取得
 $id = $_SESSION['buy_product_info'];
 unset($_SESSION['buy_product_info']);
