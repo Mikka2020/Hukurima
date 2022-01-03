@@ -38,4 +38,31 @@ h2 {
 .none {
   display: none;
 }
+
+.global-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10;
+  font-size: 8px;
+  width: 375px;
+  height: 60px;
+  border: solid 1px #ccc;
+}
+
+.global-footer nav {
+  margin-top: 10px;
+}
+
+.global-footer nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.global-footer nav ul li {
+  width: 20%;
+}
 /*# sourceMappingURL=style.css.map */
