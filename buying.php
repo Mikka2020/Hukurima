@@ -24,7 +24,7 @@ $_SESSION['product_id'] = 1;
 
 // 初期値
 $table = 'listing'; // テーブル名
-$column = 'id';
+$column = 'listing_id';
 
 // 「商品詳細画面」で見てた商品の商品IDを取得
 $id = $_SESSION['product_id'];
