@@ -1,7 +1,7 @@
 <nav class="footer-nav">
   <ul>
     <li>
-      <a href="./index.php">
+      <a href="./top.php">
         <img src="./img/icon/index.png" alt="homeアイコン" width="24px" height="24px"><br>ホーム
       </a>
     </li>
