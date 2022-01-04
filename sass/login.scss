@@ -1,2 +1,59 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+main {
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+  .logo {
+    margin: 24px auto;
+    text-align: center;
+    background-color: #fff;
+    width: 300px;
+    padding: 40px 0;
+  }
+  article {
+    section {
+      padding: 20px;
+      width: 300px;
+      margin: 0 auto;
+      ul {
+        margin-bottom: 0.7rem;
+        li {
+          margin-bottom: 0.3rem;
+          input {
+            line-height: 32px;
+            background-color: #f0f0f0;
+            width: 100%;
+            border-radius: 3px;
+          }
+        }
+      }
+      .forget-text {
+        color: #fd819d;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+      }
+      .entry-text {
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+      }
+      .login-btn,
+      .entry-btn {
+        color: #fff;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 3px;
+      }
+      .login-btn {
+        background-color: #fe9900;
+      }
+      .entry-btn {
+        background-color: #fd819d;
+      }
+    }
+  }
+}
