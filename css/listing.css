@@ -1,3 +1,83 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: solid 1px #000;
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+h2 {
+  display: none;
+}
+
+h3 {
+  background-color: #ccc;
+}
+
+input,
+select,
+textarea {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+textarea {
+  border: solid 1px #ccc;
+}
+
+.detail-section ::-webkit-input-placeholder,
+.shipping-section ::-webkit-input-placeholder,
+.price-section ::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.detail-section :-ms-input-placeholder,
+.shipping-section :-ms-input-placeholder,
+.price-section :-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.detail-section ::-ms-input-placeholder,
+.shipping-section ::-ms-input-placeholder,
+.price-section ::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.detail-section ::placeholder,
+.shipping-section ::placeholder,
+.price-section ::placeholder {
+  opacity: 0.5;
+}
+
+.detail-section ul,
+.shipping-section ul,
+.price-section ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #ccc;
+}
+
+.detail-section ul li,
+.shipping-section ul li,
+.price-section ul li {
+  width: 50%;
+}
+
+.detail-section select,
+.shipping-section select,
+.price-section select {
+  width: 100%;
+}
+
+.explain-section textarea {
+  resize: none;
+  width: 360px;
+}
 /*# sourceMappingURL=listing.css.map */
