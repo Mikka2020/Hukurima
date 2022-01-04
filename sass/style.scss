@@ -37,6 +37,13 @@ h2 {
   display: none;
 }
 
+// 表示終了（画面最下部）のハンガーアイコン
+.hanger-icon {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 // フッターナビ
 .global-footer {
   position: fixed;
