@@ -3,10 +3,10 @@ require_once('./config.php');
 
 // テスト用
 $listing = [
-  'listing_id' => '1',
+  'listing_id' => '2',
   'user_id' => '2',
   'product_name' => 'アシメレースアップリボンニット',
-  'img_extension' => '.jpg',
+  'img_extension' => 'jpg',
   'price' => '3600',
   'product_explain' => 'これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。',
   'product_category' => 'ブラウス',
