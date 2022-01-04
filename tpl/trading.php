@@ -10,24 +10,25 @@
 </head>
 
 <body>
+  <header>
+    <p>取引画面</p>
+  </header>
   <main>
     <article>
-      <section class="product-area">
+      <section class="product-section">
         <div>
-          <img src="./img/users/<?php echo "2"; ?>/products/<?php echo "1"; ?>/<?php echo 'アシメレースアップリボンニット'; ?>_1.jpg"
-            alt="商品画像サムネイル" width="80px" height="80px" />
+          <img
+            src="./img/users/<?php echo $line['user_id']; ?>/products/<?php echo $line['listing_id']; ?>/<?php echo $line['product_name']; ?>_1.<?php echo $line['img_extension']; ?>"
+            alt="商品画像サムネイル" width="80px" height="" />
         </div>
         <div>
-          <p>
-            アシメレースリボンニット（長袖）<br />
-            ¥3,600
-          </p>
+          <p class="product-name"><?php echo $line['product_name']; ?></p>
+          <p class="price">¥<?php echo $line['price']; ?></p>
         </div>
       </section>
 
       <section>
         <h2>配送状況</h2>
-        <!-- <img src="./img/progress.png" alt="配送状況プログレスバー" width="375px" height="" /> -->
         <div class="progress-bar-area">
           <ul class="progress-bar">
             <li></li>
@@ -35,31 +36,32 @@
             <li></li>
             <li></li>
           </ul>
-          <ul class="send-status">
+          <ul class="">
             <li>発送準備中</li>
             <li>発送済</li>
             <li>配達中</li>
             <li>配達済</li>
           </ul>
         </div>
-        <p class="center">配達済</p>
+        <p class="center send-status">配達済</p>
       </section>
 
-      <section>
+      <section class="prof-section">
         <h2>出品者</h2>
         <p>
-          <img src="./img/users/2/prof/mari.jpg" alt="プロフィール画像" width="32px" height="32px" />
-          Mari さん
+          <img class="prof-img" src="./img/users/<?php echo $line['user_id']; ?>/profile/mari.jpg" alt="プロフィール画像"
+            width="32px" height="32px" />
+          <?php echo "Mari"; ?> さん
         </p>
-        <p><button type="submit" class="btn msg-btn">メッセージ</button></p>
+        <button type="submit" class="btn msg-btn" name="message">メッセージ</button>
       </section>
 
-      <div class="center">
-        <a href="">返品を申請する</a><br />
-        <a href="">問題を報告する</a>
+      <div class="center other-query">
+        <p><a href="">返品を申請する</a></p>
+        <p><a href="">問題を報告する</a></p>
       </div>
       <div class="bg_btn_eval">
-        <button type="submit" class="btn eval-btn">評価画面へ</button>
+        <button type="submit" class="btn eval-btn" name="eval_btn">評価画面へ</button>
       </div>
     </article>
   </main>

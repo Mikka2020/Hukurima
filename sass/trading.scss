@@ -1,5 +1,14 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  text-align: center;
+  border: solid 1px #111;
+  height: 60px;
+  p {
+    line-height: 60px;
+  }
+}
+
 .msg-btn {
   border: solid 1px #333;
   width: 100%;
@@ -15,8 +24,20 @@
   background-color: #fff;
   padding: 10px;
 }
-
+.product-section {
+  display: flex;
+  font-size: 16px;
+  .product-name {
+  }
+  .price {
+    color: red;
+  }
+}
+.send-status {
+  font-size: 16px;
+}
 .progress-bar-area {
+  font-size: 8px;
   margin-top: 3em;
   .progress-bar {
     li {
@@ -41,9 +62,6 @@
     position: absolute;
     top: -16px;
   }
-  .send-status {
-    font-size: 8px;
-  }
   ul {
     display: flex;
     position: relative;
@@ -52,5 +70,18 @@
       width: 20%;
       text-align: center;
     }
+  }
+}
+.prof-section {
+  p {
+    line-height: 32px;
+  }
+  .prof-img {
+    border-radius: 50%;
+  }
+}
+.other-query {
+  p {
+    margin-bottom: 0.5rem;
   }
 }
