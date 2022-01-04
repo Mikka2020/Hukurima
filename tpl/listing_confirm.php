@@ -27,7 +27,7 @@
             カテゴリ
           </li>
           <li>
-            <?php echo $listing['category']; ?>
+            <?php echo $listing['product_category']; ?>
           </li>
         </ul>
         <ul>
