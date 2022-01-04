@@ -1,5 +1,15 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  text-align: center;
+  border: solid 1px #111;
+  height: 60px;
+}
+
+header p {
+  line-height: 60px;
+}
+
 .msg-btn {
   border: solid 1px #333;
   width: 100%;
@@ -18,7 +28,24 @@
   padding: 10px;
 }
 
+.product-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+
+.product-section .price {
+  color: red;
+}
+
+.send-status {
+  font-size: 16px;
+}
+
 .progress-bar-area {
+  font-size: 8px;
   margin-top: 3em;
 }
 
@@ -46,10 +73,6 @@
   top: -16px;
 }
 
-.progress-bar-area .send-status {
-  font-size: 8px;
-}
-
 .progress-bar-area ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -65,5 +88,17 @@
 .progress-bar-area ul li {
   width: 20%;
   text-align: center;
+}
+
+.prof-section p {
+  line-height: 32px;
+}
+
+.prof-section .prof-img {
+  border-radius: 50%;
+}
+
+.other-query p {
+  margin-bottom: 0.5rem;
 }
 /*# sourceMappingURL=trading.css.map */
