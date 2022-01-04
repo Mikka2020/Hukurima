@@ -1,9 +1,7 @@
 @import url("./destyle.css");
-body {
-  width: 375px;
-  min-height: 667px;
-  border: solid 1px #ccc;
-  position: relative;
+@import url("./style.css");
+header {
+  height: 60px;
 }
 
 main {
@@ -45,6 +43,7 @@ h4 {
 }
 
 #product {
+  background-color: #ccc;
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -54,22 +53,43 @@ h4 {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  background-color: #ccc;
 }
 
 #product .product-area {
-  background-color: #fff;
+  border-radius: 5px;
   margin: 2px;
 }
 
+#product .product-area .product-item {
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  border-bottom: solid 1px #ccc;
+}
+
+#product .product-area .product-item .favorite-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
 #product .product-area .product-explain {
-  margin: 4px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  height: 32px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #product .product-area .product-explain .price,
 #product .product-area .product-explain .profile {
-  font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
 }
 
 #product .product-area .product-explain .prof-img {
@@ -82,30 +102,9 @@ h4 {
   background-color: #fff;
 }
 
-.global-footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #fff;
-  z-index: 10;
-  font-size: 8px;
-  width: 375px;
-  height: 60px;
-  border: solid 1px #ccc;
-}
-
-.global-footer nav {
-  margin-top: 10px;
-}
-
-.global-footer nav ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.hanger-icon {
   text-align: center;
-}
-
-.global-footer nav ul li {
-  width: 20%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=product.css.map */

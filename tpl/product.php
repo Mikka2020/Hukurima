@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-
   <link rel="stylesheet" href="./css/product.css" type="text/css" />
   <title>商品一覧</title>
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <p></p>
+    <nav></nav>
+  </header>
   <main>
     <h1>フクリマ</h1>
     <article id="field">
@@ -64,26 +66,26 @@
             <a href="./product_detail.php?id=<?php echo $product['listing_id']; ?>">
               <img class="product-item"
                 src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id'] ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
-                alt="商品" width="180px" height="" /> <!-- 商品画像 -->
+                alt="商品" width="180px" height="" />
             </a>
+            <form action="" method="post" class="favorite-btn">
+              <button type="submit">
+                <img src="./img/icon/heart-regular.svg" alt="いいねアイコン" width="24px" height="">
+              </button>
+
+            </form>
           </div>
 
           <div class="product-explain">
-            <p class="price">¥<?php echo $product['price']; ?></p>
-            <!-- 値段 -->
-
-
             <p class="profile">
               <a href="./profile.php?user_id=<?php echo $product['user_id']; ?>">
                 <img class="prof-img"
                   src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles[$product['user_id']-1]['nickname']; ?>.<?php echo $profiles[$product['user_id']-1]['img_extension']; ?>"
-                  alt="プロフィール画像" width="16px" height="16px" /> <!-- プロフィール画像 -->
+                  alt="プロフィール画像" width="24px" height="24px" />
                 <?php echo $profiles[$product['user_id']-1]['nickname']; ?>
-                <!-- 会員名 -->
               </a>
-              <img src="./img/icon/heart-regular.svg" alt="いいねアイコン" width="16px" height="">
             </p>
-
+            <p class="price">¥<?php echo $product['price']; ?></p>
           </div>
 
         </div>
@@ -91,6 +93,7 @@
 
       </section> <!-- 商品一覧終了 -->
     </article>
+    <p class="hanger-icon"><img src="./img/icon/ハンガー.png" alt="表示終了アイコン"></p>
   </main>
 
   <footer class="global-footer">
