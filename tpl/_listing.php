@@ -14,8 +14,11 @@
   <main>
     <h1>フクリマ</h1>
     <article>
-      <form action="" method="post">
+      <form action="" method="post" enctype="multipart/form-data">
         <h2>出品フォーム</h2>
+        <section>
+          <input type="file" name="product_img" class="input-img">
+        </section>
         <section class="explain-section">
           <h3>商品名と説明</h3>
           <ul>
