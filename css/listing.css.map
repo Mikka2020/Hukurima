@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,oBAAI;AACZ,OAAO,CAAC,kBAAI",
+    "sources": [
+        "../sass/listing.scss"
+    ],
+    "names": [],
+    "file": "listing.css"
+}
