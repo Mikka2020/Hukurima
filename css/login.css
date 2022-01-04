@@ -1,3 +1,69 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+main {
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+}
+
+main .logo {
+  margin: 24px auto;
+  text-align: center;
+  background-color: #fff;
+  width: 300px;
+  padding: 40px 0;
+}
+
+main article section {
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+main article section ul {
+  margin-bottom: 0.7rem;
+}
+
+main article section ul li {
+  margin-bottom: 0.3rem;
+}
+
+main article section ul li input {
+  line-height: 32px;
+  background-color: #f0f0f0;
+  width: 100%;
+  border-radius: 3px;
+}
+
+main article section .forget-text {
+  color: #fd819d;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+main article section .entry-text {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+main article section .login-btn,
+main article section .entry-btn {
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 3px;
+}
+
+main article section .login-btn {
+  background-color: #fe9900;
+}
+
+main article section .entry-btn {
+  background-color: #fd819d;
+}
 /*# sourceMappingURL=login.css.map */
