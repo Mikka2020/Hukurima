@@ -1,0 +1,54 @@
+@import url("./destyle.css");
+@import url("./style.css");
+
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: solid 1px #000;
+}
+main {
+  margin-bottom: 60px;
+}
+h2 {
+  display: none;
+}
+h3 {
+  background-color: #ccc;
+}
+input,
+select,
+textarea {
+  line-height: 24px;
+  font-size: 14px;
+}
+textarea {
+  border: solid 1px #ccc;
+}
+
+.detail-section,
+.shipping-section,
+.price-section {
+  ::placeholder {
+    opacity: 0.5;
+  }
+  ul {
+    display: flex;
+    // margin-bottom: 0.5rem;
+    // padding-bottom: 0.3rem;
+    // padding-top: 0.3rem;
+    border-bottom: solid 1px #ccc;
+    li {
+      width: 50%;
+    }
+  }
+  select {
+    width: 100%;
+  }
+}
+.explain-section {
+  textarea {
+    resize: none;
+    width: 360px;
+  }
+}
