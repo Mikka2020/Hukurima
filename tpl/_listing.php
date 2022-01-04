@@ -22,9 +22,9 @@
         <section class="explain-section">
           <h3>商品名と説明</h3>
           <ul>
-            <li><input type="text" placeholder="商品名(必須)"></li>
+            <li><input name="product_name" type="text" placeholder="商品名(必須)"></li>
             <li>
-              <textarea name="" id="" cols="30" rows="10" placeholder="商品説明 (任意)"></textarea>
+              <textarea name="product_explain" id="" cols="30" rows="10" placeholder="商品説明 (任意)"></textarea>
             </li>
           </ul>
         </section>
@@ -32,13 +32,13 @@
           <h3>商品情報</h3>
           <ul>
             <li>カテゴリー</li>
-            <li><input type="text" name="" id="" placeholder="カテゴリーを入力"></li>
+            <li><input type="text" name="product_category" id="" placeholder=" カテゴリーを入力"></li>
           </ul>
 
           <ul>
             <li>商品の状態</li>
             <li>
-              <select name="" id="con">
+              <select name="product_condition" id="con">
                 <option value="">選択してください >
                 </option>
                 <?php foreach($product_condition as $condition_index => $product_condition_msg): ?>
@@ -51,7 +51,7 @@
           </ul>
           <ul>
             <li>ブランド</li>
-            <li><input type="text" name="" id="" placeholder="ブランドを入力"></li>
+            <li><input type="text" name="brand" id="" placeholder="ブランドを入力"></li>
           </ul>
         </section>
         <section class="shipping-section">
@@ -59,7 +59,7 @@
           <ul>
             <li>配送までの日数</li>
             <li>
-              <select name="" id="">
+              <select name="ship_to_days" id="">
                 <option value="">選択してください >
                 </option>
                 <?php foreach($days_to_ship as $days_index => $days_msg): ?>
@@ -71,20 +71,20 @@
           <ul>
             <li>クリーニングオプション</li>
             <li>
-              <select name="" id="">
+              <select name="cleaning_flg" id="">
                 <option value="">選択してください ></option>
-                <option value="">あり</option>
-                <option value="">なし</option>
+                <option value="1">あり</option>
+                <option value="0">なし</option>
               </select>
             </li>
           </ul>
           <ul>
             <li>集荷オプション</li>
             <li>
-              <select name="" id="">
+              <select name="picking_flg" id="">
                 <option value="">選択してください ></option>
-                <option value="">あり</option>
-                <option value="">なし</option>
+                <option value="1">あり</option>
+                <option value="0">なし</option>
               </select>
             </li>
           </ul>
@@ -93,7 +93,7 @@
           <h3>出品価格（300円〜9,999,999円）</h3>
           <ul>
             <li>出品価格</li>
-            <li><input type="number" name="" id="" placeholder="価格を入力">円</li>
+            <li><input type="number" name="price" id="" placeholder="価格を入力">円</li>
           </ul>
         </section>
         <button type="submit" name="draft_save" value="on" class="save_btn">下書きに保存する</button>
