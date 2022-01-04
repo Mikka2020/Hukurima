@@ -74,9 +74,12 @@
           <ul>
             <?php // foreach($address as $address): ?>
             <li>
-              <input type="radio" name="" id="">配送先<?php echo "1"; ?> <br>
-              〒<?php echo "530-0001"; ?> <br>
-              <?php echo "大阪市北区梅田3-3-1"; ?>
+              <input type="radio" name="address" id="address1" value="1" checked>
+              <label for="address1">
+                配送先<?php echo "1"; ?> <br>
+                〒<?php echo "530-0001"; ?> <br>
+                <?php echo "大阪市北区梅田3-3-1"; ?>
+              </label>
             </li>
             <?php // endforeach; ?>
 
@@ -85,7 +88,12 @@
       </section>
       <section>
         <h3>オプション</h3>
-        <input type="checkbox" name="" id="">クリーニングあり
+        <input type="checkbox" name="cleaning_flg" id="cleaning">
+        <label for="cleaning">クリーニングあり</label>
+        <br>
+        <input type="checkbox" name="hanger_flg" id="hanger">
+        <label for="hanger">ハンガーボックスあり</label>
+
 
       </section>
       <p class="center">
