@@ -16,12 +16,12 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値
-$_SESSION['product_id'] = 1;
+$_SESSION['product_id'] = 2;
 
 // 初期値
 $id = $_SESSION['product_id'];
 $table = 'listing';
-$column = 'id';
+$column = 'listing_id';
 
 
 // 商品の配送状況の取得
