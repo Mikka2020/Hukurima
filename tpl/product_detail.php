@@ -18,7 +18,7 @@
       <section class="img-section">
         <h3>商品画像</h3>
         <img
-          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.jpg"
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
           alt="商品画像" width="360px" height=""> <!-- 商品画像 -->
       </section>
       <section>
@@ -80,7 +80,8 @@
         <ul>
           <li>出品者</li>
           <li>
-            <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.jpg"
+            <img
+              src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['img_extension']; ?>"
               alt="プロフィール画像" width="32px" height="32px">
             <?php echo $user['nickname']; ?>
           </li>
