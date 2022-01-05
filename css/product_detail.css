@@ -5,6 +5,19 @@ header {
   text-align: center;
   line-height: 60px;
   border: solid 1px #111;
+  position: relative;
+}
+
+header .back-icon {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+
+header .menu-icon {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
 }
 
 main {

@@ -11,7 +11,17 @@
 
 <body>
   <header>
-    <?php echo $product['product_name']; ?>
+    <p class="back-icon">
+      <a href="#" onClick="history.back(); return false;">
+        <img src="./img/icon/arrow_back_ios_new_black_24dp.svg" alt="" width="24px">
+      </a>
+    </p>
+    <p>
+      <?php echo $product['product_name']; ?>
+    </p>
+    <p class="menu-icon">
+      <img src="./img/icon/三点リーダーアイコン.svg" alt="" width="24px">
+    </p>
   </header>
   <main>
     <article>
