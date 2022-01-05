@@ -5,11 +5,17 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  line-height: 40px;
+  line-height: 60px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 60px;
+  border: solid 1px #111;
+}
+
+header img {
+  margin-top: 10px;
 }
 
 h2,
@@ -54,6 +60,7 @@ h3 {
 }
 
 #product .product-area .product-item .favorite-btn {
+  width: 24px;
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
