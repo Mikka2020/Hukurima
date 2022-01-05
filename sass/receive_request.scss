@@ -1,0 +1,57 @@
+@import url("./destyle.css");
+@import url("./style.css");
+
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: solid 1px #111;
+  position: relative;
+  .back-icon {
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
+  .menu-icon {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+  }
+}
+h2 {
+  display: none;
+}
+.request-section {
+  justify-content: space-evenly;
+  border-bottom: solid 1px #ccc;
+  .prof-img {
+    img {
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+  }
+
+  display: flex;
+  ul {
+    display: flex;
+    li {
+      text-align: center;
+      button {
+        width: 50px;
+        height: 36px;
+        border-radius: 3px;
+      }
+      font-size: 16px;
+    }
+    .deny-btn {
+      border: solid 1px #fe8900;
+      color: #fe8900;
+    }
+    .approval-btn {
+      background-color: #fe8900;
+      color: #fff;
+    }
+  }
+}

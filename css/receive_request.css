@@ -1,0 +1,74 @@
+@import url("./destyle.css");
+@import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: solid 1px #111;
+  position: relative;
+}
+
+header .back-icon {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+
+header .menu-icon {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+}
+
+h2 {
+  display: none;
+}
+
+.request-section {
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: solid 1px #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.request-section .prof-img img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.request-section ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.request-section ul li {
+  text-align: center;
+  font-size: 16px;
+}
+
+.request-section ul li button {
+  width: 50px;
+  height: 36px;
+  border-radius: 3px;
+}
+
+.request-section ul .deny-btn {
+  border: solid 1px #fe8900;
+  color: #fe8900;
+}
+
+.request-section ul .approval-btn {
+  background-color: #fe8900;
+  color: #fff;
+}
+/*# sourceMappingURL=receive_request.css.map */
