@@ -1,106 +1,109 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>出品画面</title>
-  <link rel="stylesheet" href="./css/core_style.css">
   <link rel="stylesheet" href="./css/listing.css">
-  <link rel="stylesheet" href="./sass/style.scss">
+  <title>出品画面</title>
 </head>
 
 <body>
-  <!-- <?php //require_once '参照ヘッダーファイル';?> -->
-
+  <header>出品画面</header>
   <main>
+    <h1>フクリマ</h1>
+    <article>
+      <form action="" method="post" enctype="multipart/form-data">
+        <h2>出品フォーム</h2>
+        <section>
+          <input type="file" name="product_img" class="input-img">
+        </section>
+        <section class="explain-section">
+          <h3>商品名と説明</h3>
+          <ul>
+            <li><input name="product_name" type="text" placeholder="商品名(必須)"></li>
+            <li>
+              <textarea name="product_explain" id="" cols="30" rows="10" placeholder="商品説明 (任意)"></textarea>
+            </li>
+          </ul>
+        </section>
+        <section class="detail-section">
+          <h3>商品情報</h3>
+          <ul>
+            <li>カテゴリー</li>
+            <li><input type="text" name="product_category" id="" placeholder=" カテゴリーを入力"></li>
+          </ul>
 
-    <form action="" method="post" enctype="multipart/form-data">
-
-      <div class="input_img_contents">
-        <input type="file" name="product_img" id="first_img_content">
-      </div>
-
-      <div class="title_area">
-        <h2>商品名と説明</h2><span class="help_guide">出品禁止物・出品ルール</span>
-      </div>
-      <article class="input_area">
-        <input type="text" name="product_name" placeholder="商品名 (必須)" maxlength="10">
-        <div>
-          <div class="input_box">
-            <p class="input_label">
-              <input type="text" name="product_explain" value="" placeholder="プレースホルダーを書く" maxlength="1000"
-                class="input_form">
-          </div>
-        </div>
-        <!-- <input type="text" name="hash_tag" value="" placeholder="ハッシュタグを利用する"> -->
-      </article>
-
-      <h2>商品情報</h2>
-      <article class="input_area">
-        <div class="input_box">
-          <p class="input_label">カテゴリ</p>
-          <input type="text" name="category" value="" placeholder="選択してください (必須)" class="input_form">
-        </div>
-        <div class="input_box">
-          <p class="input_label">商品の状態</p>
-          <input type="text" name="product_condition" value="" placeholder="選択してください (必須)" class="input_form">
-        </div>
-        <div class="input_box">
-          <p class="input_label">ブランド</p>
-          <input type="text" name="brand" value="" placeholder="選択してください (必須)" class="input_form">
-        </div>
-      </article>
-
-      <h2>配送について</h2>
-      <article class="input_area">
-        <div class="input_box">
-          <p class="input_label">配送までの日数</p>
-          <input type="text" name="days_to_ship" value="" placeholder="指定しない (必須)" class="input_form">
-        </div>
-        <div class="input_box">
-          <p class="input_label">クリーニングオプション</p>
-          <input type="text" name="cleaning_flg" value="" placeholder="指定しない (任意)" class="input_form">
-        </div>
-        <div class="input_box">
-          <p class="input_label">集荷オプション</p>
-          <input type="text" name="picking_flg" value="" placeholder="指定しない (任意)" class="input_form">
-        </div>
-      </article>
-
-      <h2>販売価格 (300円〜9,999,999円)</h2><span class="help_guide">販売利益とは</span>
-      <article class="input_area">
-        <div class="input_box">
-          <p class="input_label">出品価格</p><input type="text" name="price" value="" placeholder="0円" class="input_form">
-        </div>
-        <div class="input_box">
-          <p class="input_label">販売手数料</p>
-          <p class="price_contents">0円</p>
-        </div>
-        <div class="input_box">
-          <p class="input_label">販売利益</p>
-          <p class="price_contents">0円</p>
-        </div>
-      </article>
-
-      <article class="send_form">
-        <p class="annotation">禁止されている<a href="利用規約のファイル名" class="annotation_guide">行為</a>及び<a href="利用規約のファイル名"
-            class="annotation_guide">出品物</a>を必ずご確認ください。また、出品をもちまして<a href="利用規約のファイル名"
-            class="annotation_guide">規約</a>に同意したことになります。</p>
-
-        <button type="submit" name="listing" value="on" class="listing_btn">出品する</button>
+          <ul>
+            <li>商品の状態</li>
+            <li>
+              <select name="product_condition" id="con">
+                <option value="">選択してください >
+                </option>
+                <?php foreach($product_condition as $condition_index => $product_condition_msg): ?>
+                <option value="<?php echo $condition_index; ?>">
+                  <?php echo $product_condition_msg; ?>
+                </option>
+                <?php endforeach; ?>
+              </select>
+            </li>
+          </ul>
+          <ul>
+            <li>ブランド</li>
+            <li><input type="text" name="brand" id="" placeholder="ブランドを入力"></li>
+          </ul>
+        </section>
+        <section class="shipping-section">
+          <h3>配送について</h3>
+          <ul>
+            <li>配送までの日数</li>
+            <li>
+              <select name="ship_to_days" id="">
+                <option value="">選択してください >
+                </option>
+                <?php foreach($days_to_ship as $days_index => $days_msg): ?>
+                <option value="<?php echo $days_index; ?>"><?php echo $days_msg; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </li>
+          </ul>
+          <ul>
+            <li>クリーニングオプション</li>
+            <li>
+              <select name="cleaning_flg" id="">
+                <option value="">選択してください ></option>
+                <option value="1">あり</option>
+                <option value="0">なし</option>
+              </select>
+            </li>
+          </ul>
+          <ul>
+            <li>集荷オプション</li>
+            <li>
+              <select name="picking_flg" id="">
+                <option value="">選択してください ></option>
+                <option value="1">あり</option>
+                <option value="0">なし</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section class="price-section">
+          <h3>出品価格（300円〜9,999,999円）</h3>
+          <ul>
+            <li>出品価格</li>
+            <li><input type="number" name="price" id="" placeholder="価格を入力">円</li>
+          </ul>
+        </section>
         <button type="submit" name="draft_save" value="on" class="save_btn">下書きに保存する</button>
-      </article>
-
-      <!-- <label id="file-test-label" for="file-test">ファイルを選択</label><input type="file" id="file-test">
-    <input type="text" id="file-test-name" disabled> -->
-    </form>
-
+        <button type="submit" name="listing" value="on" class="listing_btn">出品する</button>
+      </form>
+    </article>
   </main>
-
-  <!-- <?php require_once '参照フッダーファイル';?> -->
-  <!-- <script src="" async></script> -->
+  <footer class="global-footer">
+    <?php require_once('./footer.php'); ?>
+  </footer>
 </body>
 
 </html>

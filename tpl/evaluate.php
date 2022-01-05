@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
-  <link rel="stylesheet" href="./../css/evaluate.css" />
+  <link rel="stylesheet" href="./css/evaluate.css" />
   <title>Document</title>
 </head>
 
@@ -14,7 +14,6 @@
     <h1>評価</h1>
   </div>
   <hr class="line" />
-
   <div class="arert">
     <div class="message">
       <p class="orange">✔︎</p>
@@ -30,7 +29,6 @@
     <a href="">取引についてFAQ ></a><br />
     <a href="">取引者のよくある質問 ></a>
   </div>
-
   <div class="evaluate_info">
     <h2>取引情報</h2>
     <div class="information">
@@ -41,7 +39,6 @@
       </div>
     </div>
   </div>
-
   <div class="user_info">
     <h2>出品者情報</h2>
     <div class="user">
@@ -52,19 +49,22 @@
     </div>
     <button class="Evaluate_button">取引メッセージ</button>
   </div>
-
   <div class="value">
     <h2>評価</h2>
     <form method="post" action="" enctype="multipart/form-data">
       <div class="value_button">
-        <div class="good">
-          <button class="Great_button" value="1">😃</button>
-          <p>良かった</p>
+        <div class="review">
+          <div class="stars">
+            <span>
+              <input id="review01" type="radio" name="review"><label for="review01">★</label>
+              <input id="review02" type="radio" name="review"><label for="review02">★</label>
+              <input id="review03" type="radio" name="review"><label for="review03">★</label>
+              <input id="review04" type="radio" name="review"><label for="review04">★</label>
+              <input id="review05" type="radio" name="review"><label for="review05">★</label>
+            </span>
+          </div>
         </div>
-        <div class="bad">
-          <button class="Bad_button" value="9">😩</button>
-          <p>残念だった</p>
-        </div>
+
       </div>
       <div class="comment">
         <p class="small_text">評価に際してコメントを記入しましょう。</p>
