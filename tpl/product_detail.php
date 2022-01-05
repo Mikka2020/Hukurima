@@ -86,16 +86,15 @@
           <li>クリーニング</li>
           <li><?php echo '可'; ?></li>
         </ul>
-
-        <ul>
-          <li>出品者</li>
-          <li>
-            <img
-              src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['prof_img_extension']; ?>"
-              alt="プロフィール画像" width="32px" height="32px">
-            <?php echo $user['nickname']; ?>
-          </li>
-        </ul>
+      </section>
+      <section class="prof-section">
+        <h4>出品者</h4>
+        <p>
+          <img
+            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['prof_img_extension']; ?>"
+            alt="プロフィール画像" width="32px" height="32px">
+          <?php echo $user['nickname']; ?> さん
+        </p>
       </section>
     </article>
 

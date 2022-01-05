@@ -32,11 +32,16 @@ main {
     display: flex;
     li {
       width: 50%;
-      img {
-        border-radius: 100%;
-      }
     }
   }
+}
+.prof-section {
+  img {
+    border-radius: 100%;
+    margin: 0 0.3rem 0 0.5rem;
+  }
+  line-height: 32px;
+  padding-bottom: 1rem;
 }
 
 footer {

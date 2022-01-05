@@ -43,8 +43,14 @@ main {
   width: 50%;
 }
 
-.product-detail ul li img {
+.prof-section {
+  line-height: 32px;
+  padding-bottom: 1rem;
+}
+
+.prof-section img {
   border-radius: 100%;
+  margin: 0 0.3rem 0 0.5rem;
 }
 
 footer {
