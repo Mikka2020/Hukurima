@@ -6,78 +6,90 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/evaluate.css" />
-  <title>Document</title>
+  <title>評価画面</title>
 </head>
 
 <body>
-  <div class="evaluate">
-    <h1>評価</h1>
-  </div>
-  <hr class="line" />
-  <div class="arert">
-    <div class="message">
-      <p class="orange">✔︎</p>
-      <div class="mes_text">
-        <h4>受け取り評価をしてください</h4>
-        <p>
-          商品が発送されました。商品が到着したら出品者の評価をしてください。
-        </p>
+  <header class="evaluate">
+    <p>評価</p>
+  </header>
+  <main>
+    <section class="alert">
+      <div class="message">
+        <p class="orange">✔︎</p>
+        <div class="mes_text">
+          <h4>受け取り評価をしてください</h4>
+          <p>
+            商品が発送されました。商品が到着したら出品者の評価をしてください。
+          </p>
+        </div>
       </div>
+    </section>
+
+    <div class="url">
+      <a href="">取引についてFAQ ></a><br />
+      <a href="">取引者のよくある質問 ></a>
     </div>
-  </div>
-  <div class="url">
-    <a href="">取引についてFAQ ></a><br />
-    <a href="">取引者のよくある質問 ></a>
-  </div>
-  <div class="evaluate_info">
-    <h2>取引情報</h2>
-    <div class="information">
-      <img src="img/ニット.png" alt="information" />
-      <div class="text">
-        <p>アシメレースアップリボンニット（長袖）</p>
-        <p class="red">¥3,600</p>
+
+    <section class="evaluate_info">
+      <h2>取引情報</h2>
+      <div class="information">
+        <img
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['product_img_extension']; ?>"
+          alt="information" width="" height="" />
+        <div class="text">
+          <p><?php echo $product['product_name']; ?></p>
+          <p class="red">¥<?php echo $product['price']; ?></p>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="user_info">
-    <h2>出品者情報</h2>
-    <div class="user">
-      <a href=""><img src="img/user01.png" alt="information" />
-        <p>コウイチ</p>
-        <p class="pink">></p>
-      </a>
-    </div>
-    <button class="Evaluate_button">取引メッセージ</button>
-  </div>
-  <div class="value">
-    <h2>評価</h2>
-    <form method="post" action="" enctype="multipart/form-data">
-      <div class="value_button">
-        <div class="review">
-          <div class="stars">
-            <span>
-              <input id="review01" type="radio" name="review"><label for="review01">★</label>
-              <input id="review02" type="radio" name="review"><label for="review02">★</label>
-              <input id="review03" type="radio" name="review"><label for="review03">★</label>
-              <input id="review04" type="radio" name="review"><label for="review04">★</label>
-              <input id="review05" type="radio" name="review"><label for="review05">★</label>
-            </span>
+    </section>
+
+    <section class="user_info">
+      <h2>出品者情報</h2>
+      <div class="user">
+        <a href="">
+          <img src="./img/users/1/profile/huku.jpg" alt="information" />
+          <p><?php echo "コウイチ"; ?></p>
+          <p class="pink">></p>
+        </a>
+      </div>
+      <button class="Evaluate_button">取引メッセージ</button>
+    </section>
+
+    <section class="value">
+      <h2>評価</h2>
+      <form method="post" action="" enctype="multipart/form-data">
+        <div class="value_button">
+          <div class="review">
+            <div class="stars">
+              <span>
+                <input id="review01" type="radio" name="review"><label for="review01">★</label>
+                <input id="review02" type="radio" name="review"><label for="review02">★</label>
+                <input id="review03" type="radio" name="review"><label for="review03">★</label>
+                <input id="review04" type="radio" name="review"><label for="review04">★</label>
+                <input id="review05" type="radio" name="review"><label for="review05">★</label>
+              </span>
+            </div>
           </div>
         </div>
-
-      </div>
-      <div class="comment">
-        <p class="small_text">評価に際してコメントを記入しましょう。</p>
-        <div class="mes_foryou">
-          <input type="text" placeholder="この度はお取引ありがとうございました。" class="Evaluate_text">
+        <div class="comment">
+          <p class="small_text">評価に際してコメントを記入しましょう。</p>
+          <div class="mes_foryou">
+            <input type="text" placeholder="この度はお取引ありがとうございました。" class="Evaluate_text">
+          </div>
+          <p>
+            ※コメントは必要ではありませんが、お礼のメッセージなどを書くと喜ばれます
+          </p>
+          <button type="submit" name="submit-btn" value="up">送信する</button>
         </div>
-        <p>
-          ※コメントは必要ではありませんが、お礼のメッセージなどを書くと喜ばれます
-        </p>
-        <button type="submit" name="btn" value="up">送信する</button>
-    </form>
-  </div>
-  </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="global-footer">
+    <?php require_once('./footer.php'); ?>
+  </footer>
 </body>
 
 </html>
