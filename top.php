@@ -17,8 +17,10 @@ function get_db_records($sql)
   return $records;
 }
 $sql = "SELECT * FROM ";
-$sql .= TABLES['101'] . " INNER JOIN " .  TABLES['103']." ON " . TABLES['101'] . ".user_id = ". TABLES['103'] . ".user_id" ;
+$sql .= TABLES['101'];
+$sql .= " INNER JOIN " .  TABLES['103']." ON " . TABLES['101'] . ".user_id = ". TABLES['103'] . ".user_id";
+$sql .= " LEFT JOIN favorite ON favorite.favorite_listing_id = ". TABLES['101'] . ".listing_id";
+$sql .= " ORDER BY listing_id DESC";
 $sql .= " LIMIT 6";
 $products_arr = get_db_records($sql);
-
 require_once('./tpl/top.php');
