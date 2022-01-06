@@ -480,3 +480,45 @@ function get_five_column($link,$table,$column,$id){
 //     }
 //     return $list;
 // }
+
+
+
+
+
+
+
+// /* 
+// * 概要：インサートするクエリを組み立てる関数（購入画面で使用）
+// * 戻り値：SQL文
+// */
+function assemb_insert($table,$columns,$column,$values,$user_id){
+    $count = count($values);
+    $query = "INSERT INTO ";
+    $query .= "".$table."(";
+    $query .= "".$column.",";
+    for($i = 0;$i < $count;$i++){
+        if($i == $count - 1){
+            $query .= $columns[$i];
+        } else {
+            $query .= "".$columns[$i].",";
+        }
+    }
+    $query .= ",auto_approval";
+    $query .= ")";
+    $query .= " VALUES (";
+    $query .= "".$user_id.",'".$values[0]."','".$values[1]."',".$values[2].",'".$values[3]."','".$values[4]."',".$values[5].",'".$values[6]."',".$values[7].",".$values[8].",".$values[9].",1";
+    $query .= ")";
+    var_dump($query);
+    return $query;
+}
+
+// /* 
+// * 概要：インサートする関数（購入画面で使用）
+// * 戻り値：連想配列
+// */
+function insert($link,$table,$columns,$column,$values,$user_id){
+    $query = assemb_insert($table,$columns,$column,$values,$user_id);
+    mysqli_query($link,$query);
+    $id = mysqli_insert_id($link);
+    return $id;
+}
