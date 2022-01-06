@@ -1,64 +1,105 @@
-.evaluate{
+@charset "UTF-8";
+@import url("./destyle.css");
+@import url("./style.css");
+main .evaluate {
   text-align: center;
   background-color: #fff;
 }
-.line{
-  border: solid 1px #FE9900;
-}
-.information{
+
+main .information {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
-.red{
-  color :red;
-}
-.information text{
+
+main .information text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
-.information img{
-  width:90px;
-  height:90px;
+
+main .information img {
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: solid 1px #00000080;
 }
-.arert{
+
+main .alert {
   border: solid 3px #00000080;
 }
-.message{
+
+main .alert .message {
   padding-left: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
-.orange{
-  color: #FE9900;
-  font-size: large;
-}
-.mes_text{
+
+main .alert .mes_text {
   padding-left: 10px;
 }
-.url{
+
+main .orange {
+  color: #fe9900;
+  font-size: large;
+}
+
+main .url {
   text-align: right;
   padding-top: 20px;
 }
-.url a:link, a:visited, a:hover, a:active {
-  color: #F00;
-  font-weight:bold;
-  text-decoration:underline;
+
+main .url a:link,
+main a:visited,
+main a:hover,
+main a:active {
+  color: #f00;
+  font-weight: bold;
+  text-decoration: underline;
 }
-.user a{
+
+main .user a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   color: #000000;
 }
-.user img{
-  width:70px;
-  height:70px;
-  justify-content: center;
-  align-items: center;
+
+main .user img {
+  width: 70px;
+  height: 70px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: solid 1px #00000080;
   border-radius: 500px;
 }
-.user_info button{
+
+main .user_info button {
   border-radius: 5px;
   background: #ffffff;
   border: solid 1px #00000080;
@@ -66,71 +107,76 @@
   padding: 8px 70px;
   font-size: 16px;
 }
-.value_button{
+
+main .value_button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.good{
-  text-align: center;
-  padding-right: 20px;
-}
-.good button{
-  border-radius: 5px;
-  background: #fff;
-  border: solid 1px #FD819D;
-  padding: 15px 16px;
-  font-size: 16px;
-}
-.good button:active{
-  background: #ffd1dc;
-}
-.bad{
-  text-align: center;
-  padding-left: 20px;
-}
-.bad button{
-  border-radius: 5px;
-  background: #fff;
-  border: solid 1px #FD819D;
-  padding: 15px 16px;
-  font-size: 16px;
-}
-.bad button:active{
-  background: #ffd1dc;
-}
-.mes_foryou input[type=text]{
+
+main .mes_foryou input[type="text"] {
   width: 50%;
-	padding: 2em;
-	border: 2px solid #1b2538;
-	border-radius: 4px;
+  padding: 2em;
+  border: 2px solid #1b2538;
+  border-radius: 4px;
 }
-.comment button{
+
+main .value .comment button {
   border-radius: 5px;
   background: #fd819d;
-  color:#fff
+  color: #fff;
   padding: 15px 16px;
   font-size: 16px;
 }
-.stars span{
-  display: flex;               /* 要素をフレックスボックスにする */
-  flex-direction: row-reverse; /* 星を逆順に並べる */
-  justify-content: flex-end;   /* 逆順なので、左寄せにする */
+
+main .value .stars span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* 要素をフレックスボックスにする */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  /* 星を逆順に並べる */
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* 逆順なので、左寄せにする */
 }
 
-.stars input[type='radio']{
-  display: none;               /* デフォルトのラジオボタンを非表示にする */
+main .value .stars input[type="radio"] {
+  display: none;
+  /* デフォルトのラジオボタンを非表示にする */
 }
 
-.stars label{
-  color: #D2D2D2;              /* 未選択の星をグレー色に指定 */
-  font-size: 30px;             /* 星の大きさを30pxに指定 */
-  padding: 0 5px;              /* 左右の余白を5pxに指定 */
-  cursor: pointer;             /* カーソルが上に乗ったときに指の形にする */
+main .value .stars label {
+  color: #d2d2d2;
+  /* 未選択の星をグレー色に指定 */
+  font-size: 30px;
+  /* 星の大きさを30pxに指定 */
+  padding: 0 5px;
+  /* 左右の余白を5pxに指定 */
+  cursor: pointer;
+  /* カーソルが上に乗ったときに指の形にする */
 }
 
-.stars label:hover,
-.stars label:hover ~ label,
-.stars input[type='radio']:checked ~ label{
-  color: #F8C601;              /* 選択された星以降をすべて黄色にする */
+main .value .stars label:hover,
+main .value .stars label:hover ~ label,
+main .value .stars input[type="radio"]:checked ~ label {
+  color: #f8c601;
+  /* 選択された星以降をすべて黄色にする */
 }
+/*# sourceMappingURL=evaluate.css.map */
