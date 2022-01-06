@@ -64,7 +64,11 @@ if(isset($_POST['listing'])){
 
     // エラーがなかった時の処理
     if(isset($input_listing_data)){
-        $_SESSION['listing_data'] = $input_listing_data;
+        $data = [];
+        foreach ($input_listing_data as $key => $value) {
+            $data[] = $value;
+        }
+        $_SESSION['listing_data'] = $data;
         header('location:./listing_confirm.php');
         exit;
     }

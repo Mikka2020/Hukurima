@@ -1,5 +1,53 @@
 <?php
+/**
+ * 内容：出品画面
+ * 作成日：？
+ * 作成者：高橋裕司
+ * ------------------------------------------------------------------------------------------------------------------------
+ * 変更日：2021/01/06
+ * 追加内容：購入処理を追加
+ * ------------------------------------------------------------------------------------------------------------------------
+ */
+
+// 参照ファイル呼び出し
+session_start();
 require_once('./config.php');
+require_once './func.php';
+
+// 全画面で代入された値
+$user_id = $_COOKIE['user_id'];
+$column = 'user_id';
+$data = $_SESSION['listing_data'];
+$listing_label = ['product_name' , 'img_extension' ,  'price' , 'product_explain' , 'product_category' ,  'product_condition' , 'brand' , 'ship_to_days' , 'cleaning_flg' , 'picking_flg'];
+
+// 購入ボタンが押された時の処理
+if(isset($_POST['listing_btn'])){
+  // 登録処理
+  $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+  mysqli_set_charset($link , 'utf8');
+  $id = insert($link,TABLES['101'],$listing_label,$column,$data,$user_id);
+  mysqli_close($link);
+
+  // IDに合わせた画像用フォルダを作成
+  if($id != ''){
+    $file_path = './img/users/'.$user_id.'/products/'.$id;
+    mkdir($file_path,0777);
+    chmod($file_path,0777);
+  
+    // 画像移動
+    $pre_img = './img/users/'.$user_id.'/pre/'.$data[0].'.'.$data[1];
+    rename($pre_img,$file_path.'/'.$data[0].'_1.'.$data[1]);
+
+    // 画面遷移
+    session_destroy();
+    header('location:./product.php');
+    exit;
+  }
+}
+
+
+
+
 
 // テスト用
 $listing = [
