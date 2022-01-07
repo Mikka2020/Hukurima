@@ -4,43 +4,43 @@ require_once('./config.php');
 require_once('./func.php');
 
 // テスト用
-
+$id = "";
 if (isset($_COOKIE['user_id'])) {
   // ログインしているとき  
   $id = $_COOKIE['user_id'];
   $header_msg = "ログアウト";
+  // いいねボタンが押されたときの処理
+  if (isset($_POST['favorite_btn'])) {
+    // 選択した商品がいいねされているかどうか判断する
+    {
+      $sql = "SELECT * FROM ";
+      $sql .= " favorite ";
+      $sql .= " WHERE favorite_user_id = ";
+      $sql .= $id;
+      $sql .=  " AND favorite_listing_id = ";
+      $sql .= $_POST['favorite_btn'];
+    }
+  
+    if (get_db_record($sql) == []) {
+      // いいねボタンを押した商品がfavoriteテーブルになかったらインサート処理
+      $sql = "INSERT INTO ";
+      $sql .= " favorite ";
+      $sql .= " ( favorite_user_id, favorite_listing_id ) ";
+      $sql .= " VALUES ";
+      $sql .= " ( " . $id . ", " . $_POST['favorite_btn'] . " ) " ;
+    } else {
+      // いいねボタンを押した商品がfavoriteテーブルにあったら削除処理
+      $sql = "DELETE FROM ";
+      $sql .= " favorite ";
+      $sql .= " WHERE favorite_user_id = " . $id;
+      $sql .= " AND favorite_listing_id = " . $_POST['favorite_btn'];
+    }
+    update_db($sql);
+  }
 } else {
   $header_msg = "ログイン";
 }
 
-// いいねボタンが押されたときの処理
-if (isset($_POST['favorite_btn'])) {
-  // 選択した商品がいいねされているかどうか判断する
-  {
-    $sql = "SELECT * FROM ";
-    $sql .= " favorite ";
-    $sql .= " WHERE favorite_user_id = ";
-    $sql .= $id;
-    $sql .=  " AND favorite_listing_id = ";
-    $sql .= $_POST['favorite_btn'];
-  }
-
-  if (get_db_record($sql) == []) {
-    // いいねボタンを押した商品がfavoriteテーブルになかったらインサート処理
-    $sql = "INSERT INTO ";
-    $sql .= " favorite ";
-    $sql .= " ( favorite_user_id, favorite_listing_id ) ";
-    $sql .= " VALUES ";
-    $sql .= " ( " . $id . ", " . $_POST['favorite_btn'] . " ) " ;
-  } else {
-    // いいねボタンを押した商品がfavoriteテーブルにあったら削除処理
-    $sql = "DELETE FROM ";
-    $sql .= " favorite ";
-    $sql .= " WHERE favorite_user_id = " . $id;
-    $sql .= " AND favorite_listing_id = " . $_POST['favorite_btn'];
-  }
-  update_db($sql);
-}
 
 // DBから全てのrecordを取り出す関数
 function get_db_records($sql)
