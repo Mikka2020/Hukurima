@@ -31,7 +31,9 @@
  * 検索条件１つで取得のクリエの組み立て（変数名：assemb_get_lots_of_string($table,$column,$id)）<string型>
  * 検索条件１つで取得（変数名：get_lots_of_string($link,$table,$column,$id)）<string型>
  * 上から5レコード取得のクエリ組み立て（変数名：assemb_get_five_column($table,$column,$id)）
- * 上から5レコードレコード取得（変数名：get_five_column($link,$table,$column,$id)）
+ * 上から5レコードレコード取得関数（変数名：get_five_column($link,$table,$column,$id)）
+ * インサートクエリ組み立て（変数名：assemb_insert($table,$columns,$column,$values,$user_id)）
+ * インサート関数（変数名：insert($link,$table,$columns,$column,$values,$user_id)）
  * ------------------------------------------------------------------------------------------------------------------------
 */
 
