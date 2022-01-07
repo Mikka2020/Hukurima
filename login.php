@@ -43,6 +43,13 @@ if(isset($_POST['login_btn'])){
     }
 }
 
+// ログアウト処理
+if(isset($_COOKIE['user_id'])) {
+    setcookie('user_id', '', time() - 1000);
+    header('location:./top.php');
+    exit;
+}
+
 // 戻るボタン押された時の処理(name="back")
 // if(isset($_POST['back'])){
 //     header ('location:./');
