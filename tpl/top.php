@@ -12,27 +12,43 @@
 <body>
   <header>
     <img src="./img/icon/hukurima.png" alt="logo" width="" height="40px">
-    <p><a href="./login.php">ログイン</a></p>
+    <p><a href="./login.php"><?php echo $header_msg; ?></a></p>
   </header>
   <main>
     <h1>フクリマ</h1>
     <article>
       <h2>TOPページ</h2>
-      <section>
+      <section id="category">
         <h3>人気カテゴリー</h3>
-        <div>
-          <img src="" alt="">
-          <p></p>
+        <div class="category-items">
+          <div>
+            <a href="#">
+              <img src="./img/ウールライクステンカラーコート.jpg" alt="カテゴリー画像（コート）" width="100px" height="100px">
+              <p class="center">コート</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="./img/ハンドバッグ.webp" alt="カテゴリー画像（バッグ）" width="100px" height="100px">
+              <p class="center">バッグ</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="./img/ポルシェ-レガシー-ローレーサー-スニーカー.jpeg" alt="カテゴリー画像（スニーカー）" width="100px" height="100px">
+              <p class="center">スニーカー</p>
+            </a>
+          </div>
         </div>
       </section>
-      <section>
+      <!-- <section>
         <h3>トレンド</h3>
         <ul>
           <li></li>
           <li></li>
           <li></li>
         </ul>
-      </section>
+      </section> -->
       <section id="product">
         <h3>新着アイテム</h3>
 
