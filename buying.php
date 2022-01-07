@@ -24,24 +24,24 @@ require_once './func.php';
 
 // 初期値
 // $table = 'listing'; // テーブル名
-$column = 'user_id';
+$columns = ['listing_id','user_id'];
 
 
 // 「商品詳細画面」で見てた商品の商品IDを取得
 $id = $_SESSION['buy_product_info'];
-unset($_SESSION['buy_product_info']);
+// unset($_SESSION['buy_product_info']);
 // var_dump($id);
 
 // 商品IDに対する商品詳細情報と出品者情報の取得
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column($link,TABLES['101'],$column,$id);
+$line = get_column($link,TABLES['101'],$columns[0],$id);
 mysqli_close($link);
 
 // ユーザ情報を取得する処理
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$profiles = get_column($link,TABLES['103'],$column,$id);
+$profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
 mysqli_close($link);
 
 // 購入ボタンが押された時の処理
