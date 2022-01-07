@@ -1,22 +1,15 @@
 @import url("./destyle.css");
 @import url("./style.css");
-.search_values button {
-  color: #fd819d;
-}
-
-.grass {
-  color: gray;
-}
-
-.grass :active {
-  color: #fd819d;
-}
-
 .wrapper {
   border: 1px solid #000;
   display: inline-block;
   position: relative;
   background-color: transparent;
+}
+
+.wrapper button {
+  background-color: transparent;
+  border: 0;
 }
 
 .wrapper input[type="text"] {
@@ -31,9 +24,16 @@
   outline: none;
 }
 
-.wrapper button {
-  background-color: transparent;
-  border: 0;
+.wrapper .grass {
+  color: gray;
+}
+
+.wrapper .grass :active {
+  color: #fd819d;
+}
+
+.keyword {
+  font-size: small;
 }
 
 .keywords button {
@@ -50,6 +50,7 @@
   background-color: #ffffff;
   border: 1px solid #fd819d;
   border-radius: 5px;
+  color: #fd819d;
 }
 
 .search_values th {
@@ -65,11 +66,7 @@
   border-radius: 5px;
 }
 
-.keyword {
-  font-size: small;
-}
-
-.search01 button {
+.save_search .search01 button {
   width: 250px;
   height: 30px;
   text-align: left;
@@ -79,7 +76,7 @@
   border-radius: 2px;
 }
 
-.search02 button {
+.save_search .search02 button {
   width: 250px;
   height: 30px;
   text-align: left;
@@ -89,7 +86,7 @@
   border-radius: 2px;
 }
 
-.search03 button {
+.save_search .search03 button {
   width: 250px;
   height: 30px;
   text-align: left;

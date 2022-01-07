@@ -1,86 +1,93 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
-.search_values button {
-  color: #fd819d;
-}
-.grass {
-  color: gray;
-}
-.grass :active {
-  color: #fd819d;
-}
 .wrapper {
   border: 1px solid #000;
   display: inline-block;
   position: relative;
   background-color: transparent;
+  button {
+    background-color: transparent;
+    border: 0;
+  }
+  input[type="text"] {
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  .search_text :active {
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: none;
+    outline: none;
+  }
+  .grass {
+    color: gray;
+  }
+  .grass :active {
+    color: #fd819d;
+  }
 }
-.wrapper input[type="text"] {
-  padding: 1em;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-.wrapper .search_text :active {
-  border: 1px solid rgba(0, 0, 0, 0);
-  box-shadow: none;
-  outline: none;
-}
-.wrapper button {
-  background-color: transparent;
-  border: 0;
-}
-.keywords button {
-  width: 120px;
-  height: 30px;
-  background: #ffffff;
-  border-radius: 30px;
-}
-.search_values button {
-  width: 70px;
-  height: 70px;
-  font-size: xx-large;
-  background-color: #ffffff;
-  border: 1px solid #fd819d;
-  border-radius: 5px;
-}
-.search_values th {
-  width: 70px;
-}
-.search_values .pink :active {
-  width: 70px;
-  height: 70px;
-  font-size: xx-large;
-  background-color: #ffc2d0;
-  border: 1px solid #fd819d;
-  border-radius: 5px;
-}
+
 .keyword {
   font-size: small;
 }
-.search01 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 2px;
+.keywords {
+  button {
+    width: 120px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 30px;
+  }
 }
-.search02 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 2px;
+
+.search_values {
+  button {
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+    background-color: #ffffff;
+    border: 1px solid #fd819d;
+    border-radius: 5px;
+    color: #fd819d;
+  }
+  th {
+    width: 70px;
+  }
+  .pink :active {
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+    background-color: #ffc2d0;
+    border: 1px solid #fd819d;
+    border-radius: 5px;
+  }
 }
-.search03 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 2px;
+
+.save_search {
+  .search01 button {
+    width: 250px;
+    height: 30px;
+    text-align: left;
+    font-size: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 2px;
+  }
+  .search02 button {
+    width: 250px;
+    height: 30px;
+    text-align: left;
+    font-size: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 2px;
+  }
+  .search03 button {
+    width: 250px;
+    height: 30px;
+    text-align: left;
+    font-size: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 2px;
+  }
 }
