@@ -4,7 +4,7 @@ require_once('./config.php');
 require_once('./func.php');
 
 // テスト用
-$id = "";
+$id = 0;
 if (isset($_COOKIE['user_id'])) {
   // ログインしているとき  
   $id = $_COOKIE['user_id'];
