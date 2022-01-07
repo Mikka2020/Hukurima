@@ -12,7 +12,7 @@
 <body>
   <header>
     <img src="./img/icon/hukurima.png" alt="logo" width="" height="40px">
-    <p><a href="./login.php">ログイン</a></p>
+    <p><a href="./login.php"><?php echo $header_msg; ?></a></p>
   </header>
   <main>
     <h1>フクリマ</h1>
