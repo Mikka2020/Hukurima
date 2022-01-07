@@ -69,6 +69,7 @@ if(isset($_POST['listing'])){
             $data[] = $value;
         }
         $_SESSION['listing_data'] = $data;
+        $_SESSION['display_data'] = $input_listing_data;
         header('location:./listing_confirm.php');
         exit;
     }

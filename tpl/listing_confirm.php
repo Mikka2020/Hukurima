@@ -18,7 +18,7 @@
     <article>
       <h2><?php echo ''; // 商品名 ?></h2>
       <img
-        src="./img/users/<?php echo $listing['user_id']; ?>/products/<?php echo $listing['listing_id']; ?>/<?php echo $listing['product_name']; ?>_1.<?php echo $listing['img_extension']; ?>"
+        src="./img/users/<?php echo $user_id; ?>/pre/<?php echo $listing['product_name']; ?>.<?php echo $listing['img_extension']; ?>"
         alt="メイン商品画像" width="360px" height="">
 
       <section class="product-detail">
