@@ -3,9 +3,15 @@
 require_once('./config.php');
 require_once('./func.php');
 
-$id = $_COOKIE['user_id'];
 // テスト用
 
+if (isset($_COOKIE['user_id'])) {
+  // ログインしているとき  
+  $id = $_COOKIE['user_id'];
+  $header_msg = "ログアウト";
+} else {
+  $header_msg = "ログイン";
+}
 
 // いいねボタンが押されたときの処理
 if (isset($_POST['favorite_btn'])) {
