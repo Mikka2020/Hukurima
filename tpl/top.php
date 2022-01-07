@@ -46,7 +46,8 @@
                 alt="商品" width="180px" height="" />
             </a>
             <form action="" method="post">
-              <button type="submit" class="favorite-btn">
+              <button type="submit" class="favorite-btn" name="favorite_btn"
+                value="<?php echo $product['listing_id']; ?>">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart"
                   class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512">
