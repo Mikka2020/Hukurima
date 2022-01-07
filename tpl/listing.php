@@ -59,7 +59,7 @@
           <ul>
             <li>配送までの日数</li>
             <li>
-              <select name="ship_to_days" id="">
+              <select name="days_to_ship" id="">
                 <option value="">選択してください >
                 </option>
                 <?php foreach($days_to_ship as $days_index => $days_msg): ?>

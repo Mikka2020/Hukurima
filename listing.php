@@ -31,9 +31,9 @@ require_once './func.php';
 // $input_listing_label = ['product_name' => '商品名' , 'product_explan' => '商品説明' , 'product_category' => 'カテゴリ' , 'product_statu' => '商品の状態' , 'bland' => 'ブランド' , 'send_days' => '配達までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'pickup_flg' => '集荷オプション' , 'price' => '価格' , 'auto_approval' => '購入申請自動許可フラグ']; // 添字に対するラベル名がセットされている配列
 
 // 高橋DBに合わせて配列を変更
-$input_listing_data = ['product_name' => '' , 'img_extension' => '' ,  'price' => 0 , 'product_explain' => '' , 'product_category' => '' ,  'product_condition' => 0 , 'brand' => '' , 'ship_to_days' => 0 , 'cleaning_flg' => 0 , 'picking_flg' => 0]; // 入力された情報をセットする配列
-$err_msg = ['product_name' => '' , 'img_extension' => '' ,  'price' => '' , 'product_explain' => '' , 'product_category' => '' ,  'product_condition' => '' , 'brand' => '' , 'ship_to_days' => '' , 'cleaning_flg' => '' , 'picking_flg' => '']; // エラー出力用配列
-$input_listing_label = ['product_name' => '商品名' , 'img_extension' => '画像' ,  'price' => '価格' , 'product_explain' => '商品説明' , 'product_category' => 'カテゴリ' ,  'product_condition' => '商品の状態' , 'brand' => 'ブランド' , 'ship_to_days' => '配送までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'picking_flg' => '集荷オプション']; // 添字に対するラベル名がセットされている配列
+$input_listing_data = ['product_name' => '' , 'img_extension' => '' ,  'price' => 0 , 'product_explain' => '' , 'product_category' => '' ,  'product_condition' => 0 , 'brand' => '' , 'days_to_ship' => 0 , 'cleaning_flg' => 0 , 'picking_flg' => 0]; // 入力された情報をセットする配列
+$err_msg = ['product_name' => '' , 'img_extension' => '' ,  'price' => '' , 'product_explain' => '' , 'product_category' => '' ,  'product_condition' => '' , 'brand' => '' , 'days_to_ship' => '' , 'cleaning_flg' => '' , 'picking_flg' => '']; // エラー出力用配列
+$input_listing_label = ['product_name' => '商品名' , 'img_extension' => '画像' ,  'price' => '価格' , 'product_explain' => '商品説明' , 'product_category' => 'カテゴリ' ,  'product_condition' => '商品の状態' , 'brand' => 'ブランド' , 'days_to_ship' => '配送までの日数' , 'cleaning_flg' => 'クリーニングオプション' , 'picking_flg' => '集荷オプション']; // 添字に対するラベル名がセットされている配列
 $array_check_value = ['商品名','カテゴリ','商品説明','価格','ブランド'];
 
 $user_id = $_COOKIE['user_id'];

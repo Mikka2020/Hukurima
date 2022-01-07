@@ -76,7 +76,7 @@
         </ul>
         <ul>
           <li>配送までの日数</li>
-          <li><?php echo $days_to_ship[$product['ship_to_days']]; ?></li>
+          <li><?php echo $days_to_ship[$product['days_to_ship']]; ?></li>
         </ul>
         <ul>
           <li>ハンガーボックス</li>
