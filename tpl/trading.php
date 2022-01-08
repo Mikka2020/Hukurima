@@ -49,7 +49,7 @@
       <section class="prof-section">
         <h2>出品者</h2>
         <p>
-          <img class="prof-img" src="./img/users/<?php echo $line['user_id']; ?>/profile/mari.jpg" alt="プロフィール画像"
+          <img class="prof-img" src="./img/users/<?php echo $line['user_id']; ?>/profile/<?php echo $profiles['nickname'];?>.<?php echo $profiles['prof_img_extension'];?>" alt="プロフィール画像"
             width="32px" height="32px" />
           <?php echo "Mari"; ?> さん
         </p>
@@ -61,7 +61,9 @@
         <p><a href="">問題を報告する</a></p>
       </div>
       <div class="bg_btn_eval">
-        <button type="submit" class="btn eval-btn" name="eval_btn">評価画面へ</button>
+        <form action="" method="post">
+          <button type="submit" class="btn eval-btn" name="eval_btn" value="on">評価画面へ</button>
+        </form>
       </div>
     </article>
   </main>

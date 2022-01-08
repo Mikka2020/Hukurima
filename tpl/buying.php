@@ -62,7 +62,7 @@
       <section class="profile-section">
         <h3>出品者</h3>
         <p><img class="prof-img"
-            src="./img/users/<?php echo $line['user_id']; // 会員id ?>/profile/<?php echo $profiles['nickname']; // 会員名 ?>.jpg"
+            src="./img/users/<?php echo $line['user_id']; // 会員id ?>/profile/<?php echo $profiles['nickname']; // 会員名 ?>.<?php echo $profiles['prof_img_extension'];?>"
             alt="プロフィール画像" width="30px" height="30px"></p>
         <p><?php echo $profiles['nickname']; // 会員名 ?> さん</p>
         <p class="message-btn">メッセージ</p>
