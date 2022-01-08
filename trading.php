@@ -7,6 +7,10 @@
  * ------------------------------------------------------------------------------------------------------------------------
  * 変更日：2021/12/19
  * 追加内容：一連の流れを記述
+ * ------------------------------------------------------------------------------------------------------------------------
+ * 変更日：2021/01/08
+ * 追加内容：表示部に合わせMA
+ * ------------------------------------------------------------------------------------------------------------------------
  */
 
 
@@ -16,19 +20,31 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値
-$_SESSION['product_id'] = 2;
+// $_SESSION['product_id'] = 2;
 
 // 初期値
-$id = $_SESSION['product_id'];
-$table = 'listing';
-$column = 'listing_id';
+$listing_id = $_SESSION['bought_product_info'];
+// $table = 'listing';
+$columns = ['listing_id','user_id'];
 
 
 // 商品の配送状況の取得
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
-$line = get_column($link,$table,$column,$id);
+$line = get_column($link,TABLES['101'],$columns[0],$listing_id);
 mysqli_close($link);
+
+// プロフィール情報の取得
+$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+mysqli_set_charset($link , 'utf8');
+$profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
+mysqli_close($link);
+
+// 評価画面へボタンが押された時の処理
+if(isset($_POST['eval_btn'])){
+    header ('location:./evaluate.php');
+    exit;
+}
 
 // 返品を申請するボタンが押された時の処理
 // if(isset($_POST['return_goods'])){
@@ -42,11 +58,6 @@ mysqli_close($link);
 //     exit;
 // }
 
-// 評価画面へボタンが押された時の処理
-// if(isset($_POST['go_evaluation'])){
-//     header ('location:./');
-//     exit;
-// }
 
 // 戻るボタンが押された時の処理(name="back")
 // if(isset($_POST['back'])){
