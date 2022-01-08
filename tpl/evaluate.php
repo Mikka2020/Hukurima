@@ -35,7 +35,7 @@
       <h2>取引情報</h2>
       <div class="information">
         <img
-          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['product_img_extension']; ?>"
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
           alt="information" width="" height="" />
         <div class="text">
           <p><?php echo $product['product_name']; ?></p>
@@ -48,8 +48,8 @@
       <h2>出品者情報</h2>
       <div class="user">
         <a href="">
-          <img src="./img/users/1/profile/huku.jpg" alt="information" />
-          <p><?php echo "コウイチ"; ?></p>
+          <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles['nickname']; ?>.<?php echo $profiles['prof_img_extension']; ?>" alt="information" />
+          <p><?php echo $profiles['nickname']; ?></p>
           <p class="pink">></p>
         </a>
       </div>
