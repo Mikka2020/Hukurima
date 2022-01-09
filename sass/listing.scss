@@ -46,9 +46,36 @@ textarea {
     width: 100%;
   }
 }
+
 .explain-section {
-  textarea {
-    resize: none;
+  p {
+    border: solid 1px #ccc;
     width: 360px;
+    margin: 0.3rem auto 1rem;
+    input {
+      border: solid 1px #ccc;
+      width: 100%;
+    }
+    textarea {
+      resize: none;
+      width: 360px;
+    }
+  }
+}
+.btn-area {
+  li {
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-bottom: 0.3rem;
+  }
+  .listing-btn {
+    background-color: #fe8900;
+    color: #fff;
+  }
+  .save-btn {
+    border: solid 2px #ccc;
+    background-color: #fff;
   }
 }
