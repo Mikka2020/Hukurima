@@ -1,49 +1,62 @@
 @import url("./destyle.css");
 @import url("./style.css");
-.wrapper {
-  border: 1px solid #000;
-  display: inline-block;
-  position: relative;
-  background-color: transparent;
+header {
+  height: 60px;
+  border: solid 1px #ccc;
 }
 
-.wrapper button {
-  background-color: transparent;
-  border: 0;
+header button {
+  border: solid 1px #ccc;
 }
 
-.wrapper input[type="text"] {
-  padding: 1em;
-  border: 1px solid rgba(0, 0, 0, 0);
+header form {
+  margin: 0.6rem auto;
+  border: solid 1px #111;
+  width: 80%;
+  border-radius: 50px;
 }
 
-.wrapper .search_text :active {
+header input[type="text"] {
+  padding: 0.5rem 1rem;
+  width: 85%;
+}
+
+header .search_text :active {
   border: 1px solid rgba(0, 0, 0, 0);
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.wrapper .grass {
+header .grass {
   color: gray;
+  border: 0;
 }
 
-.wrapper .grass :active {
+header .grass :active {
   color: #fd819d;
 }
 
-.keyword {
-  font-size: small;
+.keywords ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
-.keywords button {
-  width: 120px;
-  height: 30px;
+.keywords ul li {
+  text-align: center;
+  border: solid 1px #111;
   background: #ffffff;
-  border-radius: 30px;
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+  border-radius: 20px;
 }
 
-.search_values button {
+.search-values button {
   width: 70px;
   height: 70px;
   font-size: xx-large;
@@ -51,13 +64,25 @@
   border: 1px solid #fd819d;
   border-radius: 5px;
   color: #fd819d;
+  text-align: center;
 }
 
-.search_values th {
+.search-values ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.search-values ul li {
   width: 70px;
 }
 
-.search_values .pink :active {
+.search-values .pink :active {
   width: 70px;
   height: 70px;
   font-size: xx-large;
@@ -66,33 +91,29 @@
   border-radius: 5px;
 }
 
-.save_search .search01 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 2px;
+.save-search form ul {
+  margin: 0 auto;
+  width: 80%;
 }
 
-.save_search .search02 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
+.save-search form ul li {
   background-color: #ffffff;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0.3rem;
+  padding-left: 0.3rem;
   border: 1px solid #000;
   border-radius: 2px;
+  position: relative;
 }
 
-.save_search .search03 button {
-  width: 250px;
-  height: 30px;
-  text-align: left;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 2px;
+.save-search form ul li button {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  height: 100%;
+  width: 16px;
+  line-height: 10px;
 }
 /*# sourceMappingURL=search.css.map */
