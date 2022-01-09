@@ -20,7 +20,7 @@ require_once './config.php';
 require_once './func.php';
 
 // 動作確認用固定値（変える）
-$_SESSION['user_id'] = 1;
+// $_SESSION['user_id'] = 1;
 
 // 初期値（変数名や内容を変える）
 $list_table = 'listing';
@@ -29,15 +29,17 @@ $search_table = 'search_conditions';
 $product_name = '';
 $search_value = ['user_id' => '' ,'product_name' => ''];
 $search_column = ['user_id','product_name'];
-$search_value['user_id'] = $_SESSION['user_id'];
+
+// ログイン
+$search_value['user_id'] = $_COOKIE['user_id'];
 
 // 商品名と選択された条件を取得する
-if(isset($_POST['search'])){
-    $search_value['product_name'] = $_POST['message'];
+if(isset($_GET['search_message'])){
+    $search_value['product_name'] = $_GET['search_message'];
 }
-if(isset($_POST['btn'])){
-    $search_value['product_name'] = $_POST['btn'];
-}
+// if(isset($_POST['btn'])){
+//     $search_value['product_name'] = $_POST['btn'];
+// }
 
 
 if(isset($search_value['product_name'])){
@@ -50,7 +52,7 @@ if(isset($search_value['product_name'])){
     // 検索条件(履歴)の保存
     $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
-    entry($link,$search_table,$search_value,$search_column);
+    // entry($link,$search_table,$search_value,$search_column);
     mysqli_close($link);
 }
 
@@ -66,5 +68,6 @@ $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
 $keywords = get_five_column($link,$search_table,$search_column[0],$search_value['user_id']);
 mysqli_close($link);
+
 
 require_once './tpl/search.php';
