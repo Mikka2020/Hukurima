@@ -92,6 +92,16 @@
               </select>
             </li>
           </ul>
+          <ul>
+            <li>購入申請自動許可</li>
+            <li>
+              <select name="auto_approval_flg" id="">
+                <option value="">選択してください ></option>
+                <option value="1">あり</option>
+                <option value="0">なし</option>
+              </select>
+            </li>
+          </ul>
         </section>
 
         <section class="price-section">
