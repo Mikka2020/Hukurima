@@ -52,6 +52,9 @@ function get_db_records($sql)
     $records[] = $row;
   }
   mysqli_close($link);
+  if (!isset($records)) {
+    return [];
+  }
   return $records;
 }
 
