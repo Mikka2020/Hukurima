@@ -16,18 +16,21 @@
     <article>
       <form action="" method="post" enctype="multipart/form-data">
         <h2>出品フォーム</h2>
+
         <section>
           <input type="file" name="product_img" class="input-img">
         </section>
+
         <section class="explain-section">
           <h3>商品名と説明</h3>
-          <ul>
-            <li><input name="product_name" type="text" placeholder="商品名(必須)"></li>
-            <li>
-              <textarea name="product_explain" id="" cols="30" rows="10" placeholder="商品説明 (任意)"></textarea>
-            </li>
-          </ul>
+          <p>
+            <input name="product_name" type="text" placeholder="商品名(必須)">
+          </p>
+          <p>
+            <textarea name="product_explain" id="" cols="30" rows="10" placeholder="商品説明 (任意)"></textarea>
+          </p>
         </section>
+
         <section class="detail-section">
           <h3>商品情報</h3>
           <ul>
@@ -54,6 +57,7 @@
             <li><input type="text" name="brand" id="" placeholder="ブランドを入力"></li>
           </ul>
         </section>
+
         <section class="shipping-section">
           <h3>配送について</h3>
           <ul>
@@ -89,6 +93,7 @@
             </li>
           </ul>
         </section>
+
         <section class="price-section">
           <h3>出品価格（300円〜9,999,999円）</h3>
           <ul>
@@ -96,8 +101,16 @@
             <li><input type="number" name="price" id="" placeholder="価格を入力">円</li>
           </ul>
         </section>
-        <button type="submit" name="draft_save" value="on" class="save_btn">下書きに保存する</button>
-        <button type="submit" name="listing" value="on" class="listing_btn">出品する</button>
+        <div class="btn-area">
+          <ul>
+            <li class="listing-btn center">
+              <button type="submit" name="listing" value="on" class="listing_btn">出品する</button>
+            </li>
+            <li class="save-btn center">
+              <button type="submit" name="draft_save" value="on" class="save_btn">下書きに保存する</button>
+            </li>
+          </ul>
+        </div>
       </form>
     </article>
   </main>
