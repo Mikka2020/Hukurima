@@ -67,6 +67,7 @@ h4 {
 }
 
 #product .product-area .product-item .favorite-btn {
+  width: 24px;
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
