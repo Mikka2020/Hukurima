@@ -22,19 +22,19 @@
         <h3>人気カテゴリー</h3>
         <div class="category-items">
           <div>
-            <a href="#">
+            <a href="./product.php?search=コート">
               <img src="./img/ウールライクステンカラーコート.jpg" alt="カテゴリー画像（コート）" width="100px" height="100px">
               <p class="center">コート</p>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="./product.php?search=バッグ">
               <img src="./img/ハンドバッグ.webp" alt="カテゴリー画像（バッグ）" width="100px" height="100px">
               <p class="center">バッグ</p>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a href="./product.php?search=スニーカー">
               <img src="./img/ポルシェ-レガシー-ローレーサー-スニーカー.jpeg" alt="カテゴリー画像（スニーカー）" width="100px" height="100px">
               <p class="center">スニーカー</p>
             </a>
