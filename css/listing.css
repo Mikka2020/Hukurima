@@ -17,6 +17,9 @@ h2 {
 
 h3 {
   background-color: #ccc;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.3rem;
 }
 
 input,
@@ -28,6 +31,10 @@ textarea {
 
 textarea {
   border: solid 1px #ccc;
+}
+
+#preview {
+  width: 100%;
 }
 
 .detail-section ::-webkit-input-placeholder,
@@ -68,6 +75,8 @@ textarea {
 .shipping-section ul li,
 .price-section ul li {
   width: 50%;
+  line-height: 24px;
+  padding-left: 0.5rem;
 }
 
 .detail-section select,
@@ -85,11 +94,18 @@ textarea {
 .explain-section p input {
   border: solid 1px #ccc;
   width: 100%;
+  padding-left: 0.3rem;
 }
 
 .explain-section p textarea {
   resize: none;
   width: 360px;
+  padding: 0.1rem;
+}
+
+.btn-area {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .btn-area li {
