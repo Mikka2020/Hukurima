@@ -49,8 +49,9 @@
       <section class="prof-section">
         <h2>出品者</h2>
         <p>
-          <img class="prof-img" src="./img/users/<?php echo $line['user_id']; ?>/profile/<?php echo $profiles['nickname'];?>.<?php echo $profiles['prof_img_extension'];?>" alt="プロフィール画像"
-            width="32px" height="32px" />
+          <img class="prof-img"
+            src="./img/users/<?php echo $line['user_id']; ?>/profile/<?php echo $profiles['nickname'];?>.<?php echo $profiles['prof_img_extension'];?>"
+            alt="プロフィール画像" width="32px" height="32px" />
           <?php echo "Mari"; ?> さん
         </p>
         <button type="submit" class="btn msg-btn" name="message">メッセージ</button>
@@ -67,6 +68,9 @@
       </div>
     </article>
   </main>
+  <footer class="global-footer">
+    <?php require_once('./footer.php'); ?>
+  </footer>
 </body>
 
 </html>
