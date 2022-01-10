@@ -30,6 +30,10 @@ textarea {
   border: solid 1px #ccc;
 }
 
+#preview {
+  width: 100%;
+}
+
 .detail-section ::-webkit-input-placeholder,
 .shipping-section ::-webkit-input-placeholder,
 .price-section ::-webkit-input-placeholder {
