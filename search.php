@@ -44,10 +44,10 @@ if(isset($_GET['search_message'])){
 
 if(isset($search_value['product_name'])){
     // 検索条件に一致する商品画像の取得
-    $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-    mysqli_set_charset($link , 'utf8');
-    $line = get_lots_of_string($link,$list_table,$search_column[1],$search_value['product_name']);
-    mysqli_close($link);
+    // $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+    // mysqli_set_charset($link , 'utf8');
+    // $line = get_lots_of_string($link,$list_table,$search_column[1],$search_value['product_name']);
+    // mysqli_close($link);
     
     // 検索条件(履歴)の保存
     if ($search_value['product_name'] != "") {
@@ -55,15 +55,18 @@ if(isset($search_value['product_name'])){
         mysqli_set_charset($link , 'utf8');
         entry($link,$search_table,$search_value,$search_column);
         mysqli_close($link);
+        
+        header("location:./product.php?search=". $search_value['product_name']);
+        exit;
     }
 }
 
 // 商品画像が押された時の処理
-if(isset($_POST['商品ボタンのラベル名'])){
-    $_SESSION['id'] = $line['id'];
-    header ('location:./product_detail.php');
-    exit;
-}
+// if(isset($_POST['商品ボタンのラベル名'])){
+//     $_SESSION['id'] = $line['id'];
+//     header ('location:./product_detail.php');
+//     exit;
+// }
 
 // 検索履歴表示する
 $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
