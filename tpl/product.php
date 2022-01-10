@@ -9,32 +9,28 @@
 
 <body>
   <header>
-    <!-- <form action="" method="get">
+    <p class="back-icon">
+      <a href="#" onClick="history.back(); return false;">
+        <img src="./img/icon/arrow_back_ios_new_black_24dp.svg" alt="" width="24px" height="">
+      </a>
+    </p>
+    <form action="" method="get">
       <input class="search_text" type="text" name="search_message" placeholder="商品を検索しよう" value="" />
       <button class="grass" type="submit" name="btn">
         <i class="fas fa-search"></i>
       </button>
-    </form> -->
+    </form>
   </header>
-  <nav></nav>
+  <nav class="sort-nav">
+    <ul>
+      <li>並び替え</li>
+      <li>絞り込み</li>
+    </ul>
+  </nav>
   <main>
     <h1>フクリマ</h1>
     <article id="field">
       <h2>商品一覧</h2>
-      <!-- トレンドエリア -->
-      <section id="trend">
-        <h3>トレンド</h3>
-        <ul>
-          <?php foreach ($tags as $tag) : ?>
-          <li class="trend-tag">
-            <a href="./product.php?search=<?php echo $tag; ?>">
-              <?php echo $tag; ?>
-            </a>
-          </li>
-          <?php endforeach; ?>
-        </ul>
-      </section>
-      <!-- トレンドエリア終了 -->
 
       <!-- 商品一覧 -->
       <form action="" method="get">
@@ -50,7 +46,6 @@
 
       <section id="product">
         <h3>商品一覧</h3>
-
 
         <?php foreach ($products_arr as $product) : ?>
         <div class="product-area">

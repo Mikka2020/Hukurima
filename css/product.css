@@ -2,6 +2,72 @@
 @import url("./style.css");
 header {
   height: 60px;
+  border: solid 1px #ccc;
+  position: relative;
+}
+
+header button {
+  border: solid 1px #ccc;
+}
+
+header form {
+  margin: 0.6rem auto;
+  border: solid 1px #111;
+  width: 80%;
+  border-radius: 50px;
+}
+
+header input[type="text"] {
+  padding: 0.5rem 1rem;
+  width: 85%;
+}
+
+header .back-icon {
+  position: absolute;
+  top: 16px;
+  left: 0.5rem;
+}
+
+header .search_text :active {
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+header .grass {
+  color: gray;
+  border: 0;
+}
+
+header .grass :active {
+  color: #fd819d;
+}
+
+.sort-nav {
+  height: 36px;
+  line-height: 24px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.sort-nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -webkit-justify-content: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 1rem;
+}
+
+.sort-nav ul li + li {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  border-left: solid 2px #ccc;
 }
 
 main {
@@ -12,7 +78,6 @@ main {
   margin-bottom: 60px;
 }
 
-h1,
 h2,
 h3,
 h4 {
