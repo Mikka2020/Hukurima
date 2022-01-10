@@ -2,13 +2,17 @@
 @import url("./style.css");
 
 header {
-  display: flex;
-  line-height: 60px;
-  justify-content: space-between;
+  // line-height: 60px;
   height: 60px;
   border: solid 1px #111;
+  position: relative;
   img {
     margin-top: 10px;
+  }
+  .login {
+    position: absolute;
+    top: 20px;
+    right: 0.5rem;
   }
 }
 h2,

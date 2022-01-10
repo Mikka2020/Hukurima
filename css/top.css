@@ -1,21 +1,19 @@
 @import url("./destyle.css");
 @import url("./style.css");
 header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 60px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 60px;
   border: solid 1px #111;
+  position: relative;
 }
 
 header img {
   margin-top: 10px;
+}
+
+header .login {
+  position: absolute;
+  top: 20px;
+  right: 0.5rem;
 }
 
 h2,
