@@ -50,10 +50,12 @@ if(isset($search_value['product_name'])){
     mysqli_close($link);
     
     // 検索条件(履歴)の保存
-    $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-    mysqli_set_charset($link , 'utf8');
-    entry($link,$search_table,$search_value,$search_column);
-    mysqli_close($link);
+    if ($search_value['product_name'] != "") {
+        $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+        mysqli_set_charset($link , 'utf8');
+        entry($link,$search_table,$search_value,$search_column);
+        mysqli_close($link);
+    }
 }
 
 // 商品画像が押された時の処理
