@@ -59,7 +59,7 @@
             <a href="./product_detail.php?id=<?php echo $product['listing_id']; ?>">
               <img class="product-img"
                 src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id'] ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
-                alt="商品" width="180px" height="" />
+                alt="商品" width="180px" height="240px" />
             </a>
             <form action="" method="post">
               <button type="submit" class="favorite-btn" name="favorite_btn"
