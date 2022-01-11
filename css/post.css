@@ -1,0 +1,31 @@
+@import url("./destyle.css");
+@import url("./style.css");
+header {
+  height: 60px;
+}
+
+.textarea-box textarea {
+  border: solid 1px #000;
+  background-color: #fff;
+  width: 100%;
+  height: 240px;
+  resize: none;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div button {
+  padding: 0.5rem;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  margin: 0.3rem;
+}
+/*# sourceMappingURL=post.css.map */
