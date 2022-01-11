@@ -19,7 +19,7 @@
 <body>
   <header class="wrapper">
     <form action="" method="get">
-      <input class="search_text" type="text" name="search_message" placeholder="商品を検索しよう" value="" />
+      <input class="search_text" type="text" name="search" placeholder="商品を検索しよう" value="" />
       <button class="grass" type="submit" name="btn">
         <i class="fas fa-search"></i>
       </button>
