@@ -1,0 +1,35 @@
+@import url("./destyle.css");
+@import url("./style.css");
+
+header {
+  height: 60px;
+  padding-top: 15px;
+  border: solid 1px #ccc;
+}
+main {
+  margin-bottom: 60px;
+  .post-img {
+    text-align: center;
+    img {
+      border: solid 1px #ccc;
+      border-radius: 10px;
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+    }
+  }
+  section {
+    position: relative;
+    .prof-img {
+      border-radius: 100%;
+    }
+    .post-div {
+      line-height: 32px;
+    }
+    .menu {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}
