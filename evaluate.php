@@ -56,7 +56,6 @@ mysqli_close($link);
 // ];
 
 
-echo "test";
 
 
 require_once('./tpl/evaluate.php');
