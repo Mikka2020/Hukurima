@@ -55,4 +55,8 @@ mysqli_close($link);
 //   'auto_approval' => '0',
 // ];
 
+
+echo "test";
+
+
 require_once('./tpl/evaluate.php');
