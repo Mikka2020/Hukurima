@@ -48,7 +48,9 @@
       <h2>出品者情報</h2>
       <div class="user">
         <a href="">
-          <img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles['nickname']; ?>.<?php echo $profiles['prof_img_extension']; ?>" alt="information" />
+          <img
+            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles['nickname']; ?>.<?php echo $profiles['prof_img_extension']; ?>"
+            alt="information" />
           <p><?php echo $profiles['nickname']; ?></p>
           <p class="pink">></p>
         </a>
@@ -63,11 +65,11 @@
           <div class="review">
             <div class="stars">
               <span>
-                <input id="review01" type="radio" name="review"><label for="review01">★</label>
-                <input id="review02" type="radio" name="review"><label for="review02">★</label>
-                <input id="review03" type="radio" name="review"><label for="review03">★</label>
-                <input id="review04" type="radio" name="review"><label for="review04">★</label>
-                <input id="review05" type="radio" name="review"><label for="review05">★</label>
+                <input id="review01" type="radio" name="review" value="5"><label for="review01">★</label>
+                <input id="review02" type="radio" name="review" value="4"><label for="review02">★</label>
+                <input id="review03" type="radio" name="review" value="3"><label for="review03">★</label>
+                <input id="review04" type="radio" name="review" value="2"><label for="review04">★</label>
+                <input id="review05" type="radio" name="review" value="1"><label for="review05">★</label>
               </span>
             </div>
           </div>
@@ -80,7 +82,7 @@
           <p>
             ※コメントは必要ではありませんが、お礼のメッセージなどを書くと喜ばれます
           </p>
-          <button type="submit" name="submit-btn" value="up">送信する</button>
+          <button type="submit" name="submit_btn" value="up">送信する</button>
         </div>
       </form>
     </section>
