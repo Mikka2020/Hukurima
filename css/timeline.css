@@ -1,0 +1,43 @@
+@import url("./destyle.css");
+@import url("./style.css");
+header {
+  height: 60px;
+  padding-top: 15px;
+  border: solid 1px #ccc;
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+main .post-img {
+  text-align: center;
+}
+
+main .post-img img {
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  width: 320px;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section {
+  position: relative;
+}
+
+main section .prof-img {
+  border-radius: 100%;
+}
+
+main section .post-div {
+  line-height: 32px;
+}
+
+main section .menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+/*# sourceMappingURL=timeline.css.map */
