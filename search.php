@@ -34,8 +34,8 @@ $search_column = ['user_id','product_name'];
 $search_value['user_id'] = $_COOKIE['user_id'];
 
 // 商品名と選択された条件を取得する
-if(isset($_GET['search_message'])){
-    $search_value['product_name'] = $_GET['search_message'];
+if(isset($_GET['search'])){
+    $search_value['product_name'] = $_GET['search'];
 }
 // if(isset($_POST['btn'])){
 //     $search_value['product_name'] = $_POST['btn'];
