@@ -1,6 +1,11 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
 main {
   .evaluate {
     text-align: center;
