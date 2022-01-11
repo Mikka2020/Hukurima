@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 内容：評価画面
  * 作成日：？
@@ -22,40 +23,38 @@ require_once './func.php';
 // 初期値
 $listing_id = $_SESSION['bought_product_info'];
 // $table = 'listing';
-$columns = ['listing_id','user_id'];
-
+$columns = ['listing_id', 'user_id'];
 
 // 商品の配送状況の取得
-$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-mysqli_set_charset($link , 'utf8');
-$product = get_column($link,TABLES['101'],$columns[0],$listing_id);
+$link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+mysqli_set_charset($link, 'utf8');
+$product = get_column($link, TABLES['101'], $columns[0], $listing_id);
 mysqli_close($link);
 
 // プロフィール情報の取得
-$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-mysqli_set_charset($link , 'utf8');
-$profiles = get_column($link,TABLES['103'],$columns[1],$product['user_id']);
+$link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+mysqli_set_charset($link, 'utf8');
+$profiles = get_column($link, TABLES['103'], $columns[1], $product['user_id']);
 mysqli_close($link);
 
-// テスト用
-// $product = [
-//   'listing_id' => '2',
-//   'user_id' => '2',
-//   'product_name' => 'アシメレースアップリボンニット',
-//   'img_extension' => 'jpg',
-//   'price' => '3600',
-//   'product_explain' => 'これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。',
-//   'product_category' => 'ブラウス',
-//   'product_condition' => '0',
-//   'brand' => 'LAISSE PASSE',
-//   'days_to_ship' => '0',
-//   'cleaning_flg' => '1',
-//   'picking_flg' => '1',
-//   'listed_at' => '2000/10/01',
-//   'auto_approval' => '0',
-// ];
 
+// DBのrecordを更新または挿入する
+function update_db($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  mysqli_query($link, $sql);
+  mysqli_close($link);
+}
 
+// 評価ボタンを押したとき
+if (isset($_POST['submit_btn'])) {
+  $evaluate_val = $_POST['review'];
+
+  // フォームで入力された評価をDBに格納
+  $sql = "UPDATE evaluations SET listing_evaluation = " . $evaluate_val . " WHERE dealing_id = 1";
+  update_db($sql);
+}
 
 
 require_once('./tpl/evaluate.php');
