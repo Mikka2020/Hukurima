@@ -129,7 +129,7 @@
   <footer class="global-footer">
     <?php require_once('./footer.php'); ?>
   </footer>
-  <script src="./js/listing.js"></script>
+  <script src="./js/add.js"></script>
 </body>
 
 </html>
