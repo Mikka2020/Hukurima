@@ -36,7 +36,7 @@ mysqli_set_charset($link, 'utf8');
 $profiles = get_column($link, TABLES['103'], $columns[1], $product['user_id']);
 mysqli_close($link);
 
-// 評価ボタンを押したとき
+// 購入者が評価ボタンを押したとき
 if (isset($_POST['submit_btn'])) {
   $evaluate_val = $_POST['review'];
 
@@ -47,5 +47,7 @@ if (isset($_POST['submit_btn'])) {
   $sql .= " WHERE dealings.listing_id = " . $listing_id;
   update_db($sql);
 }
+
+// 出品者が評価ボタンを押したとき
 
 require_once('./tpl/evaluate.php');
