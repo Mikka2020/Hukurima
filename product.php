@@ -87,43 +87,6 @@ $tags = ['アウター', 'TheNorthFace', 'パーカー', 'DIESEL'];
 
 
 // テスト用
-// DBから全てのrecordを取り出す
-function get_db_records($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  $result = mysqli_query($link, $sql);
-  while ($row = mysqli_fetch_assoc($result)) {
-    $records[] = $row;
-  }
-  mysqli_close($link);
-  if (!isset($records)) {
-    return [];
-  }
-  return $records;
-}
-// DBからrecordを一件取得する、一致するレコードがなければ空配列を返す
-function get_db_record($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  $result = mysqli_query($link, $sql);
-  if (!$result) {
-    return [];
-  }
-  $record = mysqli_fetch_assoc($result);
-  mysqli_close($link);
-  return $record;
-}
-// インサート処理
-function update_db($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  mysqli_query($link, $sql);
-  mysqli_close($link);
-}
-
 $id = 0;
 // ログインしているか
 if (isset($_COOKIE['user_id'])) {

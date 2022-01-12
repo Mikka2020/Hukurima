@@ -42,21 +42,6 @@ if (isset($_COOKIE['user_id'])) {
 }
 
 
-// DBから全てのrecordを取り出す関数
-function get_db_records($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  $result = mysqli_query($link, $sql);
-  while ($row = mysqli_fetch_assoc($result)) {
-    $records[] = $row;
-  }
-  mysqli_close($link);
-  if (!isset($records)) {
-    return [];
-  }
-  return $records;
-}
 
 // 最新の商品を6件取得する。会員がいいねした商品の情報も同時に取得する。
 {
@@ -69,28 +54,6 @@ function get_db_records($sql)
   $sql .= " LIMIT 6";
 }
 $products_arr = get_db_records($sql);
-
-// DBからrecordを一件取得する、一致するレコードがなければ空配列を返す
-function get_db_record($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  $result = mysqli_query($link, $sql);
-  if (!$result) {
-    return [];
-  }
-  $record = mysqli_fetch_assoc($result);
-  mysqli_close($link);
-  return $record;
-}
-
-// インサート処理
-function update_db($sql) {
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  mysqli_query($link, $sql);
-  mysqli_close($link);
-}
 
 
 require_once('./tpl/top.php');
