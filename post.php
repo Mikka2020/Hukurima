@@ -3,27 +3,6 @@
 require_once('./func.php');
 require_once('./config.php');
 
-function update_db($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  mysqli_query($link, $sql);
-  mysqli_close($link);
-}
-function return_insert_record_id(string $host, string $user_name, string $user_password, string $db_name, string $sql): int
-{
-  // DB接続
-  $link = mysqli_connect($host, $user_name, $user_password, $db_name);
-  mysqli_set_charset($link, 'utf8');
-  // sql文を読み込み
-  mysqli_query($link, $sql);
-
-  // DBのIDを呼び出し
-  $id = mysqli_insert_id($link);
-
-  mysqli_close($link);
-  return $id;
-}
 
 // 投稿ボタンが押されたとき
 if (isset($_POST['post_submit'])) {

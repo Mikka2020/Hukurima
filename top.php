@@ -42,7 +42,6 @@ if (isset($_COOKIE['user_id'])) {
 }
 
 
-
 // 最新の商品を6件取得する。会員がいいねした商品の情報も同時に取得する。
 {
   $sql = "SELECT * FROM ";
