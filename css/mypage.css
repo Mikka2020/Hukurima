@@ -1,0 +1,10 @@
+@import url("./destyle.css");
+@import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: solid 1px #111;
+  position: relative;
+}
+/*# sourceMappingURL=mypage.css.map */
