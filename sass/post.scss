@@ -4,7 +4,7 @@
 header {
   height: 60px;
 }
-.textarea-box {
+.textarea-wrapper {
   textarea {
     border: solid 1px #000;
     background-color: #fff;
@@ -16,9 +16,16 @@ header {
     padding: 0.5rem;
   }
 }
-div {
+.preview-wrapper {
+  border-radius: 5px;
+  img {
+    width: 100px;
+  }
+}
+.btn-wrapper {
   display: flex;
-  button {
+  button,
+  label {
     padding: 0.5rem;
     border: solid 1px #ccc;
     border-radius: 5px;

@@ -4,7 +4,7 @@ header {
   height: 60px;
 }
 
-.textarea-box textarea {
+.textarea-wrapper textarea {
   border: solid 1px #000;
   background-color: #fff;
   width: 100%;
@@ -15,14 +15,23 @@ header {
   padding: 0.5rem;
 }
 
-div {
+.preview-wrapper {
+  border-radius: 5px;
+}
+
+.preview-wrapper img {
+  width: 100px;
+}
+
+.btn-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-div button {
+.btn-wrapper button,
+.btn-wrapper label {
   padding: 0.5rem;
   border: solid 1px #ccc;
   border-radius: 5px;
