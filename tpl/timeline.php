@@ -46,7 +46,7 @@
         <img src="./img/icon/返信アイコン.svg" alt="返信ボタン" width="24px" height="24px">1
       </p>
       <p>
-        <img src="./img/icon/時計アイコン.svg" alt="投稿時間"><?php echo $product['post_at']; ?>
+        <img src="./img/icon/時計アイコン.svg" alt="投稿時間"><?php echo mb_substr($product['post_at'], 0, -3); ?>
       </p>
     </section>
     <?php endforeach; ?>
