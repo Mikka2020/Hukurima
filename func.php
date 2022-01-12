@@ -524,15 +524,8 @@ function insert($link,$table,$columns,$column,$values,$user_id){
     return $id;
 }
 
-//
 
-function update_db($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  mysqli_query($link, $sql);
-  mysqli_close($link);
-}
+// インサートしてidを返す
 function return_insert_record_id(string $host, string $user_name, string $user_password, string $db_name, string $sql): int
 {
   // DB接続
@@ -575,4 +568,14 @@ function get_db_record($sql)
   $record = mysqli_fetch_assoc($result);
   mysqli_close($link);
   return $record;
+
+}
+// インサート処理
+function update_db($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  mysqli_query($link, $sql);
+  mysqli_close($link);
+
 }
