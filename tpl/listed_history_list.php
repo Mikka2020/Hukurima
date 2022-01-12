@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/listed_history.css">
 
-  <title>フクリマ 出品履歴詳細</title>
+  <title>フクリマ 出品履歴一覧</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
   <header></header>
   <main>
-    <h2>出品履歴詳細</h2>
+    <h2>出品履歴</h2>
     <article>
       <img
         src="./img/users/<?php echo $list['user_id']; // 会員id ?>/products/<?php echo $list['listing_id']; // 商品id ?>/<?php echo $list['product_name']; // 商品名 ?>_1.jpg"
