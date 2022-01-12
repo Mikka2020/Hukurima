@@ -22,7 +22,6 @@ require_once './func.php';
 
 // 初期値
 $listing_id = $_SESSION['bought_product_info'];
-// $table = 'listing';
 $columns = ['listing_id', 'user_id'];
 
 // 商品の配送状況の取得
@@ -37,24 +36,16 @@ mysqli_set_charset($link, 'utf8');
 $profiles = get_column($link, TABLES['103'], $columns[1], $product['user_id']);
 mysqli_close($link);
 
-
-// DBのrecordを更新または挿入する
-function update_db($sql)
-{
-  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
-  mysqli_set_charset($link, 'utf8');
-  mysqli_query($link, $sql);
-  mysqli_close($link);
-}
-
 // 評価ボタンを押したとき
 if (isset($_POST['submit_btn'])) {
   $evaluate_val = $_POST['review'];
 
   // フォームで入力された評価をDBに格納
-  $sql = "UPDATE evaluations SET listing_evaluation = " . $evaluate_val . " WHERE dealing_id = 1";
+  $sql = " UPDATE evaluations ";
+  $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
+  $sql .= " SET evaluations.listing_evaluation = " . $evaluate_val;
+  $sql .= " WHERE dealings.listing_id = " . $listing_id;
   update_db($sql);
 }
-
 
 require_once('./tpl/evaluate.php');
