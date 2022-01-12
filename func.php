@@ -523,3 +523,56 @@ function insert($link,$table,$columns,$column,$values,$user_id){
     $id = mysqli_insert_id($link);
     return $id;
 }
+
+//
+
+function update_db($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  mysqli_query($link, $sql);
+  mysqli_close($link);
+}
+function return_insert_record_id(string $host, string $user_name, string $user_password, string $db_name, string $sql): int
+{
+  // DB接続
+  $link = mysqli_connect($host, $user_name, $user_password, $db_name);
+  mysqli_set_charset($link, 'utf8');
+  // sql文を読み込み
+  mysqli_query($link, $sql);
+
+  // DBのIDを呼び出し
+  $id = mysqli_insert_id($link);
+
+  mysqli_close($link);
+  return $id;
+}
+
+// DBから全てのrecordを取り出す
+function get_db_records($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  $result = mysqli_query($link, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+    $records[] = $row;
+  }
+  mysqli_close($link);
+  if (!isset($records)) {
+    return [];
+  }
+  return $records;
+}
+// DBからrecordを一件取得する、一致するレコードがなければ空配列を返す
+function get_db_record($sql)
+{
+  $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
+  mysqli_set_charset($link, 'utf8');
+  $result = mysqli_query($link, $sql);
+  if (!$result) {
+    return [];
+  }
+  $record = mysqli_fetch_assoc($result);
+  mysqli_close($link);
+  return $record;
+}
