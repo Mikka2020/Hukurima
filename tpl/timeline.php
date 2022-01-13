@@ -50,6 +50,11 @@
       </p>
     </section>
     <?php endforeach; ?>
+    <div class="post-btn">
+      <a href="./post.php">
+        <img src="./img/icon/羽根ペンアイコン.svg" alt="" width="32px" height="">
+      </a>
+    </div>
   </main>
   <footer class="global-footer">
     <?php require_once('./sns_footer.php'); ?>
