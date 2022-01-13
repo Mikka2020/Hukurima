@@ -52,7 +52,7 @@
     <?php endforeach; ?>
     <div class="post-btn">
       <a href="./post.php">
-        <img src="./img/icon/羽根ペンアイコン.svg" alt="" width="32px" height="">
+        <img src="./img/icon/羽根ペンアイコン.svg" alt="" width="20px" height="">
       </a>
     </div>
   </main>
