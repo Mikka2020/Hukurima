@@ -46,6 +46,9 @@ if (isset($_POST['submit_btn'])) {
   $sql .= " SET evaluations.listing_evaluation = " . $evaluate_val;
   $sql .= " WHERE dealings.listing_id = " . $listing_id;
   update_db($sql);
+
+  header('location:./evaluate_complete.php');
+  exit;
 }
 
 // 出品者が評価ボタンを押したとき
