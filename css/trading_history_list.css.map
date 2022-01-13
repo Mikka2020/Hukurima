@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,oBAAI;AACZ,OAAO,CAAC,kBAAI",
+    "sources": [
+        "../sass/trading_history_list.scss"
+    ],
+    "names": [],
+    "file": "trading_history_list.css"
+}
