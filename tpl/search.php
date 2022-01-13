@@ -30,10 +30,26 @@
     <section class="keywords">
       <h2>急上昇キーワード</h2>
       <ul>
-        <li><button type="submit" name="btn" value="up">アウター</button></li>
-        <li><button type="submit" name="btn" value="up">ノースフェイス</button></li>
-        <li><button type="submit" name="btn" value="up">パーカー</button></li>
-        <li><button type="submit" name="btn" value="up">DIESEL</button></li>
+        <a href="./product.php?search=コート">
+          <li>
+            コート
+          </li>
+        </a>
+        <a href="./product.php?search=ニット">
+          <li>
+            ニット
+          </li>
+        </a>
+        <a href="./product.php?search=バッグ">
+          <li>
+            バッグ
+          </li>
+        </a>
+        <a href="./product.php?search=スニーカー">
+          <li>
+            スニーカー
+          </li>
+        </a>
       </ul>
     </section>
 
@@ -61,8 +77,8 @@
           <?php foreach($keywords as $keyword): ?>
           <a href="./product.php?">
             <li>
-              <span><?php echo $keyword['product_name']; ?></span> <button><img src="./img/icon/三点リーダーアイコン.svg"
-                  alt=""></button>
+              <span><?php echo $keyword['product_name']; ?></span>
+              <button><img src="./img/icon/三点リーダーアイコン.svg" alt=""></button>
             </li>
           </a>
           <?php endforeach; ?>
