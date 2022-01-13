@@ -92,4 +92,8 @@ h2 {
 .global-footer nav ul li {
   width: 20%;
 }
+
+.global-footer nav ul li p {
+  margin-top: 0.1rem;
+}
 /*# sourceMappingURL=style.css.map */
