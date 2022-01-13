@@ -1,9 +1,5 @@
 @import url("./destyle.css");
 @import url("./style.css");
-header {
-  height: 60px;
-}
-
 .textarea-wrapper textarea {
   border: solid 1px #000;
   background-color: #fff;
