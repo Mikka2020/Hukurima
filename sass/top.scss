@@ -91,19 +91,19 @@ main {
   margin-bottom: 60px;
   .change-btn {
     background-color: #fff;
-    border: solid 4px #fe8900;
-    border-left: solid 1px #ccc;
+    border: solid 3px #fe8900;
+    border-left: solid 2px #ccc;
     border-radius: 0 5px 5px 0;
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 0;
-    width: 80px;
+    width: 56px;
     height: 40px;
     text-align: center;
     vertical-align: middle;
     p {
-      padding-top: 0.3rem;
-      font-size: 20px;
+      padding-top: 0.4rem;
+      font-size: 18px;
       color: #fe8900;
     }
     svg {
