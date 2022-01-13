@@ -27,17 +27,21 @@
   </nav>
 
   <main>
-    <section class="product">
+    <section>
       <p class="product-img"><img src="./img/users/1/products/1/リリーコート_1.jpg" alt="商品画像" width="70px" height="70px"></p>
       <p class="sold-mark"><img src="./img/icon/SOLDマーク.png" alt="購入済みマーク"></p>
       <ul class="product-info">
-        <li class="buy-request-area"><button class="buy-request-btn"></button></li>
+        <li class="trading-state">取引中</li>
         <li class="product-name">リリーコート</li>
         <li class="product-price">¥3,600</li>
       </ul>
       <div><a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
     </section>
   </main>
+
+  <footer class="global-footer">
+    <?php require_once('./footer.php'); ?>
+  </footer>
 
 
 

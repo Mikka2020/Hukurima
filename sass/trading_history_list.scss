@@ -1,2 +1,56 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: solid 1px #bbb;
+  position: relative;
+  .back-icon {
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
+}
+
+.sort-nav {
+  height: 36px;
+  line-height: 14px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    margin-right: 1rem;
+    li{
+      padding: 0;
+      font-size: 14px;
+      color: #fe9900;
+    }
+    li + li {
+      padding-left: 1rem;
+      margin-left: 1rem;
+      border-left: solid 1px #ccc;
+    }
+  }
+}
+
+main{
+  section{
+    display: flex;
+    .product-img-area{
+      text-align: center;
+      position: relative;
+    }
+    .sold-mark{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+}

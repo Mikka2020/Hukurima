@@ -1,3 +1,73 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: solid 1px #bbb;
+  position: relative;
+}
+
+header .back-icon {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+
+.sort-nav {
+  height: 36px;
+  line-height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.sort-nav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 1rem;
+}
+
+.sort-nav ul li {
+  padding: 0;
+  font-size: 14px;
+  color: #fe9900;
+}
+
+.sort-nav ul li + li {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  border-left: solid 1px #ccc;
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section .product-img-area {
+  text-align: center;
+  position: relative;
+}
+
+main section .sold-mark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 /*# sourceMappingURL=trading_history_list.css.map */
