@@ -122,6 +122,7 @@ if (isset($_COOKIE['user_id'])) {
   }
 }
 
+$search = "";
 // 商品を全件取得する。会員がいいねした商品の情報も同時に取得する。
 {
   $sql = "SELECT * FROM ";
@@ -130,7 +131,8 @@ if (isset($_COOKIE['user_id'])) {
   $sql .= " LEFT JOIN favorite ON favorite.favorite_listing_id = " . TABLES['101'] . ".listing_id"; // favoriteをjoin
   $sql .= " AND favorite.favorite_user_id = " . $id; // ログインしている会員のfavoriteレコードのみ
   if (isset($_GET['search'])) { // 検索
-    $conditions['search'] = $_GET['search'];
+    $search = $_GET['search'];
+    $conditions['search'] = $search;
     $sql .= " WHERE " . TABLES['101'] . ".product_name LIKE '%" . $conditions['search'] . "%' "; // 検索条件
   }
   if (isset($_GET['sort'])) { // 並び替え
