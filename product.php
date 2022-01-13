@@ -87,7 +87,6 @@ $tags = ['アウター', 'TheNorthFace', 'パーカー', 'DIESEL'];
 
 
 // テスト用
-
 $id = 0;
 // ログインしているか
 if (isset($_COOKIE['user_id'])) {
