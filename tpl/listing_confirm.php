@@ -51,20 +51,6 @@
 
       </section>
 
-      <section class="tag-area">
-        <h3>タグ</h3>
-        <ul>
-          <!-- タグをforeachで複数表示 -->
-          <?php // foreach($tags as $tag): ?>
-          <li>
-            <?php echo 'ニット'; ?>
-          </li>
-          <li>
-            <?php echo 'ブラウス'; ?>
-          </li>
-          <?php // endforeach; ?>
-        </ul>
-      </section>
     </article>
     <form action="" method="post">
       <button type="submit" name="listing_btn" class="btn">出品する</button>
