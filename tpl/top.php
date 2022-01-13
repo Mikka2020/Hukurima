@@ -92,6 +92,11 @@
         <?php endforeach; ?>
       </section>
       <p class="hanger-icon"><img src="./img/icon/ハンガー.png" alt="表示終了アイコン"></p>
+      <a href="./timeline.php">
+        <div class="change-btn">
+          <p>SNS</p>
+        </div>
+      </a>
     </article>
   </main>
   <footer class="global-footer">
