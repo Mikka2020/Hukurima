@@ -24,7 +24,7 @@
               src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $product['nickname'] ?>.<?php echo $product['prof_img_extension']; ?>"
               alt="プロフィール画像" width="32px" height="32px">
           </a>
-          Mari
+          <?php echo $product['nickname']; ?>
           <img class="menu" src="./img/icon/三点リーダーアイコン.svg" alt="メニューボタン" width="18px" height="">
         </div>
         <p><?php echo $product['post_sentence']; ?></p>
