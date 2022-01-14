@@ -46,6 +46,18 @@
           <li>発送までの日時</li>
           <li><?php echo $days_to_ship[$listing['days_to_ship']]; ?></li>
         </ul>
+        <ul>
+          <li>クリーニングオプション</li>
+          <li><?php echo $cleaning[$listing['cleaning_flg']]; ?></li>
+        </ul>
+        <ul>
+          <li>集荷オプション</li>
+          <li><?php echo $picking[$listing['picking_flg']]; ?></li>
+        </ul>
+        <ul>
+          <li>購入申請自動許可</li>
+          <li><?php echo $auto_approval[$listing['auto_approval_flg']]; ?></li>
+        </ul>
         <p>
           商品説明<br>
           <?php echo $listing['product_explain']; ?>
@@ -54,7 +66,7 @@
       </section>
 
     </article>
-    <form action="" method="post">
+    <form action="#" method="post">
       <ul>
         <li class="listing-btn">
           <button type="submit" name="listing_btn" class="btn" id="listing_btn">出品する</button>
