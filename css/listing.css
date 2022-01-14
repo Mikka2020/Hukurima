@@ -120,8 +120,16 @@ textarea {
   color: #fff;
 }
 
+.btn-area .listing-btn button {
+  width: 100%;
+}
+
 .btn-area .save-btn {
-  border: solid 2px #ccc;
+  border: solid 2px #111;
   background-color: #fff;
+}
+
+.btn-area .save-btn button {
+  width: 100%;
 }
 /*# sourceMappingURL=listing.css.map */

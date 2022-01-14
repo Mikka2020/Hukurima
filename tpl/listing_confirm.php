@@ -17,9 +17,11 @@
     <h1>フクリマ</h1>
     <article>
       <h2><?php echo ''; // 商品名 ?></h2>
-      <img
-        src="./img/users/<?php echo $user_id; ?>/pre/<?php echo $listing['product_name']; ?>.<?php echo $listing['img_extension']; ?>"
-        alt="メイン商品画像" width="360px" height="">
+      <div class="center">
+        <img
+          src="./img/users/<?php echo $user_id; ?>/pre/<?php echo $listing['product_name']; ?>.<?php echo $listing['img_extension']; ?>"
+          alt="メイン商品画像" width="360px" height="">
+      </div>
 
       <section class="product-detail">
         <h3>商品説明</h3>
@@ -53,8 +55,14 @@
 
     </article>
     <form action="" method="post">
-      <button type="submit" name="listing_btn" class="btn">出品する</button>
-      <button type="submit" name="fix_btn" class="btn">修正する</button>
+      <ul>
+        <li class="listing-btn">
+          <button type="submit" name="listing_btn" class="btn" id="listing_btn">出品する</button>
+        </li>
+        <li class="fix-btn">
+          <button type="submit" name="fix_btn" class="btn">修正する</button>
+        </li>
+      </ul>
     </form>
   </main>
   <footer class="global-footer">

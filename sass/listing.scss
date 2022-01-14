@@ -85,9 +85,15 @@ textarea {
   .listing-btn {
     background-color: #fe8900;
     color: #fff;
+    button {
+      width: 100%;
+    }
   }
   .save-btn {
-    border: solid 2px #ccc;
+    border: solid 2px #111;
     background-color: #fff;
+    button {
+      width: 100%;
+    }
   }
 }

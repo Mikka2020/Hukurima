@@ -1,5 +1,9 @@
 @import url("./destyle.css");
 @import url("./style.css");
+main {
+  margin-bottom: 60px;
+}
+
 .product-detail ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -26,6 +30,29 @@
 }
 
 form {
-  margin-bottom: 60px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+form li {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+form li button {
+  width: 100%;
+}
+
+form .listing-btn {
+  background-color: #fe8900;
+  color: #fff;
+}
+
+form .fix-btn {
+  background-color: #fff;
+  border: solid 1px #111;
 }
 /*# sourceMappingURL=listing_confirm.css.map */
