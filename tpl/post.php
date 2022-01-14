@@ -13,17 +13,22 @@
 <body>
   <form action="" method="post" enctype="multipart/form-data">
     <header>
-      <!-- <img src="./img/icon/hukurima.png" alt="" width="60px" height=""> -->
-      <p class="center">投稿</p>
-      <p>
-        <button type="submit" name="post_submit">投稿する</button>
+      <p class="center">
+        <img src="./img/icon/hukurima.png" alt="" width="" height="40px">
+      </p>
+      <p class="post-submit">
+        <button type="submit" name="post_submit">投稿</button>
       </p>
     </header>
     <main>
       <article>
         <section>
           <p class="textarea-wrapper">
-            <textarea name="post_text" id="" cols="30" rows="10" maxlength="140"></textarea>
+            <textarea name="post_sentence" id="" cols="30" rows="10"
+              maxlength="140"><?php echo $post_sentence; ?></textarea>
+          </p>
+          <p>
+            <?php echo $product_name; ?>
           </p>
           <div class="preview-wrapper">
             <img id="preview" class="post-img">
@@ -33,7 +38,7 @@
               <input type="file" name="post_img" class="none" id="myImage" accept="image/*">
               <img src="./img/icon/出品アイコン.svg" alt="" width="24px" height="">
             </label>
-            <button>
+            <button type="submit" name="listing_btn">
               <img src="./img/icon/紙袋アイコン.svg" alt="" width="24px" height="">
             </button>
           </div>

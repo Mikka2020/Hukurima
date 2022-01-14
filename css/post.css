@@ -1,5 +1,19 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  line-height: 60px;
+}
+
+header img {
+  margin-bottom: 0.5rem;
+}
+
+header .post-submit {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
 .textarea-wrapper textarea {
   border: solid 1px #000;
   background-color: #fff;

@@ -21,6 +21,12 @@ header {
   height: 60px;
 }
 
+header .back-icon {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+
 main {
   font-size: 12px;
   color: #707070;

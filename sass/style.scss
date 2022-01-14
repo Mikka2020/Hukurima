@@ -17,6 +17,12 @@ body {
 }
 header {
   height: 60px;
+  // 戻るボタン
+  .back-icon {
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
 }
 main {
   font-size: 12px;
