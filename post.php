@@ -1,14 +1,17 @@
 <?php
-
+session_start();
 require_once('./func.php');
 require_once('./config.php');
 
+$post_sentence = "";
+$listing_id = 0;
+$product_name = "";
 
 // 投稿ボタンが押されたとき
 if (isset($_POST['post_submit'])) {
   $upload_file = $_FILES['post_img'];
   $extension = pathinfo($_FILES['post_img']['name'])['extension'];
-  $post_sentence = $_POST['post_text'];
+  $post_sentence = $_POST['post_sentence'];
 
   // 投稿をDBにアップロード
   $sql = "INSERT INTO posts (member_id , post_sentence, post_img_extension) ";
@@ -26,9 +29,24 @@ if (isset($_POST['post_submit'])) {
 
 }
 
-
+// 出品ボタンを押したときの処理
 if(isset($_POST['listing_btn'])) {
+  $_SESSION['post_sentence'] = $_POST['post_sentence'];
+
   header('location:./post_listed_history_list.php');
   exit;
 }
+
+// 出品選択画面から戻ってきたときの処理
+if (isset($_SESSION['listing_id'])) {
+  $listing_id = $_SESSION['listing_id'];
+  $post_sentence = $_SESSION['post_sentence'];
+  session_destroy();
+
+  $sql = "SELECT * FROM listing WHERE listing_id = " . $listing_id;
+  $product = get_db_record($sql);
+  $product_name = $product['product_name'];
+
+}
+
 require_once('./tpl/post.php');
