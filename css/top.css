@@ -48,7 +48,7 @@ main #category .category-items img {
 
 main #product {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,6 +56,7 @@ main #product {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  width: 370px;
 }
 
 main #product h3 {

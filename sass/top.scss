@@ -39,11 +39,11 @@ main {
     h3 {
       width: 100%;
     }
-    // background-color: #ccc;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    width: 370px;
 
     .product-area {
       border-radius: 5px;
