@@ -19,7 +19,7 @@
       </a>
     </li>
     <li>
-      <a href="./notification.php">
+      <a href="#">
         <img src="./img/icon/通知アイコン.svg" alt="notificationアイコン" width="24px" height="24px">
         <p>通知</p>
       </a>

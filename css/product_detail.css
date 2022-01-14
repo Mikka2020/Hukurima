@@ -3,7 +3,6 @@
 header {
   text-align: center;
   line-height: 60px;
-  border: solid 1px #111;
   position: relative;
 }
 
@@ -58,7 +57,7 @@ footer {
   width: 375px;
   height: 60px;
   bottom: 0;
-  border: solid 1px #000;
+  border: solid 1px #ccc;
   z-index: 10;
 }
 
