@@ -1,7 +1,6 @@
 @import url("./destyle.css");
 @import url("./style.css");
 header {
-  border: solid 1px #111;
   position: relative;
 }
 
