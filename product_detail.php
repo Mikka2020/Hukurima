@@ -51,6 +51,7 @@ $elapsed_time = ($time1 - $time2); //これで経過日数になっていると�
 if($elapsed_time < 60){
     $elapsed_time_msg = '1分未満';
 } else if($elapsed_time/60/60 < 24) {
+    $elapsed_time_msg = "1時間以内";
     for($i = 1;$i <= 24;$i++){
         if($elapsed_time/60/60 > $i) {
             $elapsed_time_msg = $i.'時間前';
@@ -67,7 +68,6 @@ if($elapsed_time < 60){
 } else {
     $elapsed_time_msg = '1週間以上前';
 }
-
 // var_dump($elapsed_time_msg);
 
 // 名前を取得する処理
