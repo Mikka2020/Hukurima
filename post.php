@@ -25,4 +25,10 @@ if (isset($_POST['post_submit'])) {
   exit;
 
 }
+
+
+if(isset($_POST['listing_btn'])) {
+  header('location:./post_listed_history_list.php');
+  exit;
+}
 require_once('./tpl/post.php');

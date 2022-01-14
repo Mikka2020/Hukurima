@@ -33,7 +33,7 @@
               <input type="file" name="post_img" class="none" id="myImage" accept="image/*">
               <img src="./img/icon/出品アイコン.svg" alt="" width="24px" height="">
             </label>
-            <button>
+            <button type="submit" name="listing_btn">
               <img src="./img/icon/紙袋アイコン.svg" alt="" width="24px" height="">
             </button>
           </div>
