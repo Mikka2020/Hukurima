@@ -505,10 +505,11 @@ function assemb_insert($table,$columns,$column,$values,$user_id){
             $query .= "".$columns[$i].",";
         }
     }
-    $query .= ",auto_approval";
+    // $query .= ",auto_approval";
     $query .= ")";
     $query .= " VALUES (";
-    $query .= "".$user_id.",'".$values[0]."','".$values[1]."',".$values[2].",'".$values[3]."','".$values[4]."',".$values[5].",'".$values[6]."',".$values[7].",".$values[8].",".$values[9].",1";
+    // $query .= "".$user_id.",'".$values[0]."','".$values[1]."',".$values[2].",'".$values[3]."','".$values[4]."',".$values[5].",'".$values[6]."',".$values[7].",".$values[8].",".$values[9].",1";
+    $query .= "".$user_id.",'".$values[0]."','".$values[1]."',".$values[2].",'".$values[3]."','".$values[4]."',".$values[5].",'".$values[6]."',".$values[7].",".$values[8].",".$values[9].",".$values[10];
     $query .= ")";
     return $query;
 }

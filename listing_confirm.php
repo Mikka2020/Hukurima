@@ -18,7 +18,7 @@ require_once './func.php';
 $user_id = $_COOKIE['user_id'];
 $column = 'user_id';
 $data = $_SESSION['listing_data'];
-$listing_label = ['product_name' , 'img_extension' ,  'price' , 'product_explain' , 'product_category' ,  'product_condition' , 'brand' , 'days_to_ship' , 'cleaning_flg' , 'picking_flg', 'auto_approval_flg'];
+$listing_label = ['product_name' , 'img_extension' ,  'price' , 'product_explain' , 'product_category' ,  'product_condition' , 'brand' , 'days_to_ship' , 'cleaning_flg' , 'picking_flg', 'auto_approval'];
 
 // 購入ボタンが押された時の処理
 if(isset($_POST['listing_btn'])){
@@ -44,7 +44,6 @@ if(isset($_POST['listing_btn'])){
     exit;
   }
 }
-
 
 
 
