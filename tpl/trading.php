@@ -52,7 +52,7 @@
           <img class="prof-img"
             src="./img/users/<?php echo $line['user_id']; ?>/profile/<?php echo $profiles['nickname'];?>.<?php echo $profiles['prof_img_extension'];?>"
             alt="プロフィール画像" width="32px" height="32px" />
-          <?php echo "Mari"; ?> さん
+          <?php echo $profiles['nickname']; ?> さん
         </p>
         <button type="submit" class="btn msg-btn" name="message">メッセージ</button>
       </section>
