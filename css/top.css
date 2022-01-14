@@ -78,8 +78,8 @@ main #product .product-area .product-item {
 
 main #product .product-area .product-item .product-img {
   border-radius: 5px 5px 0 0;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main #product .product-area .product-item .favorite-btn {
