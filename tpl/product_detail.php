@@ -78,13 +78,19 @@
           <li>配送までの日数</li>
           <li><?php echo $days_to_ship[$product['days_to_ship']]; ?></li>
         </ul>
-        <ul>
+        <!-- <ul>
           <li>ハンガーボックス</li>
-          <li><?php echo 'あり'; ?></li>
-        </ul>
+          <li><?php //  echo 'あり'; ?></li>
+        </ul> -->
         <ul>
           <li>クリーニング</li>
-          <li><?php echo '可'; ?></li>
+          <li><?php echo $cleaning[$product['cleaning_flg']]; ?></li>
+        </ul>
+        <ul>
+          <li>購入申請自動許可</li>
+          <li>
+            <?php echo $auto_approval[$product['auto_approval']]; ?>
+          </li>
         </ul>
       </section>
       <section class="prof-section">
