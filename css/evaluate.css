@@ -48,6 +48,7 @@ main .evaluate textarea {
   margin: 0 auto;
   width: 270px;
   margin-bottom: 15px;
+  resize: none;
 }
 
 main .evaluate h4 {

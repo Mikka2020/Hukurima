@@ -28,7 +28,7 @@
             <input id="review05" type="radio" name="review" value="1"><label for="review05">★</label>
           </span>
         </div>
-        <textarea name="msg" cols="20" rows="3">取引相手にメッセージを入力</textarea>
+        <textarea name="msg" cols="20" rows="3" placeholder="取引相手にメッセージを入力"></textarea>
         <h4 class="<?php //echo $class;?>">チップを追加(任意)</h4>
         <div class="tip <?php //echo $class;?>">
           <input type="text" name="tip" placeholder="金額を入力">
