@@ -27,16 +27,20 @@
   </nav>
 
   <main>
+    <?php foreach($dealing_arr as $value):?>
     <section>
-      <p class="product-img"><img src="./img/users/1/products/1/リリーコート_1.jpg" alt="商品画像" width="70px" height="70px"></p>
-      <p class="sold-mark"><img src="./img/icon/SOLDマーク.png" alt="購入済みマーク"></p>
-      <ul class="product-info">
-        <li class="trading-state">取引中</li>
-        <li class="product-name">リリーコート</li>
-        <li class="product-price">¥3,600</li>
+      <p class="product-img"><img src="./img/users/<?php echo $value['user_id'];?>/products/<?php echo $value['listing_id'];?>/<?php echo $value['product_name'] ;?>_1.<?php echo $value['img_extension'];?>" alt="商品画像" width="70px" height="70px"></p>
+      <ul>
+        <li class="trading-state <?php echo $value['dealing_state'];?>">取引中</li>
+        <li class="product-name"><?php echo $value['product_name'];?></li>
+        <li class="product-price">¥<?php echo $value['price'];?></li>
       </ul>
-      <div><a href="#"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
+      <form action="trading.php" method="post">
+        <button type="submit" name="dealing_id" value="<?php echo $value['dealing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
+      </form>
+      <!-- <div><a href="trading.php"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div> -->
     </section>
+    <?php endforeach;?>
   </main>
 
   <footer class="global-footer">
