@@ -1,113 +1,124 @@
-@charset "utf-8";
 @import url("./destyle.css");
 @import url("./style.css");
-
-/* h1の消去 */
-h1 {
-  display: none;
-}
-/* ヘッダー(仮置き) */
 header {
-  background: #cccccc;
-  width: 100%;
-  height: 7vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-bottom: solid 2px #dcdcdc;
-}
-/* メイン */
-main {
-  padding-top: 7vh;
-}
-/* 検索エリア */
-.search_area {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  /* 位置の固定*/
-  width: 100%;
-  height: 7vh;
-  position: fixed;
-  top: 7vh;
-  left: 0;
-  /* デザインの指定 */
-  background: #fff;
-  border-bottom: solid 1.5px #dcdcdc;
-}
-.search {
-  font-size: small;
-  color: #fe9900;
-  padding: 0 10px;
-}
-.search:last-child {
-  padding-right: 15px;
-  border-left: solid 1px #dcdcdc;
-}
-/* 出品履歴エリア */
-.products_area {
-  padding-top: 7vh;
-}
-/* 出品履歴 */
-.product_info {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  padding: 5px;
-}
-.product {
-  display: flex;
-  align-items: center;
-  border-bottom: solid 1px #dcdcdc;
-}
-.product_img_area {
+  height: 60px;
   text-align: center;
+  line-height: 60px;
+  border: none;
+  border-bottom: solid 1px #bbb;
   position: relative;
 }
-.product_img {
-  margin: 10px;
-  /* background: #f00; */
-  text-align: center;
-}
-.product_price {
-  width: 100%;
-}
-.icon_group {
-  display: flex;
-  align-items: flex-end;
-  margin-right: 5px;
-}
-.favorite_num,
-.comment_num,
-.date_text,
-.product_price,
-.product_name {
-  font-size: smaller;
-}
-.buy_request_area {
-  width: 100%;
-  margin-bottom: 2px;
-}
-.buy_request_btn {
-  display: block;
-  /* width: 100%; */
-  border-radius: 3px;
-  background: #fd819d;
-  color: #fff;
-  font-size: x-small;
-  padding: 2px 6px;
-}
-.sold_mark {
+
+header .back-icon {
   position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.hanger_img {
-  text-align: center;
+  top: -1rem;
+  left: 1rem;
 }
 
-/* フッター */
-/* footer{
-    background: #f00 ;
-    height: 7vh;
-} */
+.sort-nav {
+  height: 36px;
+  line-height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  border-bottom: solid 1px #bbb;
+}
+
+.sort-nav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 1rem;
+}
+
+.sort-nav ul li {
+  padding: 0;
+  font-size: 14px;
+  color: #fe9900;
+}
+
+.sort-nav ul li + li {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  border-left: solid 1px #ccc;
+}
+
+main {
+  border: none;
+}
+
+main section {
+  height: 90px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px #bbb;
+  padding: 10px 0;
+  margin: 0;
+}
+
+main section p {
+  margin-left: 10px;
+  position: relative;
+}
+
+main section p .sold-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main section p .sale {
+  display: none;
+}
+
+main section ul {
+  padding-left: 8px;
+  width: 65%;
+  height: 70px;
+}
+
+main section ul li {
+  display: inline-block;
+  font-size: 13px;
+}
+
+main section ul .requests-btn {
+  font-size: 10px;
+  border-radius: 2px;
+  background: #fd819d;
+  color: #fff;
+  padding: 1px 7px;
+  margin-bottom: 5px;
+}
+
+main section ul .requests0 {
+  visibility: hidden;
+}
+
+main section ul li + li {
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+main section button img {
+  padding-left: 15px;
+}
+/*# sourceMappingURL=listed_history_list.css.map */
