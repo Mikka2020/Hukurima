@@ -55,7 +55,7 @@ mysqli_close($link);
 if (isset($_POST['buy_btn'])) {
     unset($_SESSION['buy_product_info']);
     $_SESSION['bought_product_info'] = $line['listing_id'];
-    
+
     $cleaning_flg = 0;
     $hanger_flg = 0;
     if (isset($_POST['cleaning_flg'])) {
@@ -64,24 +64,24 @@ if (isset($_POST['buy_btn'])) {
     if (isset($_POST['hanger_flg'])) {
         $hanger_flg = 1;
     }
-    
+
     // DBの取引テーブルにインサート
     $sql = " INSERT INTO dealings ";
-    $sql .= " (listing_id, dealing_user_id, dealing_flg, cleaning_flg, hanger_flg) ";
+    $sql .= " (listing_id, buyer_user_id,listing_user_id , dealing_flg, cleaning_flg, hanger_flg) ";
     $sql .= " VALUES ";
-    $sql .= " (" . $line['listing_id'] . ", " . $_COOKIE['user_id'] . ", 1, " . $cleaning_flg . ", " . $hanger_flg;
+    $sql .= " (" . $line['listing_id'] . ", " . $_COOKIE['user_id'] . ", " . $line['user_id'] . ", 1, " . $cleaning_flg . ", " . $hanger_flg;
     $sql .= ")";
     update_db($sql);
-    
+
     // DBの評価テーブルにインサート
     $sql = " INSERT INTO evaluations ";
     $sql .= " (listing_user_id, buyer_user_id) ";
     $sql .= " VALUES ";
-    $sql .= " ( ". $line['user_id']. ", ". $_COOKIE['user_id'];
+    $sql .= " ( " . $line['user_id'] . ", " . $_COOKIE['user_id'];
     $sql .= ")";
     update_db($sql);
 
-    header ('location:./trading.php');
+    header('location:./trading.php');
     exit;
 }
 
