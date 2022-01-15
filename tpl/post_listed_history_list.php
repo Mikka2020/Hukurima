@@ -35,15 +35,17 @@
           </label>
           <?php endforeach; ?>
         </section>
-        <section class="center">
-          <button type="submit" name="select_submit">
-            投稿に追加
-          </button>
-        </section>
-      </form>
+
     </article>
   </main>
-  <footer></footer>
+  <footer class="center">
+    <p>
+      <button type="submit" name="select_submit">
+        投稿に追加
+      </button>
+    </p>
+  </footer>
+  </form>
   <script src="./js/add.js"></script>
 </body>
 

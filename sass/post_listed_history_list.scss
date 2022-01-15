@@ -21,3 +21,28 @@ header {
   position: relative;
   line-height: 60px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  p {
+    width: 80%;
+    margin: 15px auto;
+    border: solid 1px #fe8900;
+    background-color: #fe8900;
+    color: #fff;
+    border-radius: 5px;
+    // line-height: 60px;
+    button {
+      line-height: 30px;
+      width: 100%;
+      // line-height: 60px;
+      // background-color: blue;
+      // height: 30px;
+    }
+  }
+}
