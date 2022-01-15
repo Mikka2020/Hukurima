@@ -49,9 +49,9 @@
       <div class="user">
         <a href="">
           <img
-            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles['nickname']; ?>.<?php echo $profiles['prof_img_extension']; ?>"
+            src="./img/users/<?php echo $profile['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
             alt="information" />
-          <p><?php echo $profiles['nickname']; ?></p>
+          <p><?php echo $profile['nickname']; ?></p>
           <p class="pink">></p>
         </a>
       </div>
