@@ -20,13 +20,18 @@ require_once './func.php';
 
 // ログイン中のユーザーの出品履歴を取得する。取引状況を確認するため取引テーブルも結合。
 {
-    $sql = "SELECT * FROM ";
+    $sql = "SELECT listing.listing_id , listing.user_id , listing.product_name , listing.img_extension , listing.price , listing.listed_at , dealings.dealing_flg , COUNT(dealing_requests.listing_id) AS requests_sum FROM ";
     $sql .= TABLES['101'];
     $sql .= " LEFT JOIN dealings ON listing.listing_id = dealings.listing_id";
+    $sql .= " LEFT JOIN dealing_requests ON listing.listing_id = dealing_requests.listing_id";
     $sql .= " WHERE user_id = " . $_COOKIE['user_id'];
+    $sql .= " GROUP BY listing_id";
+    $sql .= " HAVING listing_id";
     $sql .= " ORDER BY listed_at DESC";
 }
 $listing_arr = get_db_records($sql);
+// var_dump($listing_arr);
+
 
 // 商品が押された時の処理
 // if(isset($_POST['class名'])){
