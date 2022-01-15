@@ -44,7 +44,7 @@ if (isset($_COOKIE['user_id'])) {
 
 // 最新の商品を6件取得する。会員がいいねした商品の情報も同時に取得する。
 {
-  $sql = "SELECT * ,listing.listing_id AS id ,dealings.listing_id AS dealing_id ";
+  $sql = "SELECT * ,listing.listing_id AS id ,dealings.listing_id AS dealing_listing_id ";
   $sql .= " FROM ";
   $sql .= TABLES['101'];
   $sql .= " INNER JOIN " .  TABLES['103'] . " ON " . TABLES['101'] . ".user_id = " . TABLES['103'] . ".user_id";
@@ -55,6 +55,5 @@ if (isset($_COOKIE['user_id'])) {
   $sql .= " LIMIT 6";
 }
 $products_arr = get_db_records($sql);
-
 
 require_once('./tpl/top.php');

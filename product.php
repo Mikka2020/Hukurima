@@ -125,11 +125,15 @@ if (isset($_COOKIE['user_id'])) {
 $search = "";
 // 商品を全件取得する。会員がいいねした商品の情報も同時に取得する。
 {
-  $sql = "SELECT * FROM ";
-  $sql .= TABLES['101']; // listing
-  $sql .= " INNER JOIN " .  TABLES['103'] . " ON " . TABLES['101'] . ".user_id = " . TABLES['103'] . ".user_id"; // listingとprofileをjoin
-  $sql .= " LEFT JOIN favorite ON favorite.favorite_listing_id = " . TABLES['101'] . ".listing_id"; // favoriteをjoin
-  $sql .= " AND favorite.favorite_user_id = " . $id; // ログインしている会員のfavoriteレコードのみ
+  {
+    $sql = "SELECT * , listing.listing_id AS id, dealings.listing_id AS dealing_listing_id ";
+    $sql .= " FROM ";
+    $sql .= TABLES['101']; // listing
+    $sql .= " INNER JOIN " .  TABLES['103'] . " ON " . TABLES['101'] . ".user_id = " . TABLES['103'] . ".user_id"; // listingとprofileをjoin
+    $sql .= " LEFT JOIN favorite ON favorite.favorite_listing_id = " . TABLES['101'] . ".listing_id"; // favoriteをjoin
+    $sql .= " AND favorite.favorite_user_id = " . $id; // ログインしている会員のfavoriteレコードのみ
+    $sql .= " LEFT JOIN dealings ON dealings.listing_id = listing.listing_id ";
+  }
   if (isset($_GET['search'])) { // 検索
     $search = $_GET['search'];
     $conditions['search'] = $search;
@@ -138,22 +142,22 @@ $search = "";
   if (isset($_GET['sort'])) { // 並び替え
     // 高い
     if ($_GET['sort'] == 'hight_price') {
-      $sql .= " ORDER BY price DESC";
+      $sql .= " ORDER BY listing.price DESC";
     }
     // 安い
     elseif ($_GET['sort'] == 'low_price') {
-      $sql .= " ORDER BY price ASC";
+      $sql .= " ORDER BY listing.price ASC";
     }
     // 新着
     elseif ($_GET['sort'] == 'new') {
-      $sql .= " ORDER BY listed_at DESC";
+      $sql .= " ORDER BY listing.listed_at DESC";
     }
     // いいねが多い順
     elseif ($_GET['sort'] == '') {
       // $sql .= " ORDER BY ";
     }
   } else {
-    $sql .= " ORDER BY listing_id DESC";
+    $sql .= " ORDER BY listing.listing_id DESC";
   }
 }
 
