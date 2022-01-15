@@ -10,6 +10,9 @@
 require_once './config.php';
 require_once './func.php';
 
+// 初期化
+$dealing_arr = [];
+
 // ログイン中のユーザーが取引した履歴を取得する。出品した商品と購入した商品の両方を取得する。
 {
   $sql = "SELECT * FROM ";
