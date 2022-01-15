@@ -1,21 +1,35 @@
 html {
+  background-image: url("./../img/background_smartphone.png");
+  background-repeat: no-repeat;
+  background-position-y: -76px;
+  background-position-x: -15px;
+  background-size: 405px;
+  overflow: scroll;
   position: absolute;
-  top: 0;
+  top: 72px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  height: 667px;
-  overflow: scroll;
 }
 body {
+  background-color: #fff;
+  // position: absolute;
+  // top: 3.8rem;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // -webkit-transform: translateX(-50%);
+  // -ms-transform: translateX(-50%);
   overflow: scroll;
   width: 375px;
   min-height: 667px;
   border: solid 1px #ccc;
   height: 667px;
+  border-radius: 3px;
 }
 header {
+  border: solid 1px #ccc;
+  background-color: #fff;
   height: 60px;
   // 戻るボタン
   .back-icon {
@@ -69,6 +83,9 @@ h2 {
 }
 
 // フッターナビ
+footer {
+  border-radius: 0 0 3px 3px;
+}
 .global-footer {
   position: fixed;
   bottom: 0;
