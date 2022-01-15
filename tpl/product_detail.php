@@ -44,12 +44,10 @@
         <form action="" method="post">
 
           <button>
-            <img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px"
-              height=""><?php echo 1 // $product['favorite']; ?>
+            <img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px" height=""><?php echo "0" ?>
           </button>
           <button>
-            <img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px"
-              height=""><?php echo  5; // $product['comment']; ?>
+            <img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px" height=""><?php echo "0"; ?>
           </button>
         </form>
 

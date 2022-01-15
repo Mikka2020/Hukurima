@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,oBAAI;AACZ,OAAO,CAAC,kBAAI;AACZ,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,cAAc;EACtB,QAAQ,EAAE,QAAQ;CACrB",
+    "sources": [
+        "../sass/mypage.scss"
+    ],
+    "names": [],
+    "file": "mypage.css"
+}

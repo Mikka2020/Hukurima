@@ -59,6 +59,11 @@ main {
           // object-fit: scale-down;
           object-fit: cover;
         }
+        .sold-icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
         .favorite-btn {
           width: 24px;
           position: absolute;

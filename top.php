@@ -20,14 +20,14 @@ if (isset($_COOKIE['user_id'])) {
       $sql .=  " AND favorite_listing_id = ";
       $sql .= $_POST['favorite_btn'];
     }
-  
+
     if (get_db_record($sql) == []) {
       // いいねボタンを押した商品がfavoriteテーブルになかったらインサート処理
       $sql = "INSERT INTO ";
       $sql .= " favorite ";
       $sql .= " ( favorite_user_id, favorite_listing_id ) ";
       $sql .= " VALUES ";
-      $sql .= " ( " . $id . ", " . $_POST['favorite_btn'] . " ) " ;
+      $sql .= " ( " . $id . ", " . $_POST['favorite_btn'] . " ) ";
     } else {
       // いいねボタンを押した商品がfavoriteテーブルにあったら削除処理
       $sql = "DELETE FROM ";
@@ -44,12 +44,14 @@ if (isset($_COOKIE['user_id'])) {
 
 // 最新の商品を6件取得する。会員がいいねした商品の情報も同時に取得する。
 {
-  $sql = "SELECT * FROM ";
+  $sql = "SELECT * ,listing.listing_id AS id ,dealings.listing_id AS dealing_id ";
+  $sql .= " FROM ";
   $sql .= TABLES['101'];
   $sql .= " INNER JOIN " .  TABLES['103'] . " ON " . TABLES['101'] . ".user_id = " . TABLES['103'] . ".user_id";
   $sql .= " LEFT JOIN favorite ON favorite.favorite_listing_id = " . TABLES['101'] . ".listing_id";
   $sql .= " AND favorite.favorite_user_id = " . $id;
-  $sql .= " ORDER BY listing_id DESC";
+  $sql .= " LEFT JOIN dealings ON dealings.listing_id = listing.listing_id ";
+  $sql .= " ORDER BY listing.listed_at DESC";
   $sql .= " LIMIT 6";
 }
 $products_arr = get_db_records($sql);
