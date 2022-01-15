@@ -60,8 +60,8 @@
           <li>購入申請自動許可</li>
           <li><?php echo $auto_approval[$listing['auto_approval_flg']]; ?></li>
         </ul>
-        <p>商品説明文</p>
-        <p><?php echo $listing['product_explain']; ?></p>
+        <p class="explain-title">商品説明文</p>
+        <p class="explain-text"><?php echo $listing['product_explain']; ?></p>
 
 
 

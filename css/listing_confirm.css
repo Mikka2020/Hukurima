@@ -1,7 +1,15 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  line-height: 60px;
+}
+
 main {
   margin-bottom: 60px;
+}
+
+.product-detail {
+  padding: 10px;
 }
 
 .product-detail ul {
@@ -9,24 +17,32 @@ main {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  line-height: 24px;
+  border-bottom: solid 1px #ccc;
 }
 
 .product-detail ul li {
   width: 50%;
 }
 
-.tag-area ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.product-detail .product-name {
+  font-size: 1.2rem;
 }
 
-.tag-area ul li {
-  border: solid 1px #000;
-  border-radius: 16px;
-  padding: 3px 6px;
-  margin: 4px;
+.product-detail .brand {
+  font-size: 0.8rem;
+}
+
+.product-detail .price {
+  font-size: 1.2rem;
+}
+
+.product-detail .explain-title {
+  margin-bottom: 0.3rem;
+}
+
+.product-detail .explain-text {
+  margin-bottom: 0.5rem;
 }
 
 form {
