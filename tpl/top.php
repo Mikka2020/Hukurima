@@ -60,7 +60,7 @@
               <img class="product-img"
                 src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id'] ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
                 alt="商品" width="180px" height="240px" />
-              <img class="sold-icon <?php echo $product['dealing_id'] === NULL ? "none" : "" ; ?>"
+              <img class="sold-icon <?php echo $product['dealing_listing_id'] === NULL ? "none" : "" ; ?>"
                 src="./img/icon/SOLDマーク(商品一覧).svg" alt="">
             </a>
             <form action="" method="post">
