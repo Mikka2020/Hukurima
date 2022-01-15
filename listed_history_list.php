@@ -8,6 +8,9 @@
  * 変更日：2021/12/29
  * 追加内容：一連の流れを記述（並び替え・絞り込みボタンは一旦無視）
  * ------------------------------------------------------------------------------------------------------------------------
+ * 編集者：小嶋美紀
+ * 変更日：2022/01/15
+ * 変更内容：正しくデータを表示できるよう変更
  */
 
 
@@ -15,34 +18,22 @@
 require_once './config.php';
 require_once './func.php';
 
-// 動作確認用定数
-$column = 'user_id';
-$where = 'A0001';
-
-// 初期値
-$list_table = 'listing';
-$member_table = 'member';
-
-// 商品一覧で表示させるための処理
-$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-mysqli_set_charset($link , 'utf8');
-$products = get_all($link,$list_table,$column,$where);
-mysqli_close($link);
+// ログイン中のユーザーの出品履歴を取得する。取引状況を確認するため取引テーブルも結合。
+{
+    $sql = "SELECT * FROM ";
+    $sql .= TABLES['101'];
+    $sql .= " LEFT JOIN dealings ON listing.listing_id = dealings.listing_id";
+    $sql .= " WHERE user_id = " . $_COOKIE['user_id'];
+    $sql .= " ORDER BY listed_at DESC";
+}
+$listing_arr = get_db_records($sql);
 
 // 商品が押された時の処理
-if(isset($_POST['class名'])){
-    $_SESSION['id'] = $line['id']; // 出品詳細画面で使用する
-    header('location:./listed_history.php');
-    exit;
-}
-
-// 戻るボタンが押された時の処理(name="back")
-// if(isset($_POST['back'])){
-//     header ('location:./');
+// if(isset($_POST['class名'])){
+//     $_SESSION['id'] = $line['id']; // 出品詳細画面で使用する
+//     header('location:./listed_history.php');
 //     exit;
 // }
-
-var_dump($products);
 
 
 require_once('./tpl/listed_history_list.php');
