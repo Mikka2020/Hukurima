@@ -52,18 +52,14 @@
         </form>
 
       </section>
+
       <section>
-        <h4>商品説明</h4>
+        <h3>商品説明</h3>
         <p><?php echo $product['product_explain']; ?></p>
-        <ul>
-          <?php // foreach($tags as $tag): ?>
-          <li><?php // echo $tag; ?></li>
-          <?php // endforeach; ?>
-        </ul>
       </section>
 
       <section class="product-detail">
-        <h4>商品詳細</h4>
+        <h3>商品詳細</h3>
         <ul>
           <li>カテゴリ</li>
           <li><?php echo $product['product_category']; ?></li>
@@ -91,8 +87,9 @@
           </li>
         </ul>
       </section>
+      
       <section class="prof-section">
-        <h4>出品者</h4>
+        <h3>出品者</h3>
         <p>
           <img
             src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['prof_img_extension']; ?>"

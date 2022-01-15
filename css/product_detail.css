@@ -22,17 +22,28 @@ main {
   margin-bottom: 60px;
 }
 
+main h3 {
+  background: #ccc;
+  font-size: 16px;
+}
+
+main section {
+  padding: 0 10px 10px 10px;
+}
+
 .img-section {
+  padding: 0;
   text-align: center;
+  margin: 0;
 }
 
 .img-section h3 {
+  width: 100%;
   display: none;
 }
 
 .product-detail ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -48,7 +59,6 @@ main {
 
 .prof-section img {
   border-radius: 100%;
-  margin: 0 0.3rem 0 0.5rem;
 }
 
 footer {

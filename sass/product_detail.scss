@@ -1,5 +1,6 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
 header {
   text-align: center;
   line-height: 60px;
@@ -15,14 +16,28 @@ header {
     right: 1rem;
   }
 }
+
 main {
   margin-bottom: 60px;
+  h3{
+    background: #ccc;
+    // padding-left: 10px;
+    font-size: 16px;
+  }
+  section{
+    padding: 0 10px 10px 10px;
+  }
 }
+
 .img-section {
+  padding: 0;
   h3 {
+    width: 100%;
+    // padding: 10px;
     display: none;
   }
   text-align: center;
+  margin: 0;
 }
 
 .product-detail {
@@ -36,7 +51,7 @@ main {
 .prof-section {
   img {
     border-radius: 100%;
-    margin: 0 0.3rem 0 0.5rem;
+    // margin: 0 0.3rem 0 0.5rem;
   }
   line-height: 32px;
   padding-bottom: 1rem;
