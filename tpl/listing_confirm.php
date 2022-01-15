@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <p>出品確認</p>
+    <p class="center">出品確認</p>
   </header>
   <main>
     <h1>フクリマ</h1>
@@ -24,8 +24,10 @@
       </div>
 
       <section class="product-detail">
-        <h3>商品説明</h3>
-        <p><?php echo $listing['product_name']; ?></p>
+        <h3 class="none">商品</h3>
+        <p class="product-name"><?php echo $listing['product_name']; ?></p>
+        <p class="brand"><?php echo $listing['brand']; ?></p>
+        <p class="price red">¥<?php echo $listing['price']; ?></p>
         <ul>
           <li>
             カテゴリ
@@ -58,10 +60,10 @@
           <li>購入申請自動許可</li>
           <li><?php echo $auto_approval[$listing['auto_approval_flg']]; ?></li>
         </ul>
-        <p>
-          商品説明<br>
-          <?php echo $listing['product_explain']; ?>
-        </p>
+        <p class="explain-title">商品説明文</p>
+        <p class="explain-text"><?php echo $listing['product_explain']; ?></p>
+
+
 
       </section>
 
