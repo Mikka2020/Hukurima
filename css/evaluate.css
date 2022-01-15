@@ -2,176 +2,122 @@
 @import url("./destyle.css");
 @import url("./style.css");
 header {
+  border: none;
+  border-bottom: solid 1px #bbb;
   text-align: center;
   line-height: 60px;
 }
 
 main {
-  margin-bottom: 60px;
+  border: none;
+  /* 出品者側のとき */
+  /* 評価エリア */
+  /* 取引商品 */
+  /* 取引ユーザー */
+}
+
+main .disable {
+  display: none;
+}
+
+main h3 {
+  font-size: 14px;
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+main h3:first-child {
+  padding-top: 10px;
 }
 
 main .evaluate {
+  padding: 25px 10px;
+}
+
+main .evaluate p {
   text-align: center;
-  background-color: #fff;
+  margin-bottom: 10px;
 }
 
-main .information {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+main .evaluate textarea {
+  padding: 3px;
+  background: #f7f8f9;
+  border: solid 1px #707070;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  width: 270px;
+  margin-bottom: 15px;
 }
 
-main .information text {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+main .evaluate h4 {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3px;
 }
 
-main .information img {
-  width: 90px;
-  height: 90px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: solid 1px #00000080;
+main .evaluate input {
+  padding: 3px;
+  background: #f7f8f9;
+  border: solid 1px #707070;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 
-main .alert {
-  border: solid 3px #00000080;
+main .evaluate .tip {
+  width: 270px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 25px;
 }
 
-main .alert .message {
-  padding-left: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+main .evaluate .unit {
+  position: absolute;
+  top: 0;
+  left: 92%;
+  font-size: 10px;
+  padding: 4px 5px;
+  border: solid 1px #707070;
+  border-radius: 0 3px 3px 0;
+  background: #dcdcdc;
 }
 
-main .alert .mes_text {
-  padding-left: 10px;
-}
-
-main .orange {
-  color: #fe9900;
-  font-size: large;
-}
-
-main .url {
-  text-align: right;
-  padding-top: 20px;
-}
-
-main .url a:link,
-main a:visited,
-main a:hover,
-main a:active {
-  color: #f00;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-main .user a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #000000;
-}
-
-main .user img {
-  width: 70px;
-  height: 70px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: solid 1px #00000080;
-  border-radius: 500px;
-}
-
-main .user_info button {
-  border-radius: 5px;
-  background: #ffffff;
-  border: solid 1px #00000080;
-  color: #00000080;
-  padding: 8px 70px;
-  font-size: 16px;
-}
-
-main .value_button {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .mes_foryou input[type="text"] {
-  width: 50%;
-  padding: 2em;
-  border: 2px solid #1b2538;
-  border-radius: 4px;
-}
-
-main .value .comment button {
-  border-radius: 5px;
-  background: #fd819d;
+main .evaluate button {
+  font-size: 14px;
+  background: #fe8900;
   color: #fff;
-  padding: 15px 16px;
-  font-size: 16px;
+  padding: 8px;
+  width: 270px;
+  border-radius: 2px;
 }
 
-main .value .stars span {
+main .evaluate .stars {
+  margin-bottom: 10px;
+}
+
+main .evaluate .stars span {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   /* 要素をフレックスボックスにする */
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   /* 星を逆順に並べる */
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  /* 逆順なので、左寄せにする */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .value .stars input[type="radio"] {
+main .evaluate .stars input[type="radio"] {
   display: none;
   /* デフォルトのラジオボタンを非表示にする */
 }
 
-main .value .stars label {
+main .evaluate .stars label {
   color: #d2d2d2;
   /* 未選択の星をグレー色に指定 */
   font-size: 30px;
@@ -182,10 +128,86 @@ main .value .stars label {
   /* カーソルが上に乗ったときに指の形にする */
 }
 
-main .value .stars label:hover,
-main .value .stars label:hover ~ label,
-main .value .stars input[type="radio"]:checked ~ label {
+main .evaluate .stars label:hover,
+main .evaluate .stars label:hover ~ label,
+main .evaluate .stars input[type="radio"]:checked ~ label {
   color: #f8c601;
   /* 選択された星以降をすべて黄色にする */
+}
+
+main .evaluate_product {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main .evaluate_product ul {
+  width: 70%;
+  height: 70px;
+  padding-left: 10px;
+}
+
+main .evaluate_product ul li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+main .evaluate_product div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main .evaluate_product div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 55px;
+  padding-left: 310px;
+}
+
+main .user_info {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+main .user_info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+main .user_info p + p {
+  width: 270px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+main .user_info button {
+  background: #fff;
+  border: solid 1px #707070;
+  color: #707070;
+  padding: 8px;
+  text-align: center;
+  font-size: 12px;
+  width: 320px;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=evaluate.css.map */

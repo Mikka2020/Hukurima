@@ -10,81 +10,57 @@
 </head>
 
 <body>
-  <header class="evaluate">
-    <p>評価</p>
+  <h1>フクリマ</h1>
+  <header>
+    <h2>評価</h2>
   </header>
   <main>
-    <section class="alert">
-      <div class="message">
-        <p class="orange">✔︎</p>
-        <div class="mes_text">
-          <h4>受け取り評価をしてください</h4>
-          <p>
-            商品が発送されました。商品が到着したら出品者の評価をしてください。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="url">
-      <a href="">取引についてFAQ ></a><br />
-      <a href="">取引者のよくある質問 ></a>
-    </div>
-
-    <section class="evaluate_info">
-      <h2>取引情報</h2>
-      <div class="information">
-        <img
-          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
-          alt="information" width="" height="" />
-        <div class="text">
-          <p><?php echo $product['product_name']; ?></p>
-          <p class="red">¥<?php echo $product['price']; ?></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="user_info">
-      <h2>出品者情報</h2>
-      <div class="user">
-        <a href="">
-          <img
-            src="./img/users/<?php echo $profile['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
-            alt="information" />
-          <p><?php echo $profile['nickname']; ?></p>
-          <p class="pink">></p>
-        </a>
-      </div>
-      <button class="Evaluate_button">取引メッセージ</button>
-    </section>
-
-    <section class="value">
-      <h2>評価</h2>
+    <h3>評価</h3>
+    <section class="evaluate">
+      <p>今回の取引の評価を入力してください</p>
       <form method="post" action="" enctype="multipart/form-data">
-        <div class="value_button">
-          <div class="review">
-            <div class="stars">
-              <span>
-                <input id="review01" type="radio" name="review" value="5"><label for="review01">★</label>
-                <input id="review02" type="radio" name="review" value="4"><label for="review02">★</label>
-                <input id="review03" type="radio" name="review" value="3"><label for="review03">★</label>
-                <input id="review04" type="radio" name="review" value="2"><label for="review04">★</label>
-                <input id="review05" type="radio" name="review" value="1"><label for="review05">★</label>
-              </span>
-            </div>
-          </div>
+        <div class="stars">
+          <span>
+            <input id="review01" type="radio" name="review" value="5"><label for="review01">★</label>
+            <input id="review02" type="radio" name="review" value="4"><label for="review02">★</label>
+            <input id="review03" type="radio" name="review" value="3"><label for="review03">★</label>
+            <input id="review04" type="radio" name="review" value="2"><label for="review04">★</label>
+            <input id="review05" type="radio" name="review" value="1"><label for="review05">★</label>
+          </span>
         </div>
-        <div class="comment">
-          <p class="small_text">評価に際してコメントを記入しましょう。</p>
-          <div class="mes_foryou">
-            <input type="text" placeholder="この度はお取引ありがとうございました。" class="Evaluate_text">
-          </div>
-          <p>
-            ※コメントは必要ではありませんが、お礼のメッセージなどを書くと喜ばれます
-          </p>
-          <button type="submit" name="submit_btn" value="up">送信する</button>
+        <textarea name="msg" cols="20" rows="3">取引相手にメッセージを入力</textarea>
+        <h4 class="<?php //echo $class;?>">チップを追加(任意)</h4>
+        <div class="tip <?php //echo $class;?>">
+          <input type="text" name="tip" placeholder="金額を入力">
+          <span class="unit">円</span>
         </div>
+        <button type="submit" name="submit_btn" class="btn">評価を送信する</button>
       </form>
+    </section>
+
+    <h3>取引商品</h3>
+    <section class="evaluate_product">
+      <p><img
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
+          alt="商品画像" width="70px" height="70px" /></p>
+      <ul>
+        <li><?php echo $product['product_name']; ?></li>
+        <li class="red">¥<?php echo $product['price']; ?></li>
+      </ul>
+      <div><a href="product_detail.php?id=<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png"
+            alt="進むボタン"></a></div>
+      <!-- <form action="product_detail.php" method="post">
+        <button type="submit" name="id" value="<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
+      </form> -->
+    </section>
+
+    <h3>出品者<?php //echo $user;?></h3>
+    <section class="user_info">
+      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><img
+            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
+            alt="ユーザー画像" /></a></p>
+      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><?php echo $profile['nickname']; ?>さん</a></p>
+      <button>取引メッセージ</button>
     </section>
 
   </main>

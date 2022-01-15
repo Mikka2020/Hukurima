@@ -81,6 +81,12 @@ main #product .product-area .product-item .product-img {
      object-fit: cover;
 }
 
+main #product .product-area .product-item .sold-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 main #product .product-area .product-item .favorite-btn {
   width: 24px;
   position: absolute;

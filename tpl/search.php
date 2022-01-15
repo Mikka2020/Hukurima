@@ -75,7 +75,7 @@
       <form action="" method="get">
         <ul>
           <?php foreach($keywords as $keyword): ?>
-          <a href="./product.php?">
+          <a href="./product.php?search=<?php echo $keyword['product_name']; ?>">
             <li>
               <span><?php echo $keyword['product_name']; ?></span>
               <button><img src="./img/icon/三点リーダーアイコン.svg" alt=""></button>

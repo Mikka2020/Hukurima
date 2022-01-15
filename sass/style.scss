@@ -21,11 +21,16 @@ body {
   // -webkit-transform: translateX(-50%);
   // -ms-transform: translateX(-50%);
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   width: 375px;
   min-height: 667px;
   border: solid 1px #ccc;
   height: 667px;
   border-radius: 3px;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 header {
   border: solid 1px #ccc;
