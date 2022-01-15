@@ -28,9 +28,16 @@
   <main>
     <?php foreach($listing_arr as $value):?>
     <section>
-      <p class="product-img"><img src="./img/users/<?php echo $value['user_id'];?>/products/<?php echo $value['listing_id'];?>/<?php echo $value['product_name'] ;?>_1.<?php echo $value['img_extension'];?>" alt="商品画像" width="70px" height="70px"></p>
+      <p class="product-img">
+        <img src="./img/users/<?php echo $value['user_id'];?>/products/<?php echo $value['listing_id'];?>/<?php echo $value['product_name'] ;?>_1.<?php echo $value['img_extension'];?>" alt="商品画像" width="70px" height="70px">
+        <img src="./img/icon/SOLDマーク.png" alt="購入済みマーク" class="sold-mark <?php echo $value['dealing_state'];?>">
+      </p>
       <ul>
-        <li class="rerquests-btn <?php //echo $value['dealing_state'];?>">購入申請<?php echo $value['requests_sum'];?>件</li>
+        <li class="requests<?php echo $value['requests_sum'];?>">
+          <form action="receive_request.php" method="post">
+            <button type="submit" class="requests-btn" name="requests-btn" value="<?php echo $value['listing_id'];?>">購入申請<?php echo $value['requests_sum'];?>件</button>
+          </form>
+        </li>
         <li class="product-name"><?php echo $value['product_name'];?></li>
         <li class="product-price">¥<?php echo $value['price'];?></li>
       </ul>

@@ -18,27 +18,37 @@
 require_once './config.php';
 require_once './func.php';
 
+// 初期化
+$listing_arr = [];
+
+
 // ログイン中のユーザーの出品履歴を取得する。取引状況を確認するため取引テーブルも結合。
 {
-    $sql = "SELECT listing.listing_id , listing.user_id , listing.product_name , listing.img_extension , listing.price , listing.listed_at , dealings.dealing_flg , COUNT(dealing_requests.listing_id) AS requests_sum FROM ";
-    $sql .= TABLES['101'];
-    $sql .= " LEFT JOIN dealings ON listing.listing_id = dealings.listing_id";
-    $sql .= " LEFT JOIN dealing_requests ON listing.listing_id = dealing_requests.listing_id";
-    $sql .= " WHERE user_id = " . $_COOKIE['user_id'];
-    $sql .= " GROUP BY listing_id";
-    $sql .= " HAVING listing_id";
-    $sql .= " ORDER BY listed_at DESC";
+  $sql = "SELECT listing.listing_id , listing.user_id , listing.product_name , listing.img_extension , listing.price , listing.listed_at , dealings.dealing_flg , COUNT(dealing_requests.listing_id) AS requests_sum FROM ";
+  $sql .= TABLES['101'];
+  $sql .= " LEFT JOIN dealings ON listing.listing_id = dealings.listing_id";
+  $sql .= " LEFT JOIN dealing_requests ON listing.listing_id = dealing_requests.listing_id";
+  $sql .= " WHERE user_id = " . $_COOKIE['user_id'];
+  $sql .= " GROUP BY listing_id";
+  $sql .= " HAVING listing_id";
+  $sql .= " ORDER BY listed_at DESC";
 }
 $listing_arr = get_db_records($sql);
-// var_dump($listing_arr);
 
 
-// 商品が押された時の処理
-// if(isset($_POST['class名'])){
-//     $_SESSION['id'] = $line['id']; // 出品詳細画面で使用する
-//     header('location:./listed_history.php');
-//     exit;
-// }
+// 購入状態によってCSSクラスを変更する
+foreach($listing_arr as $key => $value){
+  if($value['dealing_flg'] == 0){
+    // 取引キャンセル
+    $listing_arr[$key]['dealing_state'] = 'sale';
+  } else if($value['dealing_flg'] == 1 || $value['dealing_flg'] == 9){
+    // 取引中、取引終了後
+    $listing_arr[$key]['dealing_state'] = 'sold';
+  }else{
+    // 未取引
+    $listing_arr[$key]['dealing_state'] = 'sale';
+  }
+}
 
 
 require_once('./tpl/listed_history_list.php');

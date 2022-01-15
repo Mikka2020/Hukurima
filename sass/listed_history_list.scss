@@ -1,2 +1,105 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
+@mixin requests-btn(){
+  font-size :10px;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0 7px;
+}
+
+header {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: none;
+  border-bottom: solid 1px #bbb;
+  position: relative;
+  .back-icon {
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
+}
+
+.sort-nav {
+  height: 36px;
+  line-height: 14px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  border-bottom: solid 1px #bbb;
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    margin-right: 1rem;
+    li{
+      padding: 0;
+      font-size: 14px;
+      color: #fe9900;
+    }
+    li + li {
+      padding-left: 1rem;
+      margin-left: 1rem;
+      border-left: solid 1px #ccc;
+    }
+  }
+}
+
+main{
+  border: none;
+  section{
+    height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #bbb;
+    padding: 10px 0;
+    margin: 0;
+    p{
+      margin-left: 10px;
+      position: relative;
+      .sold-mark{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .sale{
+        display: none;
+      }
+    }
+    ul{
+      padding-left: 8px;
+      width: 65%;
+      height: 70px;
+      li{
+        display: inline-block;
+        font-size: 13px;
+      }
+      .requests-btn{
+        font-size :10px;
+        border-radius: 2px;
+        background: #fd819d;
+        color: #fff;
+        padding: 1px 7px;
+        margin-bottom: 5px;
+      }
+      .requests0{
+        visibility:hidden
+      }
+      li + li{
+        width: 100%;
+        margin-bottom: 3px;
+      }
+    }
+    button{
+      img{
+        padding-left: 15px ;
+      }
+    }
+  }
+}
