@@ -15,7 +15,7 @@ require_once './func.php';
   $sql = "SELECT * FROM ";
   $sql .= "dealings";
   $sql .= " LEFT JOIN listing ON dealings.listing_id = listing.listing_id";
-  $sql .= " WHERE user_id = " . $_COOKIE['user_id'] . " OR dealing_user_id = " . $_COOKIE['user_id'];
+  $sql .= " WHERE user_id = " . $_COOKIE['user_id'] . " OR dealings.buyer_user_id = " . $_COOKIE['user_id'];
   $sql .= " ORDER BY dealing_id DESC";
 }
 $dealing_arr = get_db_records($sql);
