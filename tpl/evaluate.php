@@ -40,12 +40,15 @@
 
     <h3>取引商品</h3>
     <section class="evaluate_product">
-      <p><img src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>" alt="商品画像" width="70px" height="70px"/></p>
+      <p><img
+          src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
+          alt="商品画像" width="70px" height="70px" /></p>
       <ul>
         <li><?php echo $product['product_name']; ?></li>
         <li class="red">¥<?php echo $product['price']; ?></li>
       </ul>
-      <div><a href="product_detail.php?id=<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div>
+      <div><a href="product_detail.php?id=<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png"
+            alt="進むボタン"></a></div>
       <!-- <form action="product_detail.php" method="post">
         <button type="submit" name="id" value="<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
       </form> -->
@@ -53,8 +56,10 @@
 
     <h3>出品者<?php //echo $user;?></h3>
     <section class="user_info">
-      <p><a href="profile.php?id=<?php echo $profiles['user_id'] ;?>"><img src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profiles['nickname']; ?>.<?php echo $profiles['prof_img_extension']; ?>" alt="ユーザー画像"/></a></p>
-      <p><a href="profile.php?id=<?php echo $profiles['user_id'] ;?>"><?php echo $profiles['nickname']; ?>さん</a></p>
+      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><img
+            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
+            alt="ユーザー画像" /></a></p>
+      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><?php echo $profile['nickname']; ?>さん</a></p>
       <button>取引メッセージ</button>
     </section>
 
