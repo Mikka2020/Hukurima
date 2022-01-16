@@ -11,7 +11,8 @@
 
 <body>
   <header class="global-header">
-    <img src="./img/icon/hukurima.png" alt="" width="" height="30px">
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
+    <p class="login"><a href="./login.php"><?php echo $header_msg; ?></a></p>
   </header>
   <main>
     <article>

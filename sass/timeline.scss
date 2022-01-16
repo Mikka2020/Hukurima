@@ -2,7 +2,12 @@
 @import url("./style.css");
 
 header {
-  padding-top: 15px;
+  .login {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    line-height: 60px;
+  }
 }
 main {
   margin-bottom: 60px;

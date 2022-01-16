@@ -1,7 +1,10 @@
 @import url("./destyle.css");
 @import url("./style.css");
-header {
-  padding-top: 15px;
+header .login {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  line-height: 60px;
 }
 
 main {
