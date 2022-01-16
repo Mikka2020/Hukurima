@@ -21,6 +21,10 @@ main {
       object-fit: cover;
     }
   }
+  .listing-url {
+    text-decoration: underline;
+    color: #ff8198;
+  }
   section {
     position: relative;
     .prof-img {
@@ -46,6 +50,9 @@ main {
     position: absolute;
     top: 80%;
     right: 1rem;
+    img {
+      margin-top: 0.5rem;
+    }
   }
   .change-btn {
     background-color: #fff;

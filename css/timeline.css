@@ -24,6 +24,11 @@ main .post-img img {
      object-fit: cover;
 }
 
+main .listing-url {
+  text-decoration: underline;
+  color: #ff8198;
+}
+
 main section {
   position: relative;
 }
@@ -53,6 +58,10 @@ main .post-btn {
   position: absolute;
   top: 80%;
   right: 1rem;
+}
+
+main .post-btn img {
+  margin-top: 0.5rem;
 }
 
 main .change-btn {
