@@ -1,5 +1,6 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
 header {
   .post-submit {
     line-height: 60px;
@@ -10,7 +11,8 @@ header {
 }
 .textarea-wrapper {
   textarea {
-    border: solid 1px #000;
+    border-top: solid 1px #ccc;
+    // border-bottom: solid 1px #000;
     background-color: #fff;
     width: 100%;
     height: 240px;
@@ -19,20 +21,46 @@ header {
     font-size: 16px;
     padding: 0.5rem;
   }
-}
-.preview-wrapper {
-  border-radius: 5px;
-  img {
-    width: 100px;
+  ::placeholder {
+    opacity: 0.5;
+    // font-size: 12px;
   }
 }
+.preview-wrapper {
+  padding-top: 3rem;
+  // padding-bottom: 1rem;
+  padding-left: 1rem;
+
+  .post-img {
+    border-radius: 5px;
+    height: 150px;
+    // border: solid 1px #ccc;
+  }
+}
+.product-name {
+  position: absolute;
+  bottom: 90px;
+  left: 1rem;
+  color: $hukurima-pink;
+}
 .btn-wrapper {
+  border-top: solid 1px #ccc;
+  width: 100%;
   display: flex;
+  padding-top: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
   button,
   label {
     padding: 0.5rem;
-    border: solid 1px #ccc;
+    border: solid 1px #777;
     border-radius: 5px;
-    margin: 0.3rem;
+    margin-left: 0.5rem;
   }
+}
+section {
+  position: relative;
+  // height: 100%;
+  height: 547px;
 }
