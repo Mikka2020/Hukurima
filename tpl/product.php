@@ -44,10 +44,10 @@
       <li class="tab2">
         絞り込み
         <ul class="sort-tabs filter-tabs">
-          <a href="">
+          <a href="<?php echo $url. '&filter=sell'; ?>">
             <li>販売中</li>
           </a>
-          <a href="">
+          <a href="<?php echo $url. '&filter=auto_approval'; ?>">
             <li>購入申請自動許可</li>
 
           </a>

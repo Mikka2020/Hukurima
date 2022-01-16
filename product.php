@@ -122,10 +122,10 @@ if (isset($_COOKIE['user_id'])) {
   }
 }
 
+$url = "./product.php?";
 $search = "";
 // 商品を全件取得する。会員がいいねした商品の情報も同時に取得する。
-{
-  {
+{ {
     $sql = "SELECT * , listing.listing_id AS id, dealings.listing_id AS dealing_listing_id ";
     $sql .= " FROM ";
     $sql .= TABLES['101']; // listing
@@ -134,12 +134,31 @@ $search = "";
     $sql .= " AND favorite.favorite_user_id = " . $id; // ログインしている会員のfavoriteレコードのみ
     $sql .= " LEFT JOIN dealings ON dealings.listing_id = listing.listing_id ";
   }
-  if (isset($_GET['search'])) { // 検索
-    $search = $_GET['search'];
-    $conditions['search'] = $search;
-    $sql .= " WHERE " . TABLES['101'] . ".product_name LIKE '%" . $conditions['search'] . "%' "; // 検索条件
+  if (isset($_GET['search']) || isset($_GET['filter'])) {
+    $sql .= " WHERE ";
+
+    if (isset($_GET['search'])) { // 検索
+      $search = $_GET['search'];
+      $conditions['search'] = $search;
+      $sql .= TABLES['101'] . ".product_name LIKE '%" . $conditions['search'] . "%' "; // 検索条件
+      $url .= "&search=" . $search;
+    }
+    if (isset($_GET['search']) && isset($_GET['filter'])) {
+      $sql .= " AND ";
+    }
+    // 絞り込みが押されたとき
+    if (isset($_GET['filter'])) {
+      $filter = $_GET['filter'];
+      if ($_GET['filter'] == "sell") {
+        $sql .= " dealings.listing_id IS NULL ";
+      }
+      elseif ($_GET['filter'] == "auto_approval") {
+        $sql .= " listing.auto_approval = 1 ";
+      }
+    }
   }
   if (isset($_GET['sort'])) { // 並び替え
+    $sort = $_GET['sort'];
     // 高い
     if ($_GET['sort'] == 'high_price') {
       $sql .= " ORDER BY listing.price DESC";
@@ -161,9 +180,20 @@ $search = "";
   }
 }
 
+if (isset($_GET['sort']) && isset($_GET['filter'])) {
+  $url = "./product.php?search=". $search;
+  // $url .= "&sort=". $_GET['sort'];
+  $url .= "&filter=". $_GET['filter'];
+}
+elseif (isset($_GET['sort'])) {
+  // $url .= "&sort=". $_GET['sort'];
+}
+elseif(isset($_GET['filter'])) {
+  $url .= "&filter=". $_GET['filter'];
+}
+
 $products_arr = get_db_records($sql);
 
-$url = "./product.php?search=". $search;
 
 
 require_once './tpl/product.php';
