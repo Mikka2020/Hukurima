@@ -23,6 +23,7 @@
     </form>
   </header>
   <nav class="display-nav">
+    <div class="modal-header-bg"></div>
     <div class="modal-bg"></div>
     <ul class="parent-tabs">
       <li class="tab1">
