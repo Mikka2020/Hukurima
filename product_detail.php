@@ -33,6 +33,11 @@ mysqli_set_charset($link , 'utf8');
 $product = get_column($link,TABLES['101'],$columns[0],$id);
 mysqli_close($link);
 
+// 出品者が開いたとき
+if ($product['user_id'] == $_COOKIE['user_id']) {
+    header('location:./listed_history.php?id='. $product['listing_id']); // セッションに要変更
+    exit;
+}
 
 // 購入ボタンが押された時の処理
 if(isset($_POST['buy_btn'])){
