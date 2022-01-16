@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="global-header">
     <img src="./img/icon/hukurima.png" alt="" width="" height="30px">
   </header>
   <main>
