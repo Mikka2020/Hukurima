@@ -24,15 +24,16 @@
       <article>
         <section>
           <p class="textarea-wrapper">
-            <textarea name="post_sentence" id="" cols="30" rows="10"
-              maxlength="140"><?php echo $post_sentence; ?></textarea>
+            <textarea name="post_sentence" id="" cols="30" rows="10" maxlength="140"
+              placeholder="キャプションを追加"><?php echo $post_sentence; ?></textarea>
           </p>
-          <p>
-            <?php echo $product_name; ?>
-          </p>
+          <p></p>
           <div class="preview-wrapper">
             <img id="preview" class="post-img">
           </div>
+          <p class="product-name">
+            <?php echo $product_name; ?>
+          </p>
           <div class="btn-wrapper">
             <label for="myImage">
               <input type="file" name="post_img" class="none" id="myImage" accept="image/*">
