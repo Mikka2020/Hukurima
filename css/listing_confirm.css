@@ -14,7 +14,6 @@ main {
 
 .product-detail ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   line-height: 24px;
