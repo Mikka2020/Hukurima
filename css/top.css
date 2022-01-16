@@ -49,6 +49,7 @@ main #category .category-items img {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 0.2rem;
 }
 
 main #product {
