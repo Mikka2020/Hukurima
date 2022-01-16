@@ -13,8 +13,8 @@
 <body>
   <h1>フクリマ</h1><!-- CSSで消す -->
 
-  <header>
-    <img src="./img/icon/hukurima.png" alt="" width="" height="30px">
+  <header class="global-header">
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
   </header>
   <main>
     <h2 class="none">出品履歴詳細</h2>
