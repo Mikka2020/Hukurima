@@ -104,13 +104,17 @@ header .grass :active {
 }
 
 .display-nav .parent-tabs .sort-tabs li {
-  right: 0;
+  color: #707070;
   line-height: 30px;
   padding-left: 1rem;
   background-color: #fff;
   border-top: solid 1px #ccc;
   border-left: solid 1px #ccc;
   border-right: solid 1px #ccc;
+}
+
+.display-nav .parent-tabs .filter-tabs {
+  left: 50%;
 }
 
 main {

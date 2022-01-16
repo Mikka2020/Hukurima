@@ -43,6 +43,15 @@
       </li>
       <li class="tab2">
         絞り込み
+        <ul class="sort-tabs filter-tabs">
+          <a href="">
+            <li>販売中</li>
+          </a>
+          <a href="">
+            <li>購入申請自動許可</li>
+
+          </a>
+        </ul>
       </li>
     </ul>
   </nav>
