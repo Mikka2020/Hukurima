@@ -12,8 +12,12 @@
 
 <body>
   <h1>フクリマ</h1><!-- CSSで消す -->
-
   <header class="global-header">
+    <p class="back-icon">
+      <a href="#" onClick="history.back(); return false;">
+        <img src="./img/icon/arrow_back_ios_new_black_24dp.svg" alt="" width="24px" height="">
+      </a>
+    </p>
     <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
   </header>
   <main>
@@ -101,7 +105,7 @@
   <footer class="global-footer">
     <?php require_once('./footer.php'); ?>
   </footer>
-
+  <script src="./js/add.js"></script>
 </body>
 
 </html>

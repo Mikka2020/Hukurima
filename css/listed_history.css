@@ -1,5 +1,11 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header .back-icon {
+  position: absolute;
+  top: 18px;
+  left: 0.5rem;
+}
+
 main {
   margin-left: 10px;
   margin-right: 10px;
