@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <header>
-    <img src="./img/icon/hukurima.png" alt="logo" width="" height="40px">
+  <header class="global-header">
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="logo" width="" height="30px">
     <p class="login"><a href="./login.php"><?php echo $header_msg; ?></a></p>
   </header>
   <main>

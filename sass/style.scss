@@ -36,6 +36,13 @@ header {
     left: 1rem;
   }
 }
+.global-header {
+  position: relative;
+  text-align: center;
+  .header-logo {
+    margin-top: 16px;
+  }
+}
 main {
   font-size: 12px;
   color: #707070;

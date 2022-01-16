@@ -2,17 +2,14 @@
 @import url("./style.css");
 
 header {
-  // line-height: 60px;
-  position: relative;
-  img {
-    margin-top: 10px;
-  }
   .login {
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 0.5rem;
+    line-height: 60px;
   }
 }
+
 main {
   h2,
   h4 {

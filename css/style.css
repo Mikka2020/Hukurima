@@ -40,6 +40,15 @@ header .back-icon {
   left: 1rem;
 }
 
+.global-header {
+  position: relative;
+  text-align: center;
+}
+
+.global-header .header-logo {
+  margin-top: 16px;
+}
+
 main {
   font-size: 12px;
   color: #707070;

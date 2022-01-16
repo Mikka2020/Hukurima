@@ -1,17 +1,10 @@
 @import url("./destyle.css");
 @import url("./style.css");
-header {
-  position: relative;
-}
-
-header img {
-  margin-top: 10px;
-}
-
 header .login {
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0.5rem;
+  line-height: 60px;
 }
 
 main {
