@@ -82,12 +82,18 @@ section{
 
 .address-section{
   font-size: 14px;
+  .address{
+    padding-left: 16px;
+  }
   li{
     padding-bottom: 5px;
     &:last-child{
       border-top: solid 1px #ccc;
       padding: 0;
       padding-top: 5px;
+    }
+    span{
+      padding-right: 5px;
     }
   }
 }
@@ -115,6 +121,7 @@ section{
 }
 
 .pay-section{
+  margin-bottom: 15px;
   ul{
     ul{
       display: flex;
@@ -172,6 +179,17 @@ section{
 }
 .address-text {
   margin-left: 1rem;
+}
+
+.contact{
+  font-size: 14px;
+  text-align: center;
+  p{
+    text-decoration: underline #707070;
+  }
+  p + p{
+    padding: 10px;
+  }
 }
 
 footer {

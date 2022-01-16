@@ -56,8 +56,8 @@
                 value="<?php echo $address['address_id']; ?>" checked>
               <label for="address<?php echo $address['address_id']; ?>">配送先<?php echo $address['address_id']; ?></label>
             </li>
-            <li>〒<?php echo $address['zip']; ?></li>
-            <li><?php echo $address['address']; ?></li>
+            <li class="address">〒<?php echo $address['zip']; ?></li>
+            <li class="address"><?php echo $address['address']; ?></li>
             <?php // endforeach; ?>
             <li><label for=""><span>+</span>新しい配送先を追加する</label></li>
           </ul>
@@ -93,10 +93,10 @@
         </ul>
       </section>
       
-      <p class="center">
-        <a href="">取引中止を申請する</a><br>
-        <a href="">問題を報告する</a>
-      </p>
+      <div class="contact">
+        <p><a href="">取引中止を申請する</a></p>
+        <p><a href="">問題を報告する</a></p>
+      </div>
 
     </article>
   </main>

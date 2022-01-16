@@ -108,6 +108,10 @@ section {
   font-size: 14px;
 }
 
+.address-section .address {
+  padding-left: 16px;
+}
+
 .address-section li {
   padding-bottom: 5px;
 }
@@ -116,6 +120,10 @@ section {
   border-top: solid 1px #ccc;
   padding: 0;
   padding-top: 5px;
+}
+
+.address-section li span {
+  padding-right: 5px;
 }
 
 .option-section {
@@ -145,6 +153,10 @@ section {
 .option-section div + div {
   border: none;
   padding-top: 5px;
+}
+
+.pay-section {
+  margin-bottom: 15px;
 }
 
 .pay-section ul ul {
@@ -217,6 +229,20 @@ section {
 
 .address-text {
   margin-left: 1rem;
+}
+
+.contact {
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact p {
+  -webkit-text-decoration: underline #707070;
+          text-decoration: underline #707070;
+}
+
+.contact p + p {
+  padding: 10px;
 }
 
 footer {
