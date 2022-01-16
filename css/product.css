@@ -98,7 +98,9 @@ header .grass :active {
   line-height: 30px;
   padding-left: 1rem;
   background-color: #fff;
-  border: solid 1px #ccc;
+  border-top: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
 }
 
 main {
