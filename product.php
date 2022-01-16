@@ -124,6 +124,8 @@ if (isset($_COOKIE['user_id'])) {
 
 $url = "./product.php?";
 $search = "";
+$sort_msg = "並び替え";
+$filter_msg = "絞り込み";
 // 商品を全件取得する。会員がいいねした商品の情報も同時に取得する。
 { {
     $sql = "SELECT * , listing.listing_id AS id, dealings.listing_id AS dealing_listing_id ";
@@ -151,9 +153,11 @@ $search = "";
       $filter = $_GET['filter'];
       if ($_GET['filter'] == "sell") {
         $sql .= " dealings.listing_id IS NULL ";
+        $filter_msg = "販売中";
       }
       elseif ($_GET['filter'] == "auto_approval") {
         $sql .= " listing.auto_approval = 1 ";
+        $filter_msg = "購入申請なし";
       }
     }
   }
@@ -162,14 +166,17 @@ $search = "";
     // 高い
     if ($_GET['sort'] == 'high_price') {
       $sql .= " ORDER BY listing.price DESC";
+      $sort_msg = "価格が高い順";
     }
     // 安い
     elseif ($_GET['sort'] == 'low_price') {
       $sql .= " ORDER BY listing.price ASC";
+      $sort_msg = "価格が低い順";
     }
     // 新着
     elseif ($_GET['sort'] == 'new') {
       $sql .= " ORDER BY listing.listed_at DESC";
+      $sort_msg = "新着順";
     }
     // いいねが多い順
     elseif ($_GET['sort'] == '') {

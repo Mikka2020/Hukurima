@@ -27,10 +27,10 @@
     <div class="modal-bg"></div>
     <ul class="parent-tabs">
       <li class="tab1">
-        並び替え
+        <?php echo $sort_msg; ?>
         <ul class="sort-tabs">
           <a href="<?php echo $url.'&sort=new'; ?>">
-            <li>出品日の新しい順</li>
+            <li>新着順</li>
           </a>
           <a href="<?php echo $url.'&sort=high_price'; ?>">
             <li>価格の高い順</li>
@@ -42,13 +42,13 @@
         </ul>
       </li>
       <li class="tab2">
-        絞り込み
+        <?php echo $filter_msg; ?>
         <ul class="sort-tabs filter-tabs">
           <a href="<?php echo $url. '&filter=sell'; ?>">
             <li>販売中</li>
           </a>
           <a href="<?php echo $url. '&filter=auto_approval'; ?>">
-            <li>購入申請自動許可</li>
+            <li>購入申請なし</li>
 
           </a>
         </ul>
