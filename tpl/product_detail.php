@@ -31,35 +31,34 @@
           src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
           alt="商品画像" width="360px" height=""> <!-- 商品画像 -->
       </section>
-      <section>
+
+      <section class="product-title">
         <h3><?php echo $product['product_name']; ?></h3>
         <ul>
           <li><?php echo $product['brand']; ?></li>
           <li>¥<?php echo $product['price'] ?></li>
-          <p>
-            <img src="./img/icon/clock-regular.svg" alt="時計アイコン" width="16px" height="16px">
-            <?php echo $elapsed_time_msg; ?>
-          </p>
         </ul>
         <form action="" method="post">
-
           <button>
-            <img src="./img/icon/heart-solid.svg" alt="いいねアイコン" width="24px" height=""><?php echo "0" ?>
+            <img src="./img/icon/いいねアイコン.svg" alt="いいねアイコン" width="24px" height=""><?php echo "0" ?>
           </button>
           <button>
-            <img src="./img/icon/comment-alt-regular.svg" alt="コメントアイコン" width="24px" height=""><?php echo "0"; ?>
+            <img src="./img/icon/コメントアイコン.svg" alt="コメントアイコン" width="24px" height=""><?php echo "0"; ?>
           </button>
         </form>
-
       </section>
 
-      <section>
-        <h3>商品説明</h3>
+      <section class="product-info">
+        <h4>商品説明</h4>
         <p><?php echo $product['product_explain']; ?></p>
+        <p>
+            <img src="./img/icon/時計アイコン.svg" alt="時計アイコン" width="16px" height="16px">
+            <?php echo $elapsed_time_msg; ?>
+        </p>
       </section>
 
       <section class="product-detail">
-        <h3>商品詳細</h3>
+        <h4>商品詳細</h4>
         <ul>
           <li>カテゴリ</li>
           <li><?php echo $product['product_category']; ?></li>
@@ -89,12 +88,14 @@
       </section>
       
       <section class="prof-section">
-        <h3>出品者</h3>
+        <h4>出品者</h4>
         <p>
-          <img
-            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['prof_img_extension']; ?>"
-            alt="プロフィール画像" width="32px" height="32px">
-          <?php echo $user['nickname']; ?> さん
+          <a href="profile.php?id=<?php echo $product['user_id']; ?>">
+            <img
+              src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $user['nickname']; ?>.<?php echo $user['prof_img_extension']; ?>"
+              alt="プロフィール画像" width="32px" height="32px">
+            <?php echo $user['nickname']; ?> さん
+          </a>
         </p>
       </section>
     </article>
@@ -103,7 +104,7 @@
 
   <footer>
     <form action="" method="post">
-      <button type="submit" name="buy_btn" class="btn buy_btn">購入する</button>
+      <button type="submit" name="buy_btn" class="btn buy_btn">購入申請する</button>
     </form>
   </footer>
 
