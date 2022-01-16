@@ -33,7 +33,7 @@ main h3 {
 }
 
 main h4 {
-  background: #ccc;
+  background: #eee;
   padding-left: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -114,6 +114,7 @@ main h4 {
 /* 商品詳細 */
 .product-detail ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 10px 0 10px 10px;

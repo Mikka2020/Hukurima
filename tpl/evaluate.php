@@ -29,12 +29,12 @@
           </span>
         </div>
         <textarea name="msg" cols="20" rows="3" placeholder="取引相手にメッセージを入力"></textarea>
-        <h4 class="<?php //echo $class;?>">チップを追加(任意)</h4>
-        <div class="tip <?php //echo $class;?>">
+        <h4 class="<?php //echo $class; ?>">チップを追加(任意)</h4>
+        <div class="tip <?php //echo $class; ?>">
           <input type="text" name="tip" placeholder="金額を入力">
           <span class="unit">円</span>
         </div>
-        <button type="submit" name="submit_btn" class="btn">評価を送信する</button>
+        <button type="submit" name="submit_btn" class="btn" value="<?php echo $listing_id; ?>">評価を送信する</button>
       </form>
     </section>
 
@@ -47,19 +47,16 @@
         <li><?php echo $product['product_name']; ?></li>
         <li class="red">¥<?php echo $product['price']; ?></li>
       </ul>
-      <div><a href="product_detail.php?id=<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png"
+      <div><a href="product_detail.php?id=<?php echo $product['listing_id']; ?>"><img src="./img/icon/進むアイコン.png"
             alt="進むボタン"></a></div>
-      <!-- <form action="product_detail.php" method="post">
-        <button type="submit" name="id" value="<?php echo $product['listing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
-      </form> -->
     </section>
 
-    <h3>出品者<?php //echo $user;?></h3>
+    <h3>出品者<?php //echo $user; ?></h3>
     <section class="user_info">
-      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><img
-            src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
+      <p><a href="profile.php?id=<?php echo $profile['user_id']; ?>"><img
+            src="./img/users/<?php echo $profile['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
             alt="ユーザー画像" /></a></p>
-      <p><a href="profile.php?id=<?php echo $profile['user_id'] ;?>"><?php echo $profile['nickname']; ?>さん</a></p>
+      <p><a href="profile.php?id=<?php echo $profile['user_id']; ?>"><?php echo $profile['nickname']; ?>さん</a></p>
       <button>取引メッセージ</button>
     </section>
 

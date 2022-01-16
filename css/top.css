@@ -7,7 +7,12 @@ header .login {
   line-height: 60px;
 }
 
+section {
+  margin-bottom: 0;
+}
+
 main {
+  padding-bottom: 0.1rem;
   margin-bottom: 60px;
 }
 
@@ -18,6 +23,14 @@ main h4 {
 
 main h3 {
   font-size: 16px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+}
+
+main #category {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 0.8rem;
 }
 
 main #category .category-items {
@@ -34,17 +47,18 @@ main #category .category-items img {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 0.3rem;
 }
 
 main #product {
-  padding: 0;
+  padding-left: 3px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 370px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 main #product .product-title {
@@ -55,16 +69,17 @@ main #product .product-title {
 }
 
 main #product .product-title h3 {
-  width: 80%;
+  width: 75%;
 }
 
 main #product .product-title .more {
-  width: 20%;
+  width: 25%;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
   line-height: 16px;
   color: #fe8900;
+  padding-top: 0.5rem;
 }
 
 main #product .product-area {

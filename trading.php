@@ -1,7 +1,7 @@
 <!-- <pre> -->
 <?php
 /**
- * 内容：出品画面
+ * 内容：取引画面
  * 作成日：2021/12/19
  * 作成者：小川慧
  * ------------------------------------------------------------------------------------------------------------------------
@@ -11,6 +11,9 @@
  * 変更日：2021/01/08
  * 追加内容：表示部に合わせMA
  * ------------------------------------------------------------------------------------------------------------------------
+ * 編集者：小嶋美紀
+ * 変更日：2022/01/17
+ * 
  */
 
 
@@ -19,11 +22,8 @@ session_start();
 require_once './config.php';
 require_once './func.php';
 
-// 動作確認用固定値
-// $_SESSION['product_id'] = 2;
-
 // 初期値
-$listing_id = $_SESSION['bought_product_info'];
+$listing_id = $_POST['listing_id'];
 // $table = 'listing';
 $columns = ['listing_id','user_id'];
 
@@ -41,10 +41,10 @@ $profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
 mysqli_close($link);
 
 // 評価画面へボタンが押された時の処理
-if(isset($_POST['eval_btn'])){
-    header ('location:./evaluate.php');
-    exit;
-}
+// if(isset($_POST['eval_btn'])){
+//     header ('location:./evaluate.php');
+//     exit;
+// }
 
 // 返品を申請するボタンが押された時の処理
 // if(isset($_POST['return_goods'])){

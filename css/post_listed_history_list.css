@@ -1,8 +1,8 @@
 @import url("./destyle.css");
 @import url("./style.css");
 main .product-wrapper label div {
-  border: solid 1px red;
-  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-bottom: solid 1px #ccc;
   line-height: 100px;
   width: 100%;
   height: 100px;
@@ -10,6 +10,8 @@ main .product-wrapper label div {
 
 main .product-wrapper label div img {
   margin-bottom: 0.6rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 header {
@@ -27,10 +29,9 @@ footer {
 }
 
 footer p {
-  width: 80%;
+  width: 95%;
   margin: 15px auto;
-  border: solid 1px #fe8900;
-  background-color: #fe8900;
+  background-color: #fd819d;
   color: #fff;
   border-radius: 5px;
 }

@@ -8,6 +8,7 @@ header .login {
 }
 
 main {
+  background-color: #fff;
   margin-bottom: 60px;
 }
 
@@ -16,21 +17,47 @@ main .post-img {
 }
 
 main .post-img img {
+  margin-top: 1rem;
   border: solid 1px #ccc;
-  border-radius: 10px;
-  width: 320px;
-  height: 320px;
+  border-radius: 5px;
+  width: 332px;
+  height: 332px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+main .post-sentence {
+  line-height: 16px;
+  margin-bottom: 0.2rem;
 }
 
 main .listing-url {
   text-decoration: underline;
   color: #ff8198;
+  line-height: 16px;
+}
+
+main .action-btns {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+main .action-btns svg {
+  margin-right: 0.1rem;
+}
+
+main .action-btns img {
+  margin-left: 0.8rem;
+  margin-right: 0.2rem;
 }
 
 main section {
   position: relative;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #ccc;
 }
 
 main section .prof-img {
@@ -39,12 +66,14 @@ main section .prof-img {
 
 main section .post-div {
   line-height: 32px;
+  margin-top: 16px;
+  margin-bottom: 12px;
 }
 
 main section .menu {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 32px;
 }
 
 main .post-btn {

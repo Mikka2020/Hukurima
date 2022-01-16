@@ -62,8 +62,8 @@
         <p><a href="">問題を報告する</a></p>
       </div>
       <div class="bg_btn_eval">
-        <form action="" method="post">
-          <button type="submit" class="btn eval-btn" name="eval_btn" value="on">評価画面へ</button>
+        <form action="evaluate.php" method="post">
+          <button type="submit" class="btn eval-btn" name="eval_btn" value="<?php echo $line['listing_id'];?>">評価画面へ</button>
         </form>
       </div>
     </article>
