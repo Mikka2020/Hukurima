@@ -1,11 +1,15 @@
 @import url("./destyle.css");
 @import url("./style.css");
+header {
+  padding-top: 0.6rem;
+}
+
 header button {
   border: solid 1px #ccc;
 }
 
 header form {
-  margin: 0.6rem auto;
+  margin: 0 auto;
   border: solid 1px #111;
   width: 80%;
   border-radius: 50px;

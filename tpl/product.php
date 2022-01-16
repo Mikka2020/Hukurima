@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/product.css" type="text/css" />
   <title>商品一覧</title>
 </head>

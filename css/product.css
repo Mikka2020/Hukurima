@@ -2,6 +2,7 @@
 @import url("./style.css");
 header {
   position: relative;
+  padding-top: 0.6rem;
 }
 
 header button {
@@ -9,7 +10,7 @@ header button {
 }
 
 header form {
-  margin: 0.6rem auto;
+  margin: 0 auto;
   border: solid 1px #111;
   width: 80%;
   border-radius: 50px;
