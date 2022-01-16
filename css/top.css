@@ -58,8 +58,26 @@ main #product {
   width: 370px;
 }
 
-main #product h3 {
+main #product .product-title {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #product .product-title h3 {
+  width: 80%;
+}
+
+main #product .product-title .more {
+  width: 20%;
+  -webkit-box-pack: right;
+  -webkit-justify-content: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  line-height: 16px;
+  color: #fe8900;
 }
 
 main #product .product-area {

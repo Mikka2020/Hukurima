@@ -50,8 +50,14 @@
         </ul>
       </section> -->
       <section id="product">
-        <h3>新着アイテム</h3>
-
+        <div class="product-title">
+          <h3>新着アイテム</h3>
+          <p class="more">
+            <a href="./product.php">
+              もっと見る >
+            </a>
+          </p>
+        </div>
         <?php foreach ($products_arr as $product) : ?>
         <div class="product-area">
           <h4><?php echo $product['product_name']; ?></h4>

@@ -35,8 +35,19 @@ main {
   }
 
   #product {
-    h3 {
+    .product-title {
       width: 100%;
+      display: flex;
+      h3 {
+        width: 80%;
+      }
+      .more {
+        width: 20%;
+        justify-content: right;
+        line-height: 16px;
+        color: #fe8900;
+      }
+      // padding-top: 1rem;
     }
     padding: 0;
     margin: 0 auto;
