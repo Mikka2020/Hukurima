@@ -3,7 +3,7 @@
 
 header {
   position: relative;
-  padding-top: 0.6rem;
+  padding-top: 0.7rem;
   button {
     border: solid 1px #ccc;
   }
@@ -19,7 +19,7 @@ header {
   }
   .back-icon {
     position: absolute;
-    top: 16px;
+    top: 18px;
     left: 0.5rem;
   }
   .search_text :active {
@@ -44,14 +44,16 @@ header {
   height: 100%;
   z-index: 10;
   position: absolute;
-  top: 106px;
+  top: 98px;
 }
 
+// 並び替え・絞り込み
 .display-nav {
+  font-size: 14px;
   height: 36px;
-  line-height: 24px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  // line-height: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   color: #fe8900;
   .parent-tabs {
@@ -64,13 +66,13 @@ header {
       text-align: center;
     }
     .tab1 + .tab2 {
-      border-left: solid 2px #ccc;
+      border-left: solid 1px #ccc;
     }
     // モーダルで表示
     .sort-tabs {
       display: none;
       text-align: left;
-      padding-top: 0.4rem;
+      padding-top: 0.6rem;
       position: absolute;
       z-index: 20;
       width: 100%;
