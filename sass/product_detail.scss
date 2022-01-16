@@ -1,6 +1,9 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
 header {
+  border: none;
+  border-bottom: solid 1px #ccc;
   text-align: center;
   line-height: 60px;
   position: relative;
@@ -15,31 +18,120 @@ header {
     right: 1rem;
   }
 }
+
 main {
+  border: none;
   margin-bottom: 60px;
+  h3{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  h4{
+    background: #ccc;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
+
+/* 商品画像 */
 .img-section {
+  padding: 0;
   h3 {
+    width: 100%;
     display: none;
   }
   text-align: center;
+  margin: 0;
 }
 
+/* 商品名等 */
+.product-title{
+  h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  ul{
+    padding-left: 10px;
+    li{
+      font-size: 14px;
+    }
+    li + li{
+      margin-top: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #f00;
+      padding-bottom: 10px;
+    }
+  }
+  position: relative;
+  form{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    button{
+      width: 36px;
+      text-align: center;
+      margin-left: 10px;
+      img{
+        background: #dcdcdc;
+        border-radius: 50%;
+        padding: 5px;
+        width: 36px;
+      }
+    }  
+  }
+}
+
+/* 商品説明 */
+.product-info{
+  p{
+    font-size: 14px;
+    padding: 10px 10px 0 10px;
+    line-height: 1.5;
+  }
+  p + p{
+    padding-bottom: 10px;
+    line-height: 1;
+  }
+}
+
+/* 商品詳細 */
 .product-detail {
   ul {
     display: flex;
+    padding: 10px 0 10px 10px;
+    border-bottom: solid 1px #ccc;
     li {
+      font-size: 14px;
       width: 50%;
+    }
+    &:first-child{
+      padding-top: 10px;
     }
   }
 }
+
+/* 出品者 */
 .prof-section {
-  img {
-    border-radius: 100%;
-    margin: 0 0.3rem 0 0.5rem;
+  p{
+    font-size: 14px;
+    padding: 10px;
+    line-height: 48px;
   }
-  line-height: 32px;
-  padding-bottom: 1rem;
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    padding-right: 5px;
+  }
+}
+article{
+  padding-bottom: 15px;
 }
 
 footer {
@@ -48,14 +140,13 @@ footer {
   width: 375px;
   height: 60px;
   bottom: 0;
-  border: solid 1px #ccc;
+  border-top: solid 1px #ccc;
   z-index: 10;
   form {
     .buy_btn {
       height: 40px;
       margin-top: 10px;
-      width: 80%;
-      // border: solid 1px #000;
+      width: 355px;
       background-color: #fe9900;
       color: #fff;
     }
