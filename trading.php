@@ -22,9 +22,6 @@ session_start();
 require_once './config.php';
 require_once './func.php';
 
-// 動作確認用固定値
-// $_SESSION['product_id'] = 2;
-
 // 初期値
 $listing_id = $_POST['listing_id'];
 // $table = 'listing';
@@ -44,10 +41,10 @@ $profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
 mysqli_close($link);
 
 // 評価画面へボタンが押された時の処理
-if(isset($_POST['eval_btn'])){
-    header ('location:./evaluate.php');
-    exit;
-}
+// if(isset($_POST['eval_btn'])){
+//     header ('location:./evaluate.php');
+//     exit;
+// }
 
 // 返品を申請するボタンが押された時の処理
 // if(isset($_POST['return_goods'])){

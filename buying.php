@@ -54,7 +54,7 @@ mysqli_close($link);
 // 購入ボタンが押された時の処理
 if (isset($_POST['buy_btn'])) {
     unset($_SESSION['buy_product_info']);
-    $_SESSION['bought_product_info'] = $line['listing_id'];
+    // $_SESSION['bought_product_info'] = $line['listing_id'];
 
     $cleaning_flg = 0;
     $hanger_flg = 0;
@@ -81,7 +81,7 @@ if (isset($_POST['buy_btn'])) {
     $sql .= ")";
     update_db($sql);
 
-    header('location:./trading.php');
+    header('location:./top.php');
     exit;
 }
 

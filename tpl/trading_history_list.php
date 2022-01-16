@@ -36,7 +36,7 @@
         <li class="product-price">¥<?php echo $value['price'];?></li>
       </ul>
       <form action="trading.php" method="post">
-        <button type="submit" name="dealing_id" value="<?php echo $value['dealing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
+        <button type="submit" name="listing_id" value="<?php echo $value['listing_id'];?>"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></button>
       </form>
       <!-- <div><a href="trading.php"><img src="./img/icon/進むアイコン.png" alt="進むボタン"></a></div> -->
     </section>
