@@ -24,12 +24,10 @@ h2 {
 
 .request-section {
   -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   border-bottom: solid 1px #ccc;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -44,7 +42,6 @@ h2 {
 
 .request-section ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }

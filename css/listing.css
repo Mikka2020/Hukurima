@@ -63,7 +63,6 @@ textarea {
 .shipping-section ul,
 .price-section ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   border-bottom: solid 1px #ccc;
