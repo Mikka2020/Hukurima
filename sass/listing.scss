@@ -72,14 +72,16 @@ textarea {
   }
 }
 .btn-area {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
   li {
     border-radius: 5px;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     font-size: 16px;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
   }
   .listing-btn {
     background-color: #fe8900;
@@ -89,7 +91,7 @@ textarea {
     }
   }
   .save-btn {
-    border: solid 2px #111;
+    border: solid 1px #ccc;
     background-color: #fff;
     button {
       width: 100%;
