@@ -9,7 +9,9 @@ header {
     line-height: 60px;
   }
 }
-
+section {
+  margin-bottom: 0;
+}
 main {
   h2,
   h4 {
@@ -17,9 +19,14 @@ main {
   }
   h3 {
     font-size: 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
   }
 
   #category {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 1rem;
     .category-items {
       display: flex;
       justify-content: space-evenly;
@@ -43,14 +50,14 @@ main {
         justify-content: right;
         line-height: 16px;
         color: #fe8900;
+        padding-top: 0.5rem;
       }
       // padding-top: 1rem;
     }
-    padding: 0;
+    padding-left: 3px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    width: 370px;
 
     .product-area {
       border-radius: 5px;
