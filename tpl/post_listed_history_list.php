@@ -25,7 +25,7 @@
           <?php foreach($products_arr as $product): ?>
           <label for="<?php echo $product['listing_id']; ?>">
             <div>
-              <input type="radio" name="listing_product" id="<?php echo $product['listing_id']; ?>"
+              <input class="" type="radio" name="listing_product" id="<?php echo $product['listing_id']; ?>"
                 value="<?php echo $product['listing_id']; ?>">
               <img
                 src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['listing_id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
