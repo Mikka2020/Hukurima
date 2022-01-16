@@ -12,8 +12,9 @@
 <body>
   <h1>フクリマ</h1>
 
-  <header>
-    <h2>マイページ</h2>
+  <header class="global-header">
+    <h2 class="none">マイページ</h2>
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
   </header>
 
   <main>

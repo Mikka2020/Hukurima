@@ -6,37 +6,37 @@
 @import url("./destyle.css");
 @import url("./style.css");
 header {
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  border-bottom: solid 1px #bbb;
-  position: relative;
+  // // // // // height: 60px;
+  // // // // text-align: center;
+  // // // line-height: 60px;
+  // // border-bottom: solid 1px #bbb;
+  // position: relative;
 }
-main{
+main {
   padding: 10px 0 15px 0;
   border: none;
-  h3{
+  h3 {
     padding-left: 15px;
     margin: 15px 0 5px 0;
     color: #505050;
-    &:first-child{
+    &:first-child {
       margin-top: 5px;
     }
   }
-  ul{
-    li{
+  ul {
+    li {
       border-bottom: solid 1px #dcdcdc;
-      &:last-child{
-          border: none;
+      &:last-child {
+        border: none;
       }
-      a{
+      a {
         display: block;
         padding: 10px 10px 10px 15px;
       }
     }
   }
-  section{
-    &:last-child{
+  section {
+    &:last-child {
       margin-top: 20px;
     }
   }
