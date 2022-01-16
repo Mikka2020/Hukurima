@@ -22,8 +22,10 @@ require_once './func.php';
 
 // 初期値
 $listing_id = $_POST['eval_btn'];
+if (isset($_POST['submit_btn'])) {
+  $listing_id = $_POST['submit_btn'];
+}
 $columns = ['listing_id', 'user_id'];
-
 // 商品の配送状況の取得
 $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
 mysqli_set_charset($link, 'utf8');
@@ -43,23 +45,37 @@ if ($dealing['listing_user_id'] == $_COOKIE['user_id']) {
   mysqli_set_charset($link, 'utf8');
   $profile = get_column($link, TABLES['103'], $columns[1], $dealing['buyer_user_id']);
   mysqli_close($link);
-  
-  // 出品者が評価ボタンを押したときの処理
+
+  // 出品者が評価ボタンを押したときの処理    // 購入者と出品者の両方の評価が入力されたとき
+    $sql = "SELECT * FROM evaluations ";
+    $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
+    $sql .= " WHERE dealings.listing_id = " . $listing_id;
+    $evaluation = get_db_record($sql);
   if (isset($_POST['submit_btn'])) {
     $evaluate_val = $_POST['review'];
-    
+
     // フォームで入力された評価をDBに格納
     $sql = " UPDATE evaluations ";
     $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
     $sql .= " SET evaluations.to_buyer_evaluation = " . $evaluate_val;
     $sql .= " WHERE dealings.listing_id = " . $listing_id;
     update_db($sql);
-  
+
+    // 購入者と出品者の両方の評価が入力されたとき
+    $sql = "SELECT * FROM evaluations ";
+    $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
+    $sql .= " WHERE dealings.listing_id = " . $listing_id;
+    $evaluation = get_db_record($sql);
+    if (isset($evaluation['to_listing_evaluation']) && isset($evaluation['to_buyer_evaluation'])) {
+      $sql = "UPDATE dealings ";
+      $sql .= " SET dealing_flg = 9 ";
+      $sql .= " WHERE dealings.listing_id = " . $listing_id;
+      update_db($sql);
+    }
+
     header('location:./evaluate_complete.php');
     exit;
   }
-  
-  
 } else { // 購入者がアクセスしたときの処理
   // 出品者のプロフィールを取得
   $link = mysqli_connect(HOST, USER_ID, PASSWORD, DB_NAME);
@@ -69,14 +85,27 @@ if ($dealing['listing_user_id'] == $_COOKIE['user_id']) {
   // 購入者が評価ボタンを押したとき
   if (isset($_POST['submit_btn'])) {
     $evaluate_val = $_POST['review'];
-    
+
     // フォームで入力された評価をDBに格納
     $sql = " UPDATE evaluations ";
     $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
     $sql .= " SET evaluations.to_listing_evaluation = " . $evaluate_val;
     $sql .= " WHERE dealings.listing_id = " . $listing_id;
     update_db($sql);
-    
+
+    // 購入者と出品者の両方の評価が入力されたとき
+    $sql = "SELECT * FROM evaluations ";
+    $sql .= " INNER JOIN dealings ON dealings.dealing_id = evaluations.dealing_id ";
+    $sql .= " WHERE dealings.listing_id = " . $listing_id;
+    $evaluation = get_db_record($sql);
+    if (isset($evaluation['to_listing_evaluation']) && isset($evaluation['to_buyer_evaluation'])) {
+      $sql = "UPDATE dealings ";
+      $sql .= " SET dealing_flg = 9 ";
+      $sql .= " WHERE dealings.listing_id = " . $listing_id;
+      update_db($sql);
+    }
+
+
     header('location:./evaluate_complete.php');
     exit;
   }
