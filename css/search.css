@@ -1,21 +1,40 @@
+@charset "UTF-8";
 @import url("./destyle.css");
 @import url("./style.css");
-header {
-  padding-top: 0.6rem;
+h1, h2 {
+  display: none;
 }
 
-header button {
-  border: solid 1px #ccc;
+h3 {
+  font-size: 14px;
+  background: #ccc;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+body {
+  background: #ccc;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header form {
+  background: #f7f8f9;
   margin: 0 auto;
-  border: solid 1px #111;
-  width: 80%;
-  border-radius: 50px;
+  width: 85%;
+  border-radius: 3px;
 }
 
 header input[type="text"] {
+  border: none;
   padding: 0.5rem 1rem;
   width: 85%;
 }
@@ -36,23 +55,83 @@ header .grass :active {
   color: #fd819d;
 }
 
-.keywords ul {
+/* 性別タブ */
+.gender {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  margin-bottom: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gender label {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  width: 33%;
+  font-size: 14px;
+}
+
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender #all:checked ~ .all,
+.gender #women:checked ~ .women,
+.gender #men:checked ~ .men {
+  color: #fe8900;
+  border-bottom: solid 3px #fe8900;
+}
+
+/* カテゴリから探す＆ブランドから探す */
+.search-conditions ul {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.search-conditions ul li {
+  padding: 5px 0 15px 0;
+}
+
+.search-conditions ul ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.search-conditions ul ul li {
+  padding: 0;
+}
+
+.search-conditions ul .brand-border {
+  border-top: solid 1px #ccc;
+  padding: 15px 0 5px 0;
+}
+
+.keywords ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 10px 0 10px;
 }
 
 .keywords ul li {
   text-align: center;
-  border: solid 1px #111;
-  background: #ffffff;
-  padding: 0.3rem;
-  margin-left: 0.5rem;
-  border-radius: 20px;
+  background: #f7f8f9;
+  padding: 0.3rem 0.8rem;
+  margin: 0 1em 1em 0;
+  border-radius: 5px;
 }
 
 .search-values button {
@@ -68,11 +147,9 @@ header .grass :active {
 
 .search-values ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
@@ -90,29 +167,32 @@ header .grass :active {
   border-radius: 5px;
 }
 
-.save-search form ul {
-  margin: 0 auto;
-  width: 80%;
+.save-search ul {
+  padding: 3px 10px;
 }
 
-.save-search form ul li {
-  background-color: #ffffff;
-  font-size: 16px;
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 0.3rem;
-  padding-left: 0.3rem;
-  border: 1px solid #000;
-  border-radius: 2px;
+.save-search ul a {
+  display: block;
+  border-bottom: solid 1px #ccc;
+}
+
+.save-search ul a:last-child {
+  border: none;
+}
+
+.save-search ul li {
+  font-size: 14px;
+  padding: 0.8rem 0.5rem;
   position: relative;
 }
 
-.save-search form ul li button {
+.save-search ul li button {
   position: absolute;
   right: 1rem;
   top: 0;
   height: 100%;
   width: 16px;
   line-height: 10px;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=search.css.map */
