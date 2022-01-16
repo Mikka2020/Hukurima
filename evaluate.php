@@ -21,7 +21,7 @@ require_once './func.php';
 // $_SESSION['product_id'] = 2;
 
 // 初期値
-$listing_id = $_SESSION['bought_product_info'];
+$listing_id = $_POST['eval_btn'];
 $columns = ['listing_id', 'user_id'];
 
 // 商品の配送状況の取得
