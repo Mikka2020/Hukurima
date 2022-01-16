@@ -22,13 +22,13 @@ header {
 main {
   border: none;
   margin-bottom: 60px;
-  h3{
+  h3 {
     padding-top: 10px;
     padding-left: 10px;
     font-size: 16px;
   }
-  h4{
-    background: #ccc;
+  h4 {
+    background: #eee;
     padding-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -49,18 +49,18 @@ main {
 }
 
 /* 商品名等 */
-.product-title{
-  h3{
+.product-title {
+  h3 {
     font-size: 16px;
     margin-bottom: 5px;
     font-weight: bold;
   }
-  ul{
+  ul {
     padding-left: 10px;
-    li{
+    li {
       font-size: 14px;
     }
-    li + li{
+    li + li {
       margin-top: 15px;
       font-size: 24px;
       font-weight: bold;
@@ -69,32 +69,32 @@ main {
     }
   }
   position: relative;
-  form{
+  form {
     position: absolute;
     bottom: 15px;
     right: 15px;
-    button{
+    button {
       width: 36px;
       text-align: center;
       margin-left: 10px;
-      img{
+      img {
         background: #dcdcdc;
         border-radius: 50%;
         padding: 5px;
         width: 36px;
       }
-    }  
+    }
   }
 }
 
 /* 商品説明 */
-.product-info{
-  p{
+.product-info {
+  p {
     font-size: 14px;
     padding: 10px 10px 0 10px;
     line-height: 1.5;
   }
-  p + p{
+  p + p {
     padding-bottom: 10px;
     line-height: 1;
   }
@@ -110,7 +110,7 @@ main {
       font-size: 14px;
       width: 50%;
     }
-    &:first-child{
+    &:first-child {
       padding-top: 10px;
     }
   }
@@ -118,7 +118,7 @@ main {
 
 /* 出品者 */
 .prof-section {
-  p{
+  p {
     font-size: 14px;
     padding: 10px;
     line-height: 48px;
@@ -130,7 +130,7 @@ main {
     padding-right: 5px;
   }
 }
-article{
+article {
   padding-bottom: 15px;
 }
 

@@ -1,18 +1,19 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
-h1,h2{
+h1,
+h2 {
   display: none;
 }
-h3{
+h3 {
   font-size: 14px;
-  background: #ccc;
+  background: #eee;
   padding-top: 5px;
   padding-left: 10px;
   padding-bottom: 3px;
 }
-body{
-  background: #ccc;
+body {
+  background: #eee;
 }
 
 header {
@@ -45,12 +46,11 @@ header {
   }
 }
 
-
 /* 性別タブ */
-.gender{
+.gender {
   display: flex;
   margin-bottom: 15px;
-  label{
+  label {
     display: block;
     text-align: center;
     padding: 10px;
@@ -58,35 +58,35 @@ header {
     font-size: 14px;
   }
   justify-content: space-between;
-  input[type="radio"]{
+  input[type="radio"] {
     display: none;
   }
   #all:checked ~ .all,
   #women:checked ~ .women,
-  #men:checked ~ .men{
+  #men:checked ~ .men {
     color: #fe8900;
     border-bottom: solid 3px #fe8900;
   }
 }
 
 /* カテゴリから探す＆ブランドから探す */
-.search-conditions{
-  ul{
+.search-conditions {
+  ul {
     font-size: 14px;
     padding: 10px;
-    li{
+    li {
       padding: 5px 0 15px 0;
     }
-    ul{
+    ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0;
-      li{
+      li {
         padding: 0;
       }
     }
-    .brand-border{
+    .brand-border {
       border-top: solid 1px #ccc;
       padding: 15px 0 5px 0;
     }
@@ -139,10 +139,10 @@ header {
 .save-search {
   ul {
     padding: 3px 10px;
-    a{
+    a {
       display: block;
       border-bottom: solid 1px #ccc;
-      &:last-child{
+      &:last-child {
         border: none;
       }
     }
