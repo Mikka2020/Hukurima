@@ -1,28 +1,102 @@
 @import url("./destyle.css");
 @import url("./style.css");
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main h4 {
+  padding-bottom: 0.3rem;
+}
+
+section form {
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+section form .request-btn {
+  color: #fff;
+  background-color: #fd819d;
+  border-radius: 5px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.product-name {
+  font-size: 16px;
+}
+
+.brand {
+  font-size: 10px;
+}
+
+.price {
+  color: red;
+  font-size: 16px;
+}
+
 .detail_info ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: solid 1px #ccc;
 }
 
 .detail_info ul li {
   width: 50%;
 }
 
-.delete_btn {
+.btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-info-area {
+  line-height: 20px;
+}
+
+.product-info-area .product-text {
+  padding-bottom: 1rem;
+}
+
+.btn-form {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.btn-form .delete-btn {
   border: solid 1px #000;
   border-radius: 5px;
   padding: 5px;
   background-color: #fff;
+  width: 30%;
+  height: 40px;
 }
 
-.edit_btn {
-  border: solid 1px #000;
+.btn-form .edit-btn {
   border-radius: 5px;
   padding: 5px;
-  background-color: #fe6900;
+  background-color: #fe8900;
   color: #fff;
+  width: 60%;
+  height: 40px;
 }
 /*# sourceMappingURL=listed_history.css.map */

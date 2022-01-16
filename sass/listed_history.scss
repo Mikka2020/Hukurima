@@ -1,25 +1,87 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
+main {
+  // margin-bottom: 90px;
+  // margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  h4 {
+    padding-bottom: 0.3rem;
+  }
+}
+
+section {
+  form {
+    padding-top: 0.8rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    .request-btn {
+      color: #fff;
+      background-color: #fd819d;
+      border-radius: 5px;
+      line-height: 20px;
+      width: 100%;
+    }
+  }
+}
+
+.product-name {
+  font-size: 16px;
+}
+.brand {
+  font-size: 10px;
+}
+.price {
+  color: red;
+  font-size: 16px;
+}
+
 .detail_info {
   ul {
     display: flex;
+    border-bottom: solid 1px #ccc;
     li {
       width: 50%;
     }
   }
 }
-
-.delete_btn {
-  border: solid 1px #000;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #fff;
+.btn-wrapper {
+  display: flex;
 }
-.edit_btn {
-  border: solid 1px #000;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #fe6900;
-  color: #fff;
+.product-info-area {
+  line-height: 20px;
+  .product-text {
+    padding-bottom: 1rem;
+  }
+}
+
+.btn-form {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  // border: solid 1px red;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  .delete-btn {
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    width: 30%;
+    height: 40px;
+  }
+  .edit-btn {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fe8900;
+    color: #fff;
+    width: 60%;
+    height: 40px;
+  }
 }
