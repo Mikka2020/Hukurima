@@ -24,7 +24,7 @@
     <h2 class="none">出品履歴詳細</h2>
     <article>
       <img
-        src="./img/users/<?php echo $list['user_id']; // 会員id ?>/products/<?php echo $list['listing_id']; // 商品id ?>/<?php echo $list['product_name']; // 商品名 ?>_1.jpg"
+        src="./img/users/<?php echo $list['user_id']; // 会員id ?>/products/<?php echo $list['listing_id']; // 商品id ?>/<?php echo $list['product_name']; // 商品名 ?>_1.<?php echo $list['img_extension'] ?>"
         alt="商品画像1" width="360px" height="">
 
       <!-- 商品情報 -->
