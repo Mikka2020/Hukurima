@@ -16,15 +16,32 @@
     </p>
     <form action="" method="get">
       <input class="search_text" type="text" name="search" placeholder="商品を検索しよう" value="<?php echo $search; ?>" />
-      <button class="grass" type="submit" name="btn">
+      <button class="grass" type="submit" name="">
         <i class="fas fa-search"></i>
       </button>
     </form>
   </header>
-  <nav class="sort-nav">
-    <ul>
-      <li>並び替え</li>
-      <li>絞り込み</li>
+  <nav class="display-nav">
+    <div class="modal-bg"></div>
+    <ul class="parent-tabs">
+      <li class="tab1">
+        並び替え
+        <ul class="sort-tabs">
+          <a href="<?php echo $url.'&sort=new'; ?>">
+            <li>出品日の新しい順</li>
+          </a>
+          <a href="<?php echo $url.'&sort=high_price'; ?>">
+            <li>価格の高い順</li>
+          </a>
+          <a href="<?php echo $url.'&sort=low_price'; ?>">
+            <li>価格の安い順</li>
+          </a>
+          <!-- <li><a href=""></a>ユーザーのオススメ</li> -->
+        </ul>
+      </li>
+      <li class="tab2">
+        絞り込み
+      </li>
     </ul>
   </nav>
   <main>
@@ -35,11 +52,11 @@
       <!-- 商品一覧 -->
       <form action="" method="get">
         <!-- <select name="sort" id="sort" class="sort">
-          <option value="">出品日の新しい順</option>
-          <option value="high_price">価格の高い順</option>
-          <option value="low_price">価格の安い順</option>
-          <option value="user_recommend">ユーザーのオススメ</option>
-          <option value="new">出品日の新しい</option> -->
+          <option value=""></option>
+          <option value="high_price"></option>
+          <option value="low_price"></option>
+          <option value="user_recommend"></option>
+          <option value="new"></option> -->
         <!-- <option value="listing_date_">出品日の古い</option> -->
         </select>
       </form>
@@ -93,6 +110,7 @@
   <footer class="global-footer">
     <?php require_once('./footer.php'); ?>
   </footer>
+  <script src="./js/product.js"></script>
 </body>
 
 </html>

@@ -141,7 +141,7 @@ $search = "";
   }
   if (isset($_GET['sort'])) { // 並び替え
     // 高い
-    if ($_GET['sort'] == 'hight_price') {
+    if ($_GET['sort'] == 'high_price') {
       $sql .= " ORDER BY listing.price DESC";
     }
     // 安い
@@ -163,8 +163,7 @@ $search = "";
 
 $products_arr = get_db_records($sql);
 
-
-
+$url = "./product.php?search=". $search;
 
 
 require_once './tpl/product.php';
