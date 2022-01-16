@@ -1,14 +1,7 @@
 @import url("./destyle.css");
 @import url("./style.css");
-header {
-  line-height: 60px;
-}
-
-header img {
-  margin-bottom: 0.5rem;
-}
-
 header .post-submit {
+  line-height: 60px;
   position: absolute;
   top: 0;
   right: 1rem;

@@ -12,9 +12,9 @@
 
 <body>
   <form action="" method="post" enctype="multipart/form-data">
-    <header>
-      <p class="center">
-        <img src="./img/icon/hukurima.png" alt="" width="" height="40px">
+    <header class="global-header">
+      <p>
+        <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
       </p>
       <p class="post-submit">
         <button type="submit" name="post_submit">投稿</button>
