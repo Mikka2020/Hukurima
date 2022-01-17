@@ -16,6 +16,7 @@ $listing_arr = [];
   $sql .= " LEFT JOIN listing ON favorite.favorite_listing_id = listing.listing_id ";
   $sql .= "LEFT JOIN dealings ON listing.listing_id = dealings.listing_id";
   $sql .= " WHERE favorite.favorite_user_id = ". $_COOKIE['user_id'];
+  $sql .= " ORDER BY favorite.favorited_at DESC ";
 }
 $listing_arr = get_db_records($sql);
 
