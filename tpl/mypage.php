@@ -33,7 +33,7 @@
     <section>
       <ul>
         <li><a href="#">下書き一覧</a></li>
-        <li><a href="#">いいねした商品</a></li>
+        <li><a href="./favorite_list.php">いいねした商品</a></li>
         <li><a href="#">閲覧履歴</a></li>
         <li><a href="./listed_history_list.php">出品履歴</a></li>
         <li><a href="#">購入履歴</a></li>
