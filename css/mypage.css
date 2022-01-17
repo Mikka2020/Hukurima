@@ -5,10 +5,6 @@
 */
 @import url("./destyle.css");
 @import url("./style.css");
-* {
-  font-size: 14px;
-}
-
 main {
   padding: 10px 0 15px 0;
   border: none;
@@ -27,6 +23,7 @@ main h3:first-child {
 }
 
 main ul li {
+  font-size: 14px;
   border-bottom: solid 1px #dcdcdc;
 }
 
