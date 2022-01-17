@@ -19,7 +19,5 @@ $listing_arr = [];
 }
 $listing_arr = get_db_records($sql);
 
-// var_dump($listing_arr[1]);
-
 
 require_once('./tpl/favorite_list.php');
