@@ -11,7 +11,9 @@ main {
 }
 
 main h3 {
+  font-size: 14px;
   padding-left: 15px;
+  padding-bottom: 2px;
   margin: 15px 0 5px 0;
   color: #505050;
 }
@@ -21,6 +23,7 @@ main h3:first-child {
 }
 
 main ul li {
+  font-size: 14px;
   border-bottom: solid 1px #dcdcdc;
 }
 
@@ -30,7 +33,7 @@ main ul li:last-child {
 
 main ul li a {
   display: block;
-  padding: 10px 10px 10px 15px;
+  padding: 12px 10px 12px 15px;
 }
 
 main section:last-child {

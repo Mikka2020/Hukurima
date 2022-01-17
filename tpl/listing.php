@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="./css/listing.css">
-  <title>出品画面</title>
+  <title>フクリマ 出品画面</title>
 </head>
 
 <body>
-  <header>出品画面</header>
+  <h1>フクリマ</h1>
+  <header class="global-header">
+    <h2 class="none">出品画面</h2>
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
+  </header>
   <main>
-    <h1>フクリマ</h1>
     <article>
       <form action="" method="post" enctype="multipart/form-data">
         <h2>出品フォーム</h2>
@@ -41,6 +44,11 @@
           </ul>
 
           <ul>
+            <li>ブランド</li>
+            <li><input type="text" name="brand" id="" placeholder="ブランドを入力"></li>
+          </ul>
+
+          <ul>
             <li>商品の状態</li>
             <li>
               <select name="product_condition" id="con">
@@ -53,10 +61,6 @@
                 <?php endforeach; ?>
               </select>
             </li>
-          </ul>
-          <ul>
-            <li>ブランド</li>
-            <li><input type="text" name="brand" id="" placeholder="ブランドを入力"></li>
           </ul>
         </section>
 
