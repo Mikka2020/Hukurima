@@ -48,9 +48,8 @@ if (isset($_POST['listing_btn'])) {
     $sql .= " ( " . $user_id  . ",'" . $_SESSION['display_data']['product_explain'] . "', '" . $_SESSION['display_data']['img_extension'] . "'," . $id;
     $sql .= " ) ";
     $post_id = return_insert_record_id(HOST, USER_ID, PASSWORD, DB_NAME, $sql);
-    $moved_file = "./img/users/" . $user_id . "/posts/" . $post_id . $_SESSION['display_data']['img_extension'];
-    move_uploaded_file($pre_img, $moved_file);
-    var_dump($moved_file);
+    chmod("./img/users/" . $user_id . "/posts", 0777);
+    copy($pre_img, "./img/users/" . $user_id . '/posts/' . $post_id . '.' . $data[1]);
 
     rename($pre_img, $file_path . '/' . $data[0] . '_1.' . $data[1]);
 
