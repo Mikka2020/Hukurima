@@ -13,7 +13,14 @@
   <h1>フクリマ</h1>
   <header>
     <h2>評価</h2>
+    <p class="back-icon">
+      <a href="#" onClick="history.back(); return false;">
+        <img src="./img/icon/arrow_back_ios_new_black_24dp.svg" alt="" width="24px">
+      </a>
+    </p>
+    <img class="header-logo" src="./img/icon/hukurima.png" alt="" width="" height="30px">
   </header>
+
   <main>
     <h3>評価</h3>
     <section class="evaluate">
