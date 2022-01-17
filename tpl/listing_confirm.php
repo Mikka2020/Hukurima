@@ -10,24 +10,37 @@
 </head>
 
 <body>
+  <h1>フクリマ</h1>
   <header>
-    <p class="center">出品確認</p>
+    <h2 class="center">出品確認</h2>
   </header>
   <main>
-    <h1>フクリマ</h1>
     <article>
-      <h2><?php echo ''; // 商品名 ?></h2>
-      <div class="center">
+      <!-- <div class="center">
+        <img
+          src="./img/users/<?php //echo $user_id; ?>/pre/<?php //echo $listing['product_name']; ?>.<?php //echo $listing['img_extension']; ?>"
+          alt="メイン商品画像" width="360px" height="">
+      </div> -->
+
+      <section class="img-section">
+        <h3>商品画像</h3>
         <img
           src="./img/users/<?php echo $user_id; ?>/pre/<?php echo $listing['product_name']; ?>.<?php echo $listing['img_extension']; ?>"
-          alt="メイン商品画像" width="360px" height="">
-      </div>
+          alt="商品画像" width="360px" height=""> <!-- 商品画像 -->
+      </section>
+
+      <section class="product-title">
+        <h3><?php echo $listing['product_name']; ?></h3>
+        <ul>
+          <li><?php echo $listing['brand']; ?></li>
+          <li>¥<?php echo $listing['price']; ?></li>
+        </ul>
+      </section>
 
       <section class="product-detail">
-        <h3 class="none">商品</h3>
-        <p class="product-name"><?php echo $listing['product_name']; ?></p>
-        <p class="brand"><?php echo $listing['brand']; ?></p>
-        <p class="price red">¥<?php echo $listing['price']; ?></p>
+        <!-- <h3 class="product-name"><?php //echo $listing['product_name']; ?></h3>
+        <p class="brand"><?php //echo $listing['brand']; ?></p>
+        <p class="price red">¥<?php //echo $listing['price']; ?></p> -->
         <ul>
           <li>
             カテゴリ

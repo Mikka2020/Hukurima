@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./destyle.css");
 @import url("./style.css");
 header {
@@ -5,43 +6,88 @@ header {
 }
 
 main {
+  border: none;
   margin-bottom: 60px;
 }
 
-.product-detail {
-  padding: 10px;
+main h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 16px;
 }
 
-.product-detail ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 24px;
-  border-bottom: solid 1px #ccc;
+main h4 {
+  background: #eee;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.product-detail ul li {
-  width: 50%;
+/* 商品画像 */
+.img-section {
+  padding: 0;
+  text-align: center;
+  margin: 0;
 }
 
-.product-detail .product-name {
-  font-size: 1.2rem;
+.img-section h3 {
+  width: 100%;
+  display: none;
 }
 
-.product-detail .brand {
-  font-size: 0.8rem;
+/* 商品名等 */
+.product-title {
+  position: relative;
 }
 
-.product-detail .price {
-  font-size: 1.2rem;
+.product-title h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.product-detail .explain-title {
+.product-title ul {
+  padding-left: 10px;
+}
+
+.product-title ul li {
+  font-size: 14px;
+}
+
+.product-title ul li + li {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f00;
+  padding-bottom: 10px;
+}
+
+.product-title form {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.product-title form button {
+  width: 36px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.product-title form button img {
+  background: #dcdcdc;
+  border-radius: 50%;
+  padding: 5px;
+  width: 36px;
+}
+
+.explain-title {
   margin-bottom: 0.3rem;
 }
 
-.product-detail .explain-text {
+.explain-text {
   margin-bottom: 0.5rem;
 }
 
