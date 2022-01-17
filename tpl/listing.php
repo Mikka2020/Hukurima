@@ -63,7 +63,7 @@
         <section class="shipping-section">
           <h3>配送について</h3>
           <ul>
-            <li>配送までの日数</li>
+            <li>発送までの日数</li>
             <li>
               <select name="days_to_ship" id="">
                 <option value="">選択してください >
