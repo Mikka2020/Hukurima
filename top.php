@@ -2,6 +2,7 @@
 
 require_once('./config.php');
 require_once('./func.php');
+$footer_colors['top'] = '#fe8900';
 
 // テスト用
 $id = 0;
