@@ -46,7 +46,6 @@ if(isset($_POST['listing_btn'])){
 }
 
 
-
 // テスト用
 $listing = $_SESSION['display_data'];
 

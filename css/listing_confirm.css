@@ -14,6 +14,7 @@ main {
 
 .product-detail ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   line-height: 24px;
@@ -47,14 +48,15 @@ main {
 form {
   margin: 0 auto;
   width: 95%;
+  padding-top: 0.3rem;
 }
 
 form li {
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   font-size: 16px;
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 form li button {
@@ -68,6 +70,6 @@ form .listing-btn {
 
 form .fix-btn {
   background-color: #fff;
-  border: solid 1px #111;
+  border: solid 1px #707070;
 }
 /*# sourceMappingURL=listing_confirm.css.map */

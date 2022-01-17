@@ -37,12 +37,13 @@ main {
 form {
   margin: 0 auto;
   width: 95%;
+  padding-top: 0.3rem;
   li {
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     font-size: 16px;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     button {
       width: 100%;
     }
@@ -53,6 +54,6 @@ form {
   }
   .fix-btn {
     background-color: #fff;
-    border: solid 1px #111;
+    border: solid 1px #707070;
   }
 }
