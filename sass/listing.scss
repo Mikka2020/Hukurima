@@ -1,10 +1,6 @@
 @import url("./destyle.css");
 @import url("./style.css");
 
-header {
-  text-align: center;
-  line-height: 60px;
-}
 main {
   margin-bottom: 60px;
 }
@@ -12,19 +8,17 @@ h2 {
   display: none;
 }
 h3 {
+  font-size: 14px;
   background-color: #eee;
   padding-top: 0.5rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.3rem;
+  padding-bottom: 3px;
+  padding-left: 10px;
 }
 input,
 select,
 textarea {
   line-height: 24px;
   font-size: 14px;
-}
-textarea {
-  border: solid 1px #ccc;
 }
 
 #preview {
@@ -43,10 +37,12 @@ textarea {
     // padding-bottom: 0.3rem;
     // padding-top: 0.3rem;
     border-bottom: solid 1px #ccc;
+    padding: 0 10px;
     li {
+      font-size: 14px;
       width: 50%;
       line-height: 24px;
-      padding-left: 0.5rem;
+      padding: 5px 0;
     }
   }
   select {
@@ -56,18 +52,18 @@ textarea {
 
 .explain-section {
   p {
-    border: solid 1px #ccc;
-    width: 360px;
-    margin: 0.3rem auto 1rem;
+    // width: 360px;
     input {
-      border: solid 1px #ccc;
-      width: 100%;
-      padding-left: 0.3rem;
+      border-bottom: solid 1px #ccc;
+      width: 355px;
+      display: block;
+      margin: 0 auto;
+      padding: 7px 10px 7px 0;
     }
     textarea {
+      padding: 7px 10px;
       resize: none;
       width: 360px;
-      padding: 0.1rem;
     }
   }
 }
