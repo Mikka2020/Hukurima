@@ -20,6 +20,9 @@ require_once './func.php';
 // 動作確認用固定値
 // $_SESSION['product_id'] = 2;
 
+// 初期化
+$class = '';
+
 // 初期値
 $listing_id = $_POST['eval_btn'];
 if (isset($_POST['submit_btn'])) {
@@ -45,6 +48,8 @@ if ($dealing['listing_user_id'] == $_COOKIE['user_id']) {
   mysqli_set_charset($link, 'utf8');
   $profile = get_column($link, TABLES['103'], $columns[1], $dealing['buyer_user_id']);
   mysqli_close($link);
+  $user = '購入者';
+  $class = 'none';
 
   // 出品者が評価ボタンを押したときの処理    // 購入者と出品者の両方の評価が入力されたとき
     $sql = "SELECT * FROM evaluations ";
@@ -82,6 +87,7 @@ if ($dealing['listing_user_id'] == $_COOKIE['user_id']) {
   mysqli_set_charset($link, 'utf8');
   $profile = get_column($link, TABLES['103'], $columns[1], $product['user_id']);
   mysqli_close($link);
+  $user = '出品者';
   // 購入者が評価ボタンを押したとき
   if (isset($_POST['submit_btn'])) {
     $evaluate_val = $_POST['review'];

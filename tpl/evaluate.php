@@ -29,8 +29,8 @@
           </span>
         </div>
         <textarea name="msg" cols="20" rows="3" placeholder="取引相手にメッセージを入力"></textarea>
-        <h4 class="<?php //echo $class; ?>">チップを追加(任意)</h4>
-        <div class="tip <?php //echo $class; ?>">
+        <h4 class="<?php echo $class; ?>">チップを追加(任意)</h4>
+        <div class="tip <?php echo $class; ?>">
           <input type="text" name="tip" placeholder="金額を入力">
           <span class="unit">円</span>
         </div>
@@ -51,7 +51,7 @@
             alt="進むボタン"></a></div>
     </section>
 
-    <h3>出品者<?php //echo $user; ?></h3>
+    <h3><?php echo $user; ?></h3>
     <section class="user_info">
       <p><a href="profile.php?id=<?php echo $profile['user_id']; ?>"><img
             src="./img/users/<?php echo $profile['user_id']; ?>/profile/<?php echo $profile['nickname']; ?>.<?php echo $profile['prof_img_extension']; ?>"
