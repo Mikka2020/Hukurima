@@ -19,6 +19,8 @@ session_start();
 require_once './config.php';
 require_once './func.php';
 
+$footer_colors['search'] = "#fe8900";
+
 // 動作確認用固定値（変える）
 // $_SESSION['user_id'] = 1;
 

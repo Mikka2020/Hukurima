@@ -17,6 +17,8 @@
  */
 
 
+$footer_colors['listing'] = '#fe8900';
+
 // 参照ファイル呼び出し
 session_start();
 require_once './config.php';
