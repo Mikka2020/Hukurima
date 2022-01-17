@@ -46,6 +46,7 @@ section form .request-btn {
 
 .detail_info ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   border-bottom: solid 1px #ccc;
@@ -57,6 +58,7 @@ section form .request-btn {
 
 .btn-wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -74,9 +76,11 @@ section form .request-btn {
   margin: 0 auto;
   padding-bottom: 1rem;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;

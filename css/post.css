@@ -55,6 +55,7 @@ header .post-submit {
   border-top: solid 1px #ccc;
   width: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding-top: 2rem;

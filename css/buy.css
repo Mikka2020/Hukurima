@@ -6,9 +6,11 @@ header {
   position: relative;
   line-height: 60px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -40,9 +42,11 @@ section {
 .product-info {
   padding: 10px 15px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
@@ -75,13 +79,16 @@ section {
 
 .profile-section {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   font-size: 14px;
 }
 
@@ -128,10 +135,12 @@ section {
 
 .option-section {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .option-section div {
@@ -161,9 +170,11 @@ section {
 
 .pay-section ul ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -202,6 +213,7 @@ section {
 
 .product-section .product-detail ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -221,6 +233,7 @@ section {
 
 .address-area {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
