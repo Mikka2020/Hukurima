@@ -17,10 +17,12 @@
  */
 
 
+
 // 参照ファイル呼び出し
 session_start();
 require_once './config.php';
 require_once './func.php';
+$footer_colors['listing'] = '#fe8900';
 
 // 動作確認用
 // setcookie('user_id',2,time()+60*60*24);

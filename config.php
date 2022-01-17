@@ -17,6 +17,9 @@ const TABLES = [
     '104' => 'search_conditions',
 ];
 
+// footerのアイコンのカラーの初期値
+$footer_colors = ['top' => '#707070', 'search' => '#707070', 'listing' => '#707070', 'notification' => '#707070', 'mypage' => '#707070' ];
+
 /*
  /Applications/XAMPP/bin/mysql -u root
  use hukurima;

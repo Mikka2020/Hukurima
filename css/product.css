@@ -74,10 +74,12 @@ header .grass :active {
 
 .display-nav .parent-tabs {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   -webkit-box-pack: right;
+  -webkit-justify-content: right;
       -ms-flex-pack: right;
           justify-content: right;
 }
@@ -135,10 +137,12 @@ h4 {
 
 #trend ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 #trend ul .trend-tag {
@@ -155,10 +159,12 @@ h4 {
   padding: 0;
   margin: 0;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 #product .product-area {
@@ -197,9 +203,11 @@ h4 {
   height: 32px;
   padding: 4px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }

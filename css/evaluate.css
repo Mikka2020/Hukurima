@@ -4,12 +4,15 @@
 header {
   text-align: center;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
@@ -119,15 +122,18 @@ main .evaluate .stars {
 
 main .evaluate .stars span {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   /* 要素をフレックスボックスにする */
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   /* 星を逆順に並べる */
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -158,9 +164,11 @@ main .evaluate .stars input[type="radio"]:checked ~ label {
 main .evaluate_product {
   padding: 10px 15px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
@@ -194,16 +202,20 @@ main .evaluate_product div a {
 main .user_info {
   padding: 10px 15px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 main .user_info img {

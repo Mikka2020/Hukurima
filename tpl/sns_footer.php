@@ -3,7 +3,7 @@
     <li>
       <a href="./timeline.php">
         <img src="./img/icon/ホームアイコン.svg" alt="ホームボタン" width="24px" height="24px">
-        <p>ホーム</p>
+        <p class="hukurima-pink">ホーム</p>
       </a>
     </li>
     <li>
