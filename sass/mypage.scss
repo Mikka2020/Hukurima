@@ -5,6 +5,9 @@
 
 @import url("./destyle.css");
 @import url("./style.css");
+*{
+  font-size: 14px;
+}
 header {
   // // // // // height: 60px;
   // // // // text-align: center;
@@ -16,7 +19,9 @@ main {
   padding: 10px 0 15px 0;
   border: none;
   h3 {
+    font-size: 14px;
     padding-left: 15px;
+    padding-bottom: 2px;
     margin: 15px 0 5px 0;
     color: #505050;
     &:first-child {
@@ -31,7 +36,7 @@ main {
       }
       a {
         display: block;
-        padding: 10px 10px 10px 15px;
+        padding: 12px 10px 12px 15px;
       }
     }
   }
