@@ -5,6 +5,10 @@ header {
   text-align: center;
 }
 
+body {
+  background-color: #eee;
+}
+
 main {
   padding-bottom: 10px;
   margin-bottom: 60px;

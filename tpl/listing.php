@@ -114,7 +114,7 @@
           <h3>出品価格（300円〜9,999,999円）</h3>
           <ul>
             <li>出品価格</li>
-            <li><input type="number" name="price" id="" placeholder="価格を入力">円</li>
+            <li class="input-price"><input type="number" name="price" id="" placeholder="価格を入力">円</li>
           </ul>
         </section>
         <div class="btn-area">

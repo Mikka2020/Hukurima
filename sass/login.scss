@@ -4,11 +4,15 @@ header {
   line-height: 60px;
   text-align: center;
 }
+body {
+  background-color: #eee;
+}
 main {
   padding-bottom: 10px;
   margin-bottom: 60px;
   .logo {
     margin: 24px auto;
+    // margin: 0 auto;
     text-align: center;
     background-color: #fff;
     width: 300px;

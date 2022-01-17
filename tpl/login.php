@@ -26,7 +26,7 @@
           </ul>
           <ul>
             <li>パスワード</li>
-            <li><input type="text" name="password" placeholder="パスワードを入力"></li>
+            <li><input type="password" name="password" placeholder="パスワードを入力"></li>
           </ul>
           <p class="login-btn">
             <button type="submit" name="login_btn" value="on">ログイン</button>
