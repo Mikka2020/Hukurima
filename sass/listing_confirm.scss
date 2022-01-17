@@ -73,41 +73,40 @@ main {
     }
   }
 }
-
-
-// .product-detail {
-//   padding: 10px;
-//   ul {
-//     display: flex;
-//     line-height: 24px;
-//     border-bottom: solid 1px #ccc;
-//     li {
-//       width: 50%;
-//     }
-//   }
-//   .product-name {
-//     font-size: 16px;
-//     font-weight: bold;
-//     padding: 10px 0;
-//   }
-//   .brand {
-//     font-size: 14px;
-//   }
-//   .price {
-//     font-size: 24px;
-//     font-weight: bold;
-//   }
-  .explain-title {
-    margin-bottom: 0.3rem;
+/* 商品説明 */
+.product-info {
+  p {
+    font-size: 14px;
+    padding: 10px 10px 0 10px;
+    line-height: 1.5;
   }
-  .explain-text {
-    margin-bottom: 0.5rem;
+  p + p {
+    padding-bottom: 10px;
+    line-height: 1;
   }
-// }
+}
+
+/* 商品詳細 */
+.product-detail {
+  ul {
+    display: flex;
+    padding: 10px 0 10px 10px;
+    border-bottom: solid 1px #ccc;
+    li {
+      font-size: 14px;
+      width: 50%;
+    }
+    &:first-child {
+      padding-top: 10px;
+    }
+  }
+}
+
 form {
   margin: 0 auto;
   width: 95%;
   padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   li {
     height: 40px;
     line-height: 40px;
