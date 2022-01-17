@@ -36,7 +36,7 @@
           </a>
         </p>
         <p class="post-img">
-          <img
+          <img class="<?php echo $product['post_img_extension'] != NULL ? "" : "none" ; ?>"
             src="./img/users/<?php echo $product['post_user_id'] ?>/posts/<?php echo $product['post_id'] ?>.<?php echo $product['post_img_extension']; ?>"
             alt="投稿画像" width="320px" height="320px">
         </p>
