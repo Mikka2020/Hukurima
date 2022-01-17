@@ -35,10 +35,22 @@ $line = get_column($link,TABLES['101'],$columns[0],$listing_id);
 mysqli_close($link);
 
 // プロフィール情報の取得
-$link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
-mysqli_set_charset($link , 'utf8');
-$profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
-mysqli_close($link);
+// 購入者側の時
+if($_COOKIE['user_id'] != $line['user_id']){
+    $link = mysqli_connect(HOST , USER_ID, PASSWORD , DB_NAME);
+    mysqli_set_charset($link , 'utf8');
+    $profiles = get_column($link,TABLES['103'],$columns[1],$line['user_id']);
+    $user = '出品者';
+    mysqli_close($link);
+} else {
+    // 出品者側の時(購入者のプロフィールを取ってくる)
+    $sql = "SELECT * FROM dealings LEFT JOIN listing ON dealings.listing_id = listing.listing_id LEFT JOIN profile ON profile.user_id = dealings.buyer_user_id WHERE listing.listing_id = " . $listing_id;
+    $profiles = get_db_record($sql);
+    $profiles['user_id'] = $profiles['buyer_user_id'];
+    $user = '購入者';
+}
+
+
 
 // 評価画面へボタンが押された時の処理
 // if(isset($_POST['eval_btn'])){
