@@ -109,12 +109,21 @@ footer {
   border-top: solid 1px #ccc;
 }
 
+.global-footer .hukurima-orange {
+  color: #fe8900;
+}
+
+.global-footer .hukurima-pink {
+  color: #fd819d;
+}
+
 .global-footer nav {
   margin-top: 10px;
 }
 
 .global-footer nav ul {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
