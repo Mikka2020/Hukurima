@@ -10,6 +10,7 @@ $sql .= " listing ";
 $sql .= " WHERE ";
 $sql .= " user_id =  ";
 $sql .= $id;
+$sql .= " ORDER BY listing_id DESC ";
 
 $products_arr = get_db_records($sql);
 // var_dump($products_arr);
