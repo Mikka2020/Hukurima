@@ -81,7 +81,9 @@ if (isset($_POST['buy_btn'])) {
     $sql .= ")";
     update_db($sql);
 
-    header('location:./top.php');
+    // 購入手続き完了画面に遷移
+    $_SESSION['bought_listing_id'] = $line['listing_id'];
+    header('location:./bought_complete.php');
     exit;
 }
 
