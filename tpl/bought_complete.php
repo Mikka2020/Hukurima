@@ -18,9 +18,10 @@
       <section>
         <p class="complete-msg">購入手続きが完了しました</p>
         <p class="center"><img src="./img/icon/取引完了.png" alt="" width="150px" height="145px"></p>
-        <form action="trading.php" metho="post">
-          <button type="submit" name="listing_id" value="<?php echo $listing_id;?>">取引内容確認はこちらから</button>
-        </form>
+        <!-- <form action="trading.php" metho="post">
+          <button type="submit" name="listing_id" value="<?php //echo $listing_id;?>">取引内容確認はこちらから</button>
+        </form> -->
+        <p class="trading"><a href="./trading_history_list.php">取引内容確認はこちらから</a></p>
         <p class="top">
           <a href="./top.php">トップへ戻る</a>
         </p>
