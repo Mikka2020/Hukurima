@@ -14,6 +14,7 @@
 session_start();
 require_once('./config.php');
 require_once './func.php';
+$footer_colors['listing'] = '#fe8900';
 
 // 全画面で代入された値
 $user_id = $_COOKIE['user_id'];
