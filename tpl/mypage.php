@@ -21,7 +21,7 @@
     <h3>会員設定</h3>
     <section>
       <ul>
-        <li><a href="./profile.php">プロフィール</a></li>
+        <li><a href="./profile.php?id=<?php echo $_COOKIE['user_id']; ?>">プロフィール</a></li>
         <li><a href="#">会員情報設定</a></li>
         <li><a href="#">配送先管理</a></li>
         <li><a href="#">売上金管理</a></li>

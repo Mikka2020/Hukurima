@@ -14,29 +14,41 @@
     <article>
       <section>
         <img
-          src="./img/users/<?php echo $line['user_id']; ?>/profile/<?php echo $line['nickname'] ?>.<?php echo $line['prof_img_extension']; ?>"
+          src="./img/users/<?php echo $profile['user_id']; ?>/profile/<?php echo $profile['nickname'] ?>.<?php echo $profile['prof_img_extension']; ?>"
           alt="プロフィール画像" width="32px" height="32px" />
-        <?php echo $line['nickname']; ?> <br />
-        <a href="">★★★★★ 72</a>
+        <?php echo $profile['nickname']; ?> <br />
+        <a href="">
+          <p><span class="star5_rating" data-rate="<?php echo (int)($evaluation['eval_val']); ?>"></span>
+            <?php echo mb_substr($evaluation['eval_val'], 0, 4); ?>
+          </p>
+        </a>
 
         <img src="./img/icon/本人確認.png" alt="本人確認バッジ" width="14px" height="16px" />
         <a href="">本人確認する</a>
         <ul class="nav_prof">
           <li>
-            55 <br />
-            <span>出品</span>
+            <ul>
+              <li><?php echo $listing_cnt; ?></li>
+              <li>出品</li>
+            </ul>
           </li>
           <li>
-            144 <br />
-            <span>投稿</span>
+            <ul>
+              <li><?php echo $post_cnt; ?></li>
+              <li>投稿</li>
+            </ul>
           </li>
           <li>
-            42 <br />
-            <span>フォロー</span>
+            <ul>
+              <li>0</li>
+              <li>フォロー</li>
+            </ul>
           </li>
           <li>
-            12 <br />
-            <span>フォロワー</span>
+            <ul>
+              <li>0</li>
+              <li>フォロワー</li>
+            </ul>
           </li>
         </ul>
       </section>
@@ -44,14 +56,21 @@
       <section>
         <h2>自己紹介</h2>
         <p>
-          <?php echo $line['prof_text'] ?>
+          <?php echo $profile['prof_text'] ?>
         </p>
         <button>閉じる</button>
       </section>
 
-      <section>
-        <?php // foreach() ?>
-        <?php // endforeach; ?>
+      <section id="products">
+        <?php  foreach($products_arr as $product): ?>
+        <div>
+          <img
+            src="./img/users/<?php echo $product['user_id']; ?>/products/<?php echo $product['id']; ?>/<?php echo $product['product_name']; ?>_1.<?php echo $product['img_extension']; ?>"
+            alt="出品した商品" width="100px" height="100px">
+          <img class="<?php echo $product['listing_id'] == NULL ? "none" : ""; ?>" src="./img/icon/SOLDマーク(出品履歴一覧).svg"
+            alt="">
+        </div>
+        <?php  endforeach; ?>
       </section>
     </article>
   </main>

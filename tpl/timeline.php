@@ -20,7 +20,7 @@
       <?php foreach ($products_arr as $product) : ?>
       <section>
         <div class="post-div">
-          <a href="">
+          <a href="./profile.php?id=<?php echo $product['post_user_id']; ?>">
             <img class="prof-img"
               src="./img/users/<?php echo $product['post_user_id']; ?>/profile/<?php echo $product['nickname'] ?>.<?php echo $product['prof_img_extension']; ?>"
               alt="プロフィール画像" width="32px" height="32px">
