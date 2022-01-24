@@ -100,7 +100,7 @@
 
           <div class="product-explain">
             <p class="profile">
-              <a href="./profile.php?user_id=<?php echo $product['user_id']; ?>">
+              <a href="./profile.php?id=<?php echo $product['user_id']; ?>">
                 <img class="prof-img"
                   src="./img/users/<?php echo $product['user_id']; ?>/profile/<?php echo $product['nickname']; ?>.<?php echo $product['prof_img_extension']; ?>"
                   alt="プロフィール画像" width="24px" height="24px" />
