@@ -17,7 +17,7 @@ require_once './config.php';
 require_once './func.php';
 
 // 初期値
-$user_id = $_COOKIE['user_id'];
+$user_id = $_GET['user_id'];
 $column = 'user_id';
 
 // profileを取得
