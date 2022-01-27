@@ -22,9 +22,11 @@ h3 {
 .evaluate_product {
   padding: 10px 15px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
