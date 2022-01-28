@@ -1,5 +1,13 @@
 @import url("./destyle.css");
 @import url("./style.css");
+
+header {
+  .back-icon {
+    position: absolute;
+    top: 18px;
+    left: 0.5rem;
+  }
+}
 .nav_prof {
   margin-top: 20px;
   width: 100%;
@@ -14,37 +22,37 @@
   }
 }
 
-.user-info{
+.user-info {
   display: flex;
   flex-wrap: wrap;
   // justify-content: center;
   align-items: flex-end;
   padding: 10px;
-  .profile-img{
+  .profile-img {
     margin-left: 15px;
   }
-  div{
+  div {
     // width: 60%;
     display: flex;
     flex-wrap: wrap;
     padding-left: 15px;
-    h3{
+    h3 {
       font-size: 16px;
       width: 100%;
     }
-    p{
+    p {
       font-size: 14px;
       color: #00f;
       // text-decoration: underline 1px #00f;
     }
-    .user-confirm{
+    .user-confirm {
       font-size: 12px;
       margin-left: 20px;
     }
   }
 }
 
-.profile-img{
+.profile-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -109,18 +117,18 @@
   width: 0%;
 } /* 星0 */
 
-.self-introduction{
-  h4{
+.self-introduction {
+  h4 {
     font-size: 13px;
     // background-color: #eee;
     padding: 10px 20px 5px 20px;
     // padding-bottom: 5px;
   }
-  p{
+  p {
     padding: 0 20px 10px 20px;
     font-size: 13px;
   }
-  button{
+  button {
     display: block;
     margin: 0 auto;
     font-size: 12px;
@@ -129,15 +137,15 @@
   }
 }
 
-#products{
+#products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px 20px;
-  div{
+  div {
     position: relative;
     margin: 5px;
-    #sold{
+    #sold {
       position: absolute;
       top: 0;
       left: 0;

@@ -1,6 +1,12 @@
 @charset "UTF-8";
 @import url("./destyle.css");
 @import url("./style.css");
+header .back-icon {
+  position: absolute;
+  top: 18px;
+  left: 0.5rem;
+}
+
 .nav_prof {
   margin-top: 20px;
   width: 100%;
